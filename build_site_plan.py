@@ -293,11 +293,20 @@ data_page = f"""  <h1>Data and code: how to check our work</h1>
     <li><strong>1. Preflight</strong>Checked all 220 tasks, 10,453 checklist items and 261 input files (1.66 GB) before any paid run.</li>
     <li><strong>2. Generate</strong>One resumable job ran all 220 tasks with GPT, then all 220 with Claude.</li>
     <li><strong>3. Inspect</strong>Extracted text and page images from every saved file for the judges.</li>
-    <li><strong>4. Calibrate</strong>Graded 6 tasks (24 assessments), reviewed them by hand, then approved full grading.</li>
+    <li><strong>4. Calibrate</strong>Graded 6 tasks (24 assessments), reviewed a report on the results, then approved full grading.</li>
     <li><strong>5. Grade</strong>880 blinded assessments, checkpointed one by one.</li>
     <li><strong>6. Analyze</strong>Offline scripts built every table and chart; no new model calls.</li>
   </ol>
 
+  <h2 id="agent">How the coding agent was used</h2>
+  <p>The whole project was built with a coding agent, with a human approving every paid step and every claim.</p>
+  <ul class="tight">
+    <li><strong>Planned:</strong> drafted the evaluation plan and kept a written run log, updated at each stage (<a href="https://github.com/yasskin/gdpval-paired-eval/blob/main/PROJECT_PLAN.md">PROJECT_PLAN.md</a>).</li>
+    <li><strong>Built:</strong> wrote the harness, grader, tests, analysis scripts and this site.</li>
+    <li><strong>Operated:</strong> ran preflight checks, monitored the unattended jobs and diagnosed failures from saved records, such as the expired login that paused grading.</li>
+    <li><strong>Checked:</strong> re-derived every number on this site from saved records and corrected claims that went beyond the evidence.</li>
+    <li><strong>Human control:</strong> paid stages, budgets and published claims needed explicit approval; the agent never launched paid work on its own.</li>
+  </ul>
   <h2>Settings frozen before the run</h2>
   <div class="table-wrap"><table class="numbers">
     <tbody>
@@ -338,12 +347,7 @@ data_page = f"""  <h1>Data and code: how to check our work</h1>
   </table></div>
   <p class="note">Re-running the job resumes from checkpoints and skips finished work: <code>uv run python full_run.py run --experiment &lt;dir&gt;</code>, then <code>full_grade.py inspect | grade | aggregate --workspace &lt;dir&gt;</code>. Every paid stage needed a recorded human approval.</p>
 
-  <h3>How the coding agent was used</h3>
-  <ul class="tight">
-    <li>Wrote the harness, grader, tests and analysis scripts, and this site, from a written plan.</li>
-    <li>Ran preflight checks, monitored the unattended jobs and diagnosed failures from saved records, such as the expired login that paused grading.</li>
-    <li>Paid stages, budgets and claims needed explicit human approval; the agent never launched paid work on its own.</li>
-  </ul>
+
 
   <h2>Status of every task (220 × 2)</h2>
   <p class="howto">one row per task. "Finished · 1 file" means the model said it was done and saved a file. The last two columns show each judge's verdict. <a href="data/status_matrix.csv">Download as CSV</a>.</p>
