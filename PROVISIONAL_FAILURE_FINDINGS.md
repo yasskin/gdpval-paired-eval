@@ -2,7 +2,7 @@
 
 **Updated:** November 17, 2026; full grading export saved November 11.  
 **Scope:** 220 GDPval tasks, one primary attempt per model; 440 attempts total.  
-**Status:** Primary generation and the provisional automated grading queue have finished. Of 880 judge assignments, 857 have valid assessments, nine have invalid grades, four failed and 10 are unavailable. Human artifact audit, expert adjudication and final slice selection remain outstanding.
+**Status:** Primary generation and the provisional automated grading queue have finished. Of 880 judge assignments, 857 have valid assessments, nine have invalid grades, four failed and 10 are unavailable. The 30-task inspection slice has been selected by a pre-set rule; the human hand audit of the failure ledger and expert adjudication remain outstanding.
 
 **Bottom line:** GPT completed with at least one artifact on 211/220 tasks versus Claude on 144/220, a 30.5-percentage-point delivery-proxy gap. Quality comparisons remain uncertain and judge-sensitive, not evidence of an overall quality winner. The independent higher-budget Claude experiment finished with 54/62 completed conversations, 53 with listed artifacts; it does not alter primary outcomes.
 
