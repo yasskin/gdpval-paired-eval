@@ -324,16 +324,16 @@ data_page = f"""  <h1>Data and code: how to check our work</h1>
   </table></div>
 
   <h2>The code</h2>
-  <p>The code is included with the submission rather than on this public site, because it embeds local paths and dataset files. Main pieces:</p>
+  <p>All the code is public at <a href="https://github.com/yasskin/gdpval-paired-eval"><b>github.com/yasskin/gdpval-paired-eval</b></a>. Its README lists every script in run order. Raw model outputs and judge grades are not in the repository because they are large and contain copies of the GDPval reference files. Main pieces:</p>
   <div class="table-wrap"><table class="numbers">
     <thead><tr><th>File</th><th>What it does</th></tr></thead>
     <tbody>
-      <tr><td><code>full_run.py</code></td><td>Resumable generation job: preflight hashes, both providers, limits, checkpoints, status matrix</td></tr>
-      <tr><td><code>full_grade.py</code></td><td>Separate grading workspace: inspect files, blinded judges, approval gates, aggregate reports</td></tr>
-      <tr><td><code>retry_claude.py</code></td><td>The separately labeled larger-limit Claude follow-up</td></tr>
-      <tr><td><code>analyze_sectors.py</code>, <code>analyze_plan_items.py</code></td><td>Offline statistics: sectors, costs, judge agreement, slice ranking, failure candidates</td></tr>
+      <tr><td><a href="https://github.com/yasskin/gdpval-paired-eval/blob/main/full_run.py"><code>full_run.py</code></a></td><td>Resumable generation job: preflight hashes, both providers, limits, checkpoints, status matrix</td></tr>
+      <tr><td><a href="https://github.com/yasskin/gdpval-paired-eval/blob/main/full_grade.py"><code>full_grade.py</code></a></td><td>Separate grading workspace: inspect files, blinded judges, approval gates, aggregate reports</td></tr>
+      <tr><td><a href="https://github.com/yasskin/gdpval-paired-eval/blob/main/retry_claude.py"><code>retry_claude.py</code></a></td><td>The separately labeled larger-limit Claude follow-up</td></tr>
+      <tr><td><a href="https://github.com/yasskin/gdpval-paired-eval/blob/main/analyze_sectors.py"><code>analyze_sectors.py</code></a>, <a href="https://github.com/yasskin/gdpval-paired-eval/blob/main/analyze_plan_items.py"><code>analyze_plan_items.py</code></a></td><td>Offline statistics: sectors, costs, judge agreement, slice ranking, failure candidates</td></tr>
       <tr><td><code>build_site_*.py</code></td><td>Generate this site's data-driven pages</td></tr>
-      <tr><td><code>test_full_grade.py</code> and run tests</td><td>Offline tests for coverage, resume, locking, retries and grading validation</td></tr>
+      <tr><td><a href="https://github.com/yasskin/gdpval-paired-eval/blob/main/test_full_grade.py"><code>test_full_grade.py</code></a> and run tests</td><td>Offline tests for coverage, resume, locking, retries and grading validation</td></tr>
     </tbody>
   </table></div>
   <p class="note">Re-running the job resumes from checkpoints and skips finished work: <code>uv run python full_run.py run --experiment &lt;dir&gt;</code>, then <code>full_grade.py inspect | grade | aggregate --workspace &lt;dir&gt;</code>. Every paid stage needed a recorded human approval.</p>
