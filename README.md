@@ -4,6 +4,8 @@ This is the code behind a paired evaluation on all 220 public [GDPval](https://h
 
 **Results site:** https://yasskin.github.io/evals-site/
 
+**One-page summary:** [RESULTS_ONE_PAGE.md](RESULTS_ONE_PAGE.md). It gives the headline findings, organized by the four parts of the take-home brief.
+
 The results site explains the findings for non-specialists. This repository holds the code that produced them, so the work can be checked or re-run.
 
 ## What is not included
@@ -45,7 +47,8 @@ uv run --no-project --with pandas --with pyarrow --with scipy python turing/fiel
 - `PROJECT_PLAN.md`: plan, decisions and run log
 - `PILOT.md`: pilot protocol
 - `CALIBRATION_REPORT.md`: judge calibration sample that was reviewed before full grading
-- `PROVISIONAL_FAILURE_FINDINGS.md`, `RESULTS_ONE_PAGE.md`: written findings
+- `RESULTS_ONE_PAGE.md`: one-page summary of the findings
+- `PROVISIONAL_FAILURE_FINDINGS.md`: detailed failure findings
 - `plan_items.json`: analysis output used by the site generators
 
 All findings are provisional. Judge scores are never averaged across the two judges.

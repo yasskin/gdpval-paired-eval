@@ -1,59 +1,55 @@
-# GDPval Full Run: OpenAI vs. Anthropic
+# Can AI do real professional work? GPT-6 Astra vs. Claude Opus 5.5 on GDPval
 
-**Updated November 17, 2026; grading export November 11.**
+**Updated November 17, 2026** · [Results site](https://yasskin.github.io/evals-site/) · [Code](https://github.com/yasskin/gdpval-paired-eval) · Provisional results; AI-graded, not yet checked by human experts.
 
-**Bottom line:** GPT completed with at least one artifact on **211/220 tasks (95.9%)**, versus Claude on **144/220 (65.5%)** under the primary limits. This is a delivery proxy, not a correctness score. Provisional quality outcomes are judge-sensitive and mostly unresolved; there is no defensible overall quality winner.
+**Bottom line:** GPT handed in a file far more often: **211 of 220 tasks (95.9%)**, against **144 of 220 (65.5%)** for Claude. Whose files were *better* is still mostly unclear. The AI judges often could not tell, and each favored its own company's model. Where both judges agreed, Claude's work was better on **29** tasks and GPT's on **17**.
 
-## What We Tested
+## Key results in plain English
 
-All **220 public GDPval gold tasks across 44 occupations**, one fresh attempt each by **GPT-6 Astra** (`gpt-6-astra`, low reasoning) and **Claude Opus 5.5** (`databricks-claude-opus-5-5`, endpoint defaults). Both used shared local Python, web and image tools, with 14 turns, 24 executed tool calls and 50,000 generated tokens per conversation. GPT ran first, then Claude; reasoning compute was not matched.
-
-Both models separately judged both generators using the original weighted rubrics and blinded wrapper identities. Of **880 assignments, 857 yielded valid assessments**, nine were invalid, four failed and 10 were unavailable because of five primary infrastructure failures. Validity checks do not establish professional grading accuracy.
-
-## Full-Set Results
-
-| Primary outcome | GPT | Claude |
+| Finding | GPT-6 Astra | Claude Opus 5.5 |
 | --- | ---: | ---: |
-| Conversation completed | 212/220 | 158/220 |
-| Completed with any artifact (headline) | 211/220 | 144/220 |
-| Any artifact, including runs that hit a limit | 212/220 | 153/220 |
-| Incomplete conversation | 3/220 | 62/220 |
-| Completed without artifacts | 1/220 | 14/220 |
-| Provider/harness error | 5/220 | 0/220 |
+| Finished and saved at least one file (headline) | **211/220** | **144/220** |
+| Cut off by a limit before finishing | 3 | 62 |
+| Both judges agree this model's work was better | 17 | **29** |
+| Clear wins by the GPT judge / Claude judge | 38 / 26 | 31 / 50 |
+| Estimated cost per delivered file (answer stage) | $0.58 | $1.93 |
 
-| Judge; all 220 paired tasks | GPT favored | Claude favored | Tie | Unresolved |
-| --- | ---: | ---: | ---: | ---: |
-| OpenAI judge | 38 | 31 | 8 | 143 |
-| Claude judge | 26 | 50 | 10 | 134 |
+- **Claude often ran out of room.** On 62 tasks it was still working when it hit the limits, and on 13 more it used all 24 actions and then replied in text instead of a file. Given more room in a separate follow-up, it finished 54 of the 62, and 53 of those included a file.
+- **On quality, there is no clear overall winner.** About 2 in 3 tasks had no clear winner under either judge. Judges could not verify **24.3%** of checklist items; PowerPoint, video and ZIP files were almost entirely unverifiable.
+- **By sector, only Finance & insurance shows a significant gap.** Claude delivered on 9 of 25 finance tasks, against 24 of 25 in wholesale trade; no sector shows a significant quality difference. Treat this as exploratory: [details](https://yasskin.github.io/evals-site/sectors.html).
 
-Both judges favor GPT on 17 tasks and Claude on 29; eight tasks have opposite-direction decisions. Unverified evidence accounts for **9,811/40,318 criterion decisions (24.3%)** in valid assessments. Overlapping score bounds are unresolved, not ties or statistical confidence intervals. Judges are not averaged; missing assessments are not semantic zeros.
+## 1. What we ran, how we graded, what it cost
 
-## By Sector (exploratory)
+- **Tasks:** all **220 public GDPval gold tasks** from 44 occupations. The brief suggests a 20–40 task slice. We ran all 220 because a single unattended job made it affordable and a full run avoids hand-picking. We then chose a **30-task slice for close inspection** with a rule fixed in advance: six occupations ranked by the score gap that both judges agree on ([how we chose](https://yasskin.github.io/evals-site/methods.html#slice)).
+- **Models:** one try per task for GPT-6 Astra (low reasoning) and Claude Opus 5.5 (default settings, via Databricks). Both had the same tools and the same limits: 14 rounds of work, 24 actions and 50,000 written tokens per task. Reasoning effort was not matched.
+- **Grading:** each file was graded twice, by a GPT judge and by a Claude judge, against the task's expert-written weighted checklist, without the judges being told which model made it. Judges agree on **95.7%** of pass/fail calls they could both check (kappa 0.85). The Claude judge favors Claude 50–26 (p = 0.008); the GPT judge favors GPT 38–31 (p = 0.47, within chance). We lead with the tasks where both judges agree and **never average the two judges**.
+- **Cost:** about **$1,165** at list prices for everything (OpenAI $522, Anthropic $643): main run $401, grading $536, Claude retry $198, pilot $29. These are estimates, not invoices ([breakdown](https://yasskin.github.io/evals-site/methods.html#cost)).
 
-GDPval's nine sectors have 20–25 tasks each. Paired tests compare the models task by task: exact McNemar for delivery and an exact sign test on decided pairs for each judge. Per-sector p-values are Holm-adjusted across the nine sectors, and a permutation test checks whether the gap varies by sector.
+## 2. Failure modes: which matter, and which are noise
 
-![Delivery by sector](site/sector_delivery.svg)
+- **85 tasks with no usable file (9 GPT, 76 Claude), all classified against the run records.** Most of Claude's are real model-plus-limits gaps: 33 ran out of the token budget, 14 had the final reply cut off, 15 used all 14 turns, and 13 wrote the work as chat text instead of saving the file. GPT's include **noise**: 2 server timeouts, plus 3 web-search requests cut off mid-way (partly the harness).
+- **30 errors inside delivered files, in a draft taxonomy** (12 GPT, 12 Claude, 6 shared). We took only checklist items that **both** judges failed, prioritized by weight. 8 are high severity (could mislead a decision) and 4 are grading problems or tool limits, not model weaknesses.
+  - **GPT** mostly misses *domain judgment and completeness*: 5 domain-judgment errors, 3 completeness. One example is a heat-map analysis that left out whether a hotspot was within 10 °C of a safety limit.
+  - **Claude** mostly makes *quantitative and grounding* errors: 4 quantitative, 3 reference grounding. One example is a wrong legal identifier in a case file.
+- The ledger is a draft until each item is hand-checked against the original file ([failures page](https://yasskin.github.io/evals-site/failures.html)).
 
-- **Delivery gap varies by sector (permutation p = 0.019).** GPT delivers on 88–100% of tasks in every sector, while Claude ranges from **9/25 in Finance & insurance** to **24/25 in Wholesale trade**.
-- **Only Finance & insurance is significant after correction (15 GPT-only vs. 0 Claude-only; adjusted p < 0.001).** Claude was incomplete on 15/25 Finance tasks. Seven sectors show 28–32-point GPT leads that are nominally significant (p < 0.05) but not after Holm correction, and Wholesale trade shows no gap.
+## 3. Gaps, and the dataset that would close them
 
-![Quality by sector](site/sector_quality.svg)
+| | For OpenAI: "Delivering a file is not the same as finishing the job" | For Anthropic: "Deliver first, then improve" |
+| --- | --- | --- |
+| **The gap** | Files arrive reliably but skip specific requirements. On 67 of the 143 tasks where both models delivered, both judges failed a GPT item that they passed for Claude. | Claude spends its budget researching and planning, then runs out before saving the file. 76 of 220 tasks ended with no usable file. |
+| **Dataset contents** | Requirement-dense deliverables (legal, safety, deal, financial, clinical) with expert gold files, a linked requirement checklist with severity labels, and pairs of polished-but-incomplete drafts with expert corrections. | Long, multi-step assignments with an explicit visible budget; gold sessions that save a basic valid file early and then improve it; failed sessions paired with repaired sessions. The 62 cut-off runs are ready-made examples. |
+| **Worth buying for evaluation** | Expert checklists turn "complete" into pass/fail checks, so critical omissions can be counted on held-out tasks. | Automatic acceptance tests (the file exists, opens and matches the requested format) plus expert review of core requirements. |
+| **Worth buying for training** | Teaches the model to cover every stated requirement without losing delivery reliability. | Teaches budget management: turn the work into a delivered file within fixed limits. |
+| **Test before scaling** | Re-run at a higher reasoning setting with expert omission counts. Build the dataset only if the omissions persist. | Re-run the 62 tasks raising one limit at a time. Build the dataset only if a "save a draft early" instruction does not close the gap. |
 
-- **No sector shows a significant quality difference under either judge.** The smallest adjusted p is 0.63, and the quality pattern does not vary by sector (permutation p = 0.91 with the OpenAI judge; p = 0.32 with the Claude judge).
-- Pooled across sectors, the OpenAI judge's 38–31 split is not significant (p = 0.47). The Claude judge's 50–26 split for Claude is significant (p = 0.008), consistent with apparent self-preference rather than a reliable quality verdict.
+Proposed pilot: about 300 tasks for each dataset, scaled only if the held-out test improves.
 
-This breakdown was not pre-registered, sectors are small, and sector is confounded with file types and inputs. Treat it as hypothesis-generating. Source: `analyze_sectors.py` → `site/sector_results.json`.
+## 4. Honest limits
 
-## Observed Gaps and Data Opportunities
+- **Sample:** one try per task. Sectors have 20–25 tasks each. The 30-task slice was chosen for large gaps, so it exaggerates differences by design.
+- **Grader reliability:** AI judges with measurable self-preference. A quarter of checklist items could not be verified. Calibration was an approval after reviewing a 6-task report, not a human check of the grades. **The human hand audit of the 30 failures is still pending.**
+- **Comparability:** reasoning effort was not matched, and Claude ran through Databricks serving. The retry changed several limits at once and its files are ungraded; it never replaces the main results.
+- **Cost:** list-price estimates. They exclude web-search fees and Databricks platform charges.
 
-- **GPT:** three malformed/truncated web-tool arguments caused parser failures. Candidate intervention: bounded tool-call examples and safe recovery tests, alongside adapter fixes; transport timeouts are not training-data failures.
-- **Claude:** 62 incomplete attempts and 13 completed-but-tool-exhausted attempts expose budget/file-production gaps. Candidate data: long-horizon workflows with budget accounting, early artifact checkpoints and deliverable acceptance checks.
-- **Both:** uncertain and conflicting grades motivate expert-reviewed, source-linked rubrics and inspectable gold artifacts before asserting substantive quality gaps.
-
-**Separate retry study:** fresh, higher-budget attempts on the 62 Claude incompletes produced 54 completed conversations (87.1%); 53 had at least one listed artifact. Four remained incomplete and four had provider errors. Multiple limits changed together; retry quality is ungraded and results never replace the primary.
-
-**Limits and cost:** single attempts; sequential provider passes; incomplete modality support; no full-set Office rendering/recalculation or live citation verification; no expert adjudication or final 30-task audit. Primary generation alone recorded **68.62 million tokens**; grading, retries and development are additional. Total USD charges remain unreconciled. Local execution was not a hardened sandbox.
-
-**Next:** audit disagreements and the frozen-rule review slice, then turn verified failures into a concrete dataset proposal and audience-specific pitches.
-
-[Detailed findings and evidence](PROVISIONAL_FAILURE_FINDINGS.md) | [Full grading export](../../gdpval-data/full_grades/primary-v1/reports/FINDINGS.md) | [Analysis plan](PROJECT_PLAN.md) | [Separate development pilot](PILOT_RESULTS.md)
+All claims come from our own runs, not from published leaderboards. More detail: [results site](https://yasskin.github.io/evals-site/) · [worked example](https://yasskin.github.io/evals-site/example.html) · [failure findings](PROVISIONAL_FAILURE_FINDINGS.md) · [project plan](PROJECT_PLAN.md) · [code](https://github.com/yasskin/gdpval-paired-eval)
