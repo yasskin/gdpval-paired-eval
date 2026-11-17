@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+gdpval-data/
+site/
+audit/
+.env
+*approval*.json

@@ -1,0 +1,3607 @@
+{
+ "cost": {
+  "primary_generation": {
+   "openai": {
+    "requests": 1577,
+    "input": 142749,
+    "cached": 14458004,
+    "cache_write": 3975154,
+    "output": 1131470,
+    "long_prompt_requests": 0,
+    "usd_micro": 122148415
+   },
+   "anthropic": {
+    "requests": 1910,
+    "input": 43725861,
+    "cached": 0,
+    "cache_write": 0,
+    "output": 5185626,
+    "long_prompt_requests": 0,
+    "usd_micro": 278615964
+   },
+   "no_usage": {
+    "requests": 11,
+    "failed": 11
+   }
+  },
+  "primary_grading": {
+   "anthropic": {
+    "requests": 773,
+    "input": 25384927,
+    "cached": 0,
+    "cache_write": 0,
+    "output": 2608851,
+    "long_prompt_requests": 0,
+    "usd_micro": 153716728
+   },
+   "openai": {
+    "requests": 1189,
+    "input": 3567,
+    "cached": 30849504,
+    "cache_write": 17586556,
+    "output": 1754965,
+    "long_prompt_requests": 27,
+    "usd_micro": 382560554
+   },
+   "no_usage": {
+    "requests": 14,
+    "failed": 14
+   }
+  },
+  "claude_retries": {
+   "anthropic": {
+    "requests": 851,
+    "input": 38732264,
+    "cached": 0,
+    "cache_write": 0,
+    "output": 2176716,
+    "long_prompt_requests": 0,
+    "usd_micro": 198463376
+   },
+   "no_usage": {
+    "requests": 7,
+    "failed": 6,
+    "outcome_unknown": 1
+   }
+  },
+  "pilot_six_tasks": {
+   "openai": {
+    "requests": 117,
+    "input": 1337646,
+    "output": 73552,
+    "usd_micro": 17054060
+   },
+   "anthropic": {
+    "requests": 132,
+    "input": 2121402,
+    "output": 178176,
+    "usd_micro": 12049128
+   }
+  }
+ },
+ "prices": {
+  "openai": {
+   "input": 10.0,
+   "cached": 1.0,
+   "cache_write": 12.5,
+   "output": 50.0
+  },
+  "anthropic": {
+   "input": 4.0,
+   "cached": 0.2,
+   "cache_write": 5.0,
+   "output": 20.0
+  }
+ },
+ "slice": {
+  "ranking": [
+   {
+    "occupation": "Financial and Investment Analysts",
+    "sector": "Finance and Insurance",
+    "mean_abs": 12.17391304347826,
+    "coverage": 0,
+    "gpt": 1,
+    "claude": 0,
+    "eligible": false,
+    "rank": 1
+   },
+   {
+    "occupation": "Customer Service Representatives",
+    "sector": "Finance and Insurance",
+    "mean_abs": 11.360768007826836,
+    "coverage": 4,
+    "gpt": 1,
+    "claude": 2,
+    "eligible": true,
+    "rank": 2
+   },
+   {
+    "occupation": "Financial Managers",
+    "sector": "Finance and Insurance",
+    "mean_abs": 6.129032258064517,
+    "coverage": 1,
+    "gpt": 1,
+    "claude": 0,
+    "eligible": false,
+    "rank": 3
+   },
+   {
+    "occupation": "Private Detectives and Investigators",
+    "sector": "Retail Trade",
+    "mean_abs": 6.0727779302193055,
+    "coverage": 5,
+    "gpt": 0,
+    "claude": 4,
+    "eligible": true,
+    "rank": 4
+   },
+   {
+    "occupation": "Real Estate Sales Agents",
+    "sector": "Real Estate and Rental and Leasing",
+    "mean_abs": 5.411872986654395,
+    "coverage": 4,
+    "gpt": 1,
+    "claude": 1,
+    "eligible": true,
+    "rank": 5
+   },
+   {
+    "occupation": "First-Line Supervisors of Retail Sales Workers",
+    "sector": "Retail Trade",
+    "mean_abs": 4.446035805626598,
+    "coverage": 5,
+    "gpt": 2,
+    "claude": 1,
+    "eligible": true,
+    "rank": 6
+   },
+   {
+    "occupation": "Computer and Information Systems Managers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "mean_abs": 4.176624559007624,
+    "coverage": 5,
+    "gpt": 1,
+    "claude": 1,
+    "eligible": true,
+    "rank": 7
+   },
+   {
+    "occupation": "Medical and Health Services Managers",
+    "sector": "Health Care and Social Assistance",
+    "mean_abs": 3.2104454685099824,
+    "coverage": 3,
+    "gpt": 1,
+    "claude": 1,
+    "eligible": false,
+    "rank": 8
+   },
+   {
+    "occupation": "Securities, Commodities, and Financial Services Sales Agents",
+    "sector": "Finance and Insurance",
+    "mean_abs": 3.0971659919028323,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 2,
+    "eligible": false,
+    "rank": 9
+   },
+   {
+    "occupation": "Sales Managers",
+    "sector": "Wholesale Trade",
+    "mean_abs": 2.8680445151033385,
+    "coverage": 5,
+    "gpt": 1,
+    "claude": 1,
+    "eligible": true,
+    "rank": 10
+   },
+   {
+    "occupation": "News Analysts, Reporters, and Journalists",
+    "sector": "Information",
+    "mean_abs": 2.7173913043478253,
+    "coverage": 5,
+    "gpt": 0,
+    "claude": 2,
+    "eligible": true,
+    "rank": 11
+   },
+   {
+    "occupation": "Mechanical Engineers",
+    "sector": "Manufacturing",
+    "mean_abs": 2.393162393162393,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 1,
+    "eligible": false,
+    "rank": 12
+   },
+   {
+    "occupation": "Shipping, Receiving, and Inventory Clerks",
+    "sector": "Manufacturing",
+    "mean_abs": 2.2580645161290334,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 1,
+    "eligible": false,
+    "rank": 13
+   },
+   {
+    "occupation": "Audio and Video Technicians",
+    "sector": "Information",
+    "mean_abs": 2.025316455696202,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 1,
+    "eligible": false,
+    "rank": 14
+   },
+   {
+    "occupation": "First-Line Supervisors of Police and Detectives",
+    "sector": "Government",
+    "mean_abs": 1.8925566343042077,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 2,
+    "eligible": false,
+    "rank": 15
+   },
+   {
+    "occupation": "Buyers and Purchasing Agents",
+    "sector": "Manufacturing",
+    "mean_abs": 1.4912280701754383,
+    "coverage": 5,
+    "gpt": 1,
+    "claude": 1,
+    "eligible": true,
+    "rank": 16
+   },
+   {
+    "occupation": "Registered Nurses",
+    "sector": "Health Care and Social Assistance",
+    "mean_abs": 1.1764705882352957,
+    "coverage": 3,
+    "gpt": 1,
+    "claude": 0,
+    "eligible": false,
+    "rank": 17
+   },
+   {
+    "occupation": "Pharmacists",
+    "sector": "Retail Trade",
+    "mean_abs": 0.8545908149368842,
+    "coverage": 3,
+    "gpt": 3,
+    "claude": 0,
+    "eligible": false,
+    "rank": 18
+   },
+   {
+    "occupation": "Concierges",
+    "sector": "Real Estate and Rental and Leasing",
+    "mean_abs": 0.7547169811320742,
+    "coverage": 2,
+    "gpt": 1,
+    "claude": 0,
+    "eligible": false,
+    "rank": 19
+   },
+   {
+    "occupation": "Producers and Directors",
+    "sector": "Information",
+    "mean_abs": 0.7189753524916568,
+    "coverage": 3,
+    "gpt": 2,
+    "claude": 0,
+    "eligible": false,
+    "rank": 20
+   },
+   {
+    "occupation": "Lawyers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "mean_abs": 0.6190476190476176,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 2,
+    "eligible": false,
+    "rank": 21
+   },
+   {
+    "occupation": "Industrial Engineers",
+    "sector": "Manufacturing",
+    "mean_abs": 0.41237113402062003,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 1,
+    "eligible": false,
+    "rank": 22
+   },
+   {
+    "occupation": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+    "sector": "Wholesale Trade",
+    "mean_abs": 0.384615384615384,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 1,
+    "eligible": false,
+    "rank": 23
+   },
+   {
+    "occupation": "Property, Real Estate, and Community Association Managers",
+    "sector": "Real Estate and Rental and Leasing",
+    "mean_abs": 0.35714285714285554,
+    "coverage": 4,
+    "gpt": 0,
+    "claude": 1,
+    "eligible": true,
+    "rank": 24
+   },
+   {
+    "occupation": "Real Estate Brokers",
+    "sector": "Real Estate and Rental and Leasing",
+    "mean_abs": 0.2985074626865668,
+    "coverage": 4,
+    "gpt": 0,
+    "claude": 1,
+    "eligible": true,
+    "rank": 25
+   },
+   {
+    "occupation": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+    "sector": "Wholesale Trade",
+    "mean_abs": 0.18348623853211168,
+    "coverage": 5,
+    "gpt": 0,
+    "claude": 1,
+    "eligible": true,
+    "rank": 26
+   },
+   {
+    "occupation": "Child, Family, and School Social Workers",
+    "sector": "Government",
+    "mean_abs": 0.13513513513513545,
+    "coverage": 2,
+    "gpt": 0,
+    "claude": 1,
+    "eligible": false,
+    "rank": 27
+   },
+   {
+    "occupation": "Counter and Rental Clerks",
+    "sector": "Real Estate and Rental and Leasing",
+    "mean_abs": 0.0,
+    "coverage": 5,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": true,
+    "rank": 28
+   },
+   {
+    "occupation": "Order Clerks",
+    "sector": "Wholesale Trade",
+    "mean_abs": 0.0,
+    "coverage": 5,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": true,
+    "rank": 29
+   },
+   {
+    "occupation": "Administrative Services Managers",
+    "sector": "Government",
+    "mean_abs": 0.0,
+    "coverage": 4,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": true,
+    "rank": 30
+   },
+   {
+    "occupation": "Compliance Officers",
+    "sector": "Government",
+    "mean_abs": 0.0,
+    "coverage": 4,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": true,
+    "rank": 31
+   },
+   {
+    "occupation": "First-Line Supervisors of Non-Retail Sales Workers",
+    "sector": "Wholesale Trade",
+    "mean_abs": 0.0,
+    "coverage": 4,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": true,
+    "rank": 32
+   },
+   {
+    "occupation": "Medical Secretaries and Administrative Assistants",
+    "sector": "Health Care and Social Assistance",
+    "mean_abs": 0.0,
+    "coverage": 4,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": true,
+    "rank": 33
+   },
+   {
+    "occupation": "First-Line Supervisors of Office and Administrative Support Workers",
+    "sector": "Health Care and Social Assistance",
+    "mean_abs": 0.0,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": false,
+    "rank": 34
+   },
+   {
+    "occupation": "First-Line Supervisors of Production and Operating Workers",
+    "sector": "Manufacturing",
+    "mean_abs": 0.0,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": false,
+    "rank": 35
+   },
+   {
+    "occupation": "General and Operations Managers",
+    "sector": "Retail Trade",
+    "mean_abs": 0.0,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": false,
+    "rank": 36
+   },
+   {
+    "occupation": "Nurse Practitioners",
+    "sector": "Health Care and Social Assistance",
+    "mean_abs": 0.0,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": false,
+    "rank": 37
+   },
+   {
+    "occupation": "Project Management Specialists",
+    "sector": "Professional, Scientific, and Technical Services",
+    "mean_abs": 0.0,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": false,
+    "rank": 38
+   },
+   {
+    "occupation": "Recreation Workers",
+    "sector": "Government",
+    "mean_abs": 0.0,
+    "coverage": 3,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": false,
+    "rank": 39
+   },
+   {
+    "occupation": "Accountants and Auditors",
+    "sector": "Professional, Scientific, and Technical Services",
+    "mean_abs": 0.0,
+    "coverage": 2,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": false,
+    "rank": 40
+   },
+   {
+    "occupation": "Editors",
+    "sector": "Information",
+    "mean_abs": 0.0,
+    "coverage": 2,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": false,
+    "rank": 41
+   },
+   {
+    "occupation": "Film and Video Editors",
+    "sector": "Information",
+    "mean_abs": 0.0,
+    "coverage": 2,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": false,
+    "rank": 42
+   },
+   {
+    "occupation": "Personal Financial Advisors",
+    "sector": "Finance and Insurance",
+    "mean_abs": 0.0,
+    "coverage": 1,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": false,
+    "rank": 43
+   },
+   {
+    "occupation": "Software Developers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "mean_abs": 0.0,
+    "coverage": 1,
+    "gpt": 0,
+    "claude": 0,
+    "eligible": false,
+    "rank": 44
+   }
+  ],
+  "selected": [
+   "Customer Service Representatives",
+   "Private Detectives and Investigators",
+   "Real Estate Sales Agents",
+   "First-Line Supervisors of Retail Sales Workers",
+   "Computer and Information Systems Managers",
+   "Sales Managers"
+  ],
+  "selected_tasks": [
+   {
+    "task_id": "cebf301e-5ea7-41ae-b117-ad8f43e7ac22",
+    "occupation": "Computer and Information Systems Managers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   },
+   {
+    "task_id": "c2e8f271-7858-412f-b460-472463ad81d9",
+    "occupation": "Computer and Information Systems Managers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   },
+   {
+    "task_id": "2ea2e5b5-257f-42e6-a7dc-93763f28b19d",
+    "occupation": "Computer and Information Systems Managers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   },
+   {
+    "task_id": "c357f0e2-963d-4eb7-a6fa-3078fe55b3ba",
+    "occupation": "Computer and Information Systems Managers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "backed": -5.940594059405939,
+    "inspectable": true,
+    "direction": "Claude"
+   },
+   {
+    "task_id": "a45bc83b-22f9-4def-8d89-9c5661b2b86f",
+    "occupation": "Computer and Information Systems Managers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "backed": 14.94252873563218,
+    "inspectable": true,
+    "direction": "GPT"
+   },
+   {
+    "task_id": "f3351922-dbdd-45da-85c5-e7110696bbe5",
+    "occupation": "Customer Service Representatives",
+    "sector": "Finance and Insurance",
+    "backed": -3.529411764705884,
+    "inspectable": true,
+    "direction": "Claude"
+   },
+   {
+    "task_id": "61717508-4df7-41be-bf97-318dfb2475c0",
+    "occupation": "Customer Service Representatives",
+    "sector": "Finance and Insurance",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   },
+   {
+    "task_id": "0ed38524-a4ad-405f-9dee-7b2252659aad",
+    "occupation": "Customer Service Representatives",
+    "sector": "Finance and Insurance",
+    "backed": -1.923076923076934,
+    "inspectable": true,
+    "direction": "Claude"
+   },
+   {
+    "task_id": "87da214f-fd92-4c58-9854-f4d0d10adce0",
+    "occupation": "Customer Service Representatives",
+    "sector": "Finance and Insurance",
+    "backed": 51.35135135135136,
+    "inspectable": false,
+    "direction": "GPT"
+   },
+   {
+    "task_id": "d025a41c-c439-4ee1-bc79-dd5c94b27a2d",
+    "occupation": "Customer Service Representatives",
+    "sector": "Finance and Insurance",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   },
+   {
+    "task_id": "bd72994f-5659-4084-9fab-fc547d1efe3b",
+    "occupation": "First-Line Supervisors of Retail Sales Workers",
+    "sector": "Retail Trade",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   },
+   {
+    "task_id": "211d0093-2c64-4bd0-828c-0201f18924e7",
+    "occupation": "First-Line Supervisors of Retail Sales Workers",
+    "sector": "Retail Trade",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   },
+   {
+    "task_id": "d4525420-a427-4ef2-b4e9-2dcc2d31b3b6",
+    "occupation": "First-Line Supervisors of Retail Sales Workers",
+    "sector": "Retail Trade",
+    "backed": -5.882352941176464,
+    "inspectable": true,
+    "direction": "Claude"
+   },
+   {
+    "task_id": "45c6237b-f9c9-4526-9a8d-6a5c404624ec",
+    "occupation": "First-Line Supervisors of Retail Sales Workers",
+    "sector": "Retail Trade",
+    "backed": 4.347826086956516,
+    "inspectable": true,
+    "direction": "GPT"
+   },
+   {
+    "task_id": "cecac8f9-8203-4ebd-ad49-54436a8c4171",
+    "occupation": "First-Line Supervisors of Retail Sales Workers",
+    "sector": "Retail Trade",
+    "backed": 12.000000000000009,
+    "inspectable": true,
+    "direction": "GPT"
+   },
+   {
+    "task_id": "ae0c1093-5ea8-4b84-a81e-53ebf7a4321d",
+    "occupation": "Private Detectives and Investigators",
+    "sector": "Retail Trade",
+    "backed": -4.545454545454547,
+    "inspectable": true,
+    "direction": "Claude"
+   },
+   {
+    "task_id": "f9f82549-fdde-4462-aff8-e70fba5b8c66",
+    "occupation": "Private Detectives and Investigators",
+    "sector": "Retail Trade",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   },
+   {
+    "task_id": "57b2cdf2-ad62-4591-aa91-aad489740320",
+    "occupation": "Private Detectives and Investigators",
+    "sector": "Retail Trade",
+    "backed": -20.33898305084746,
+    "inspectable": true,
+    "direction": "Claude"
+   },
+   {
+    "task_id": "84322284-5c2c-4873-b507-b147449d209d",
+    "occupation": "Private Detectives and Investigators",
+    "sector": "Retail Trade",
+    "backed": -2.739726027397253,
+    "inspectable": true,
+    "direction": "Claude"
+   },
+   {
+    "task_id": "a46d5cd2-55fe-48fa-a4c6-6aaf6b9991b5",
+    "occupation": "Private Detectives and Investigators",
+    "sector": "Retail Trade",
+    "backed": -2.739726027397268,
+    "inspectable": true,
+    "direction": "Claude"
+   },
+   {
+    "task_id": "5ad0c554-a7a2-48cd-b41a-ebc1bff4a9de",
+    "occupation": "Real Estate Sales Agents",
+    "sector": "Real Estate and Rental and Leasing",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   },
+   {
+    "task_id": "11593a50-734d-4449-b5b4-f8986a133fd8",
+    "occupation": "Real Estate Sales Agents",
+    "sector": "Real Estate and Rental and Leasing",
+    "backed": -7.547169811320753,
+    "inspectable": true,
+    "direction": "Claude"
+   },
+   {
+    "task_id": "94925f49-36bc-42da-b45b-61078d329300",
+    "occupation": "Real Estate Sales Agents",
+    "sector": "Real Estate and Rental and Leasing",
+    "backed": 19.512195121951223,
+    "inspectable": false,
+    "direction": "GPT"
+   },
+   {
+    "task_id": "90f37ff3-e4ed-4a0b-94bb-bed0f7def1ef",
+    "occupation": "Real Estate Sales Agents",
+    "sector": "Real Estate and Rental and Leasing",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   },
+   {
+    "task_id": "d3d255b2-f5f2-4841-9f62-2083ec9ef3da",
+    "occupation": "Real Estate Sales Agents",
+    "sector": "Real Estate and Rental and Leasing",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   },
+   {
+    "task_id": "b3573f20-5d3e-4954-948f-9461fda693d2",
+    "occupation": "Sales Managers",
+    "sector": "Wholesale Trade",
+    "backed": -10.810810810810809,
+    "inspectable": true,
+    "direction": "Claude"
+   },
+   {
+    "task_id": "a69be28f-9a84-47c9-992e-b90446cdca9d",
+    "occupation": "Sales Managers",
+    "sector": "Wholesale Trade",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   },
+   {
+    "task_id": "788d2bc6-82df-4dc7-8467-a0f31405dc14",
+    "occupation": "Sales Managers",
+    "sector": "Wholesale Trade",
+    "backed": 3.529411764705884,
+    "inspectable": true,
+    "direction": "GPT"
+   },
+   {
+    "task_id": "74ed1dc7-1468-48a8-9071-58775c0d667a",
+    "occupation": "Sales Managers",
+    "sector": "Wholesale Trade",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   },
+   {
+    "task_id": "69a8ef86-4e69-4fe2-9168-080f1e978e67",
+    "occupation": "Sales Managers",
+    "sector": "Wholesale Trade",
+    "backed": 0.0,
+    "inspectable": true,
+    "direction": null
+   }
+  ],
+  "eligible": 17
+ },
+ "judges": {
+  "agreement": {
+   "mixed": 40,
+   "both_unresolved": 121,
+   "both_tie": 5,
+   "both_gpt": 17,
+   "opposite": 8,
+   "both_claude": 29
+  },
+  "self_preference": {
+   "openai": {
+    "own": 38,
+    "other": 31,
+    "p": 0.47036853185814453
+   },
+   "anthropic": {
+    "own": 50,
+    "other": 26,
+    "p": 0.007905180027859783
+   }
+  },
+  "unverified_by_judge_generator": [
+   {
+    "judge_provider": "anthropic",
+    "generator": "anthropic",
+    "mean": 0.3321578998922519,
+    "size": 10209
+   },
+   {
+    "judge_provider": "anthropic",
+    "generator": "openai",
+    "mean": 0.12586137008512363,
+    "size": 9868
+   },
+   {
+    "judge_provider": "openai",
+    "generator": "anthropic",
+    "mean": 0.3390903857225101,
+    "size": 10422
+   },
+   {
+    "judge_provider": "openai",
+    "generator": "openai",
+    "mean": 0.1674304919034525,
+    "size": 9819
+   }
+  ],
+  "unverified_by_format": [
+   {
+    "format": "pdf",
+    "mean": 0.014751210920299428,
+    "size": 9084
+   },
+   {
+    "format": "docx",
+    "mean": 0.07951307951307951,
+    "size": 7722
+   },
+   {
+    "format": "xlsx",
+    "mean": 0.12546999025205402,
+    "size": 7181
+   },
+   {
+    "format": "multiple formats",
+    "mean": 0.10997109826589595,
+    "size": 6920
+   },
+   {
+    "format": "no file",
+    "mean": 0.7727734999273572,
+    "size": 6883
+   },
+   {
+    "format": "pptx",
+    "mean": 0.9828532235939643,
+    "size": 1458
+   },
+   {
+    "format": "zip",
+    "mean": 0.9859154929577465,
+    "size": 426
+   },
+   {
+    "format": "txt",
+    "mean": 0.15040650406504066,
+    "size": 246
+   },
+   {
+    "format": "wav",
+    "mean": 0.6348314606741573,
+    "size": 178
+   },
+   {
+    "format": "png",
+    "mean": 0.007142857142857143,
+    "size": 140
+   },
+   {
+    "format": "mp4",
+    "mean": 0.975,
+    "size": 80
+   }
+  ],
+  "criterion_same_verdict": 0.888844200894877,
+  "pass_fail_agreement": 0.9567836380191918,
+  "kappa": 0.8481179823562964,
+  "criterion_pairs": 19891,
+  "pass_fail_pairs": 14277
+ },
+ "candidates": {
+  "openai": [
+   {
+    "task_id": "61e7b9c6-0051-429f-a341-fda9b6578a84",
+    "occupation": "Medical and Health Services Managers",
+    "sector": "Health Care and Social Assistance",
+    "model": "openai",
+    "rubric_item_id": "adfc1f1e-90ab-4788-bca7-517f7ab8e495",
+    "criterion": "An estimated one-month cost without insurance is provided for each medication.",
+    "weight": 5,
+    "share": 0.07936507936507936,
+    "run_id": "f0833b51-887c-4383-b207-54f0cc619512",
+    "files": [
+     "Menopause_Formulary.xlsx"
+    ],
+    "gpt_judge": [
+     "An estimated monthly uninsured cost is not provided for each medication.",
+     "candidate/Menopause_Formulary.xlsx, Formulary!G2:G46 has only one numeric price (G12); Read first!B3 explicitly identifies missing quotes."
+    ],
+    "claude_judge": [
+     "A monthly cost is missing for almost every medication.",
+     "In 44 of 45 rows, column G says 'Not verified'. Only estradiol has a price ($11.40)."
+    ]
+   },
+   {
+    "task_id": "27e8912c-8bd5-44ba-ad87-64066ea05264",
+    "occupation": "Administrative Services Managers",
+    "sector": "Government",
+    "model": "openai",
+    "rubric_item_id": "d4bbbfb9-ee26-4c78-a3c2-2e7c2b20285a",
+    "criterion": "The Word document contains all items, including all columns with details corresponding to each item, listed in the checklist PDF",
+    "weight": 4,
+    "share": 0.07547169811320754,
+    "run_id": "bc6256d7-156c-4511-afbc-016419aa2949",
+    "files": [
+     "Organizational_Action_Items.docx",
+     "Workstation_Ergonomics_Checklist.pdf"
+    ],
+    "gpt_judge": [
+     "All assessment questions and response capability are carried over, but not all corresponding item details required by this criterion.",
+     "candidate/Organizational_Action_Items.docx tables 2\u20134 reproduce questions C1\u2013C5, K1\u2013K6, W1\u2013W6 but omit their PDF 'Try' guidance; preceding paragraph says 'Use the matching PDF item for full setup guidance.' For example PDF p.2 K4 says 'Keep keyboard flat (legs down); recheck chair and input height', absent from Word K4 row."
+    ],
+    "claude_judge": [
+     "All items are present, but not all of the details shown for each item in the PDF were carried over.",
+     "The Word tables list all items C1\u2013C5, K1\u2013K6 and W1\u2013W6 with their question text, but leave out the PDF's per-item 'Try:' guidance. The tracker says 'Use the matching PDF item for full setup guidance.'"
+    ]
+   },
+   {
+    "task_id": "f9a1c16c-53fd-4c8f-88cc-5c325ec2f0bb",
+    "occupation": "Audio and Video Technicians",
+    "sector": "Information",
+    "model": "openai",
+    "rubric_item_id": "133bc04a-4169-4315-8217-0af9623c532e",
+    "criterion": "Overall formatting and style of the deliverable",
+    "weight": 5,
+    "share": 0.06329113924050633,
+    "run_id": "192db291-0ade-40f8-bf64-7cf1e44e33f8",
+    "files": [
+     "Tour_Stage_Plot.pdf"
+    ],
+    "gpt_judge": [
+     "Although the overall hierarchy and icons are clear, conspicuous missing text and local label clutter prevent a finished, consistently professional advance document.",
+     "candidate/Tour_Stage_Plot.pdf p.1 visible blank gaps replace Drums in Input 3, Output 3 and wedge 3 label; Output 6 also has a missing label segment. Vox1 IEM rig label appears twice, with the right label crowding drum graphics."
+    ],
+    "claude_judge": [
+     "Generally clean design but visible text dropouts and overlap reduce professionalism",
+     "Missing words in Input 3, Output 3, Output 6, drum wedge label and footnote; 'IEM rig' label overlaps cymbal"
+    ]
+   },
+   {
+    "task_id": "b3573f20-5d3e-4954-948f-9461fda693d2",
+    "occupation": "Sales Managers",
+    "sector": "Wholesale Trade",
+    "model": "openai",
+    "rubric_item_id": "2dea2242-14a3-4ae8-812b-7a9c9b11818e",
+    "criterion": "Contains at least one  prompt  related to door-counts.",
+    "weight": 2,
+    "share": 0.05405405405405406,
+    "run_id": "51417ad0-b501-438c-a57b-a9cce6b0a76e",
+    "files": [
+     "Brand Data Gathering.pdf"
+    ],
+    "gpt_judge": [
+     "Account and channel identification does not collect door counts; no other prompt requests them.",
+     "candidate/Brand Data Gathering.pdf, all three pages Q1\u201319 reviewed; p. 1 Q4 requests channels, key accounts and volumes but no number of retail locations or doors."
+    ],
+    "claude_judge": [
+     "There is no door-count prompt.",
+     "None of Q1-19 mention doors, store counts or retail locations. Q4 asks only about channels, key accounts and volumes."
+    ]
+   },
+   {
+    "task_id": "ae0c1093-5ea8-4b84-a81e-53ebf7a4321d",
+    "occupation": "Private Detectives and Investigators",
+    "sector": "Retail Trade",
+    "model": "openai",
+    "rubric_item_id": "6f10d19e-948f-4852-aa45-ec421db30271",
+    "criterion": "In each PDF, the main title appears centered at the top of the first page.",
+    "weight": 1,
+    "share": 0.045454545454545456,
+    "run_id": "4d4fea24-0995-4546-8253-41e5e62e1b4e",
+    "files": [
+     "Undercover_Observation_Form.pdf",
+     "Undercover_Operations_Guide_Employee_Evaluation.pdf"
+    ],
+    "gpt_judge": [
+     "Titles appear near the top but are not centered.",
+     "candidate/Undercover_Operations_Guide_Employee_Evaluation.pdf and candidate/Undercover_Observation_Form.pdf, page 1 of each: titles begin at the left body margin and are visibly left aligned."
+    ],
+    "claude_judge": [
+     "The titles are left-aligned, not centered.",
+     "Rendered guide p1 and form p1: titles start at the left margin (x\u224863) and are not centered"
+    ]
+   },
+   {
+    "task_id": "a95a5829-34bb-40f3-993b-558aed6dcdef",
+    "occupation": "First-Line Supervisors of Police and Detectives",
+    "sector": "Government",
+    "model": "openai",
+    "rubric_item_id": "7debe9ce-4fd6-4d5e-bb60-baf91868b95e",
+    "criterion": "Names a specific location or system where training records are maintained (e.g., LMS, RMS, or a named shared drive/folder)",
+    "weight": 2,
+    "share": 0.044444444444444446,
+    "run_id": "31e50de6-f44f-4d37-a351-27ecf763aa73",
+    "files": [
+     "Training_Request_General_Order.docx"
+    ],
+    "gpt_judge": [
+     "These are generic unresolved locations; neither a specific repository/system nor a named drive/folder is supplied.",
+     "candidate/Training_Request_General_Order.docx, section 8.1 locates files only in 'agency\u2019s approved records repository'; section 7.1 gives 'access-restricted shared drive or approved document platform.'"
+    ],
+    "claude_judge": [
+     "The storage locations are generic placeholders rather than a named location or system.",
+     "Section 7.1 says \"an access-restricted shared drive or approved document platform\". Section 8.1 says \"the agency's approved records repository\". No specific system, drive or folder is named."
+    ]
+   },
+   {
+    "task_id": "fe0d3941-e32c-4bf1-a643-b566d2b4cb3c",
+    "occupation": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+    "sector": "Wholesale Trade",
+    "model": "openai",
+    "rubric_item_id": "e6822651-37b4-4676-a3eb-3e78bdf73846",
+    "criterion": "All survey questions are answerable only with Yes or No; no additional options and no free\u2011text fields appear anywhere in the PDF.",
+    "weight": 2,
+    "share": 0.041666666666666664,
+    "run_id": "e019a191-508d-4e18-a24e-be18960dd948",
+    "files": [
+     "Instant non-invasive blood analysis.pdf",
+     "Workflows.pptx"
+    ],
+    "gpt_judge": [
+     "Although every survey question offers only Yes/No, a free-text field appears on both pages, contrary to the explicit no-free-text-anywhere requirement.",
+     "candidate/Instant non-invasive blood analysis.pdf pp.1\u20132 each include 'Anonymous respondent ID (assigned by organizer):' followed by a blank writing line."
+    ],
+    "claude_judge": [
+     "Every question offers only Yes/No, but the PDF contains a fill-in blank, which breaks the rule of no free-text fields anywhere.",
+     "Both pages include 'Anonymous respondent ID (assigned by organizer): ______________'"
+    ]
+   },
+   {
+    "task_id": "4c4dc603-c21c-4284-8fb1-1b827c1fddf4",
+    "occupation": "Securities, Commodities, and Financial Services Sales Agents",
+    "sector": "Finance and Insurance",
+    "model": "openai",
+    "rubric_item_id": "e8e2c233-d6f3-440a-b5c2-4201ac83c5ea",
+    "criterion": "States that the fund thesis is to finance real-economy growth while seeking consistent, long-term returns; prioritize sectors with tangible development multipliers.",
+    "weight": 2,
+    "share": 0.038461538461538464,
+    "run_id": "53243e2d-a0bb-49b8-aac0-5a295e2e4846",
+    "files": [
+     "Project_Kenonic_Product_Summary.pdf"
+    ],
+    "gpt_judge": [
+     "Does not state consistent returns or that sectors are prioritized for tangible development multipliers.",
+     "candidate/Project_Kenonic_Product_Summary.pdf p.1 \u00a701 seeks long-term returns and aligns capital with real-economy needs; \u00a704 lists priority sectors."
+    ],
+    "claude_judge": [
+     "The thesis statement is missing.",
+     "Section 04 lists priority sectors, but the fund thesis and 'development multipliers' are not stated."
+    ]
+   },
+   {
+    "task_id": "f5d428fd-b38e-41f0-8783-35423dab80f6",
+    "occupation": "Concierges",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "openai",
+    "rubric_item_id": "c73bdaeb-ea1d-4aea-8223-6945d86eeadb",
+    "criterion": "The itinerary includes all destinations from this set (case-insensitive, allowing common spelling variants such as Harbour/Harbor): Nassau; Harbour Island; Eleuthera; Staniel Cay; Highbourne Cay; Rose Island (including \"Rose Island/Nassau\").",
+    "weight": 2,
+    "share": 0.03773584905660377,
+    "run_id": "f1fc5805-13d2-4f72-aeda-7951347592d5",
+    "files": [
+     "Bahamas_Family_Yacht_Itinerary.pdf"
+    ],
+    "gpt_judge": [
+     "Not all six destinations included.",
+     "candidate/Bahamas_Family_Yacht_Itinerary.pdf p.1 introduction explicitly defers Harbour Island and Eleuthera; pp.1\u20132 contain no Highbourne Cay stop."
+    ],
+    "claude_judge": [
+     "Harbour Island, Eleuthera and Highbourne Cay are not stops.",
+     "Page 1 intro: 'favors the Exumas over longer crossings to Harbour Island and Eleuthera'; Highbourne Cay never appears"
+    ]
+   },
+   {
+    "task_id": "b1a79ce1-86b0-41fb-97dc-9206dfd7b044",
+    "occupation": "Producers and Directors",
+    "sector": "Information",
+    "model": "openai",
+    "rubric_item_id": "8a8fd0c0-634c-4e83-ab00-d46ae48a3764",
+    "criterion": "The color palette includes a cream swatch.",
+    "weight": 2,
+    "share": 0.03773584905660377,
+    "run_id": "38987880-6449-4ff1-92d7-14414a6fa266",
+    "files": [
+     "Beauty_and_Fracture_Moodboard.png"
+    ],
+    "gpt_judge": [
+     "No cream swatch is provided in addition to the requested ivory and candlelight colors.",
+     "candidate/Beauty_and_Fracture_Moodboard.png, complete seven-swatch palette labels crimson, black, gold, candlelight, pink, brown and ivory."
+    ],
+    "claude_judge": [
+     "There is no separate cream swatch.",
+     "The palette has 7 swatches and none is labeled cream; the only light swatch is 'IVORY / SPARING'"
+    ]
+   },
+   {
+    "task_id": "a079d38f-c529-436a-beca-3e291f9e62a3",
+    "occupation": "Producers and Directors",
+    "sector": "Information",
+    "model": "openai",
+    "rubric_item_id": "e6f7e9a3-1724-4808-be73-1b53e287fe5c",
+    "criterion": "Workbook includes numeric fields for per\u2011day Shooting hours",
+    "weight": 2,
+    "share": 0.037037037037037035,
+    "run_id": "f11adfe5-202d-4b5e-8c51-a6a019937619",
+    "files": [
+     "Educational_video_production_estimate.xlsx"
+    ],
+    "gpt_judge": [
+     "There is no numeric per-day shooting-hours field; the numeric hours total includes setup and breaks.",
+     "candidate/Educational_video_production_estimate.xlsx, Shoot plan C5:C18 uses minutes; C20 totals on-site hours. Basis & rates B19 states 4.5 h content blocks in text."
+    ],
+    "claude_judge": [
+     "There is no dedicated numeric field for shooting hours per day.",
+     "Shoot plan C20 'Total on-site hours'=8 includes setup. Shooting time appears only as per-block minutes; no separate shooting-hours field exists."
+    ]
+   },
+   {
+    "task_id": "3baa0009-5a60-4ae8-ae99-4955cb328ff3",
+    "occupation": "News Analysts, Reporters, and Journalists",
+    "sector": "Information",
+    "model": "openai",
+    "rubric_item_id": "0e80ef29-180b-40f7-b2a7-b65785a516d2",
+    "criterion": "States that the weaker global outlook is linked to tariffs and retaliations from them",
+    "weight": 2,
+    "share": 0.03571428571428571,
+    "run_id": "9dd23788-a849-4587-91e1-d7856f2a9ea6",
+    "files": [
+     "article.md",
+     "global_growth.jpg"
+    ],
+    "gpt_judge": [
+     "Tariff link is present but the required retaliation link is absent.",
+     "candidate/article.md paragraphs 1, 5 and 9 discuss trade barriers, tariffs and uncertainty; full body contains no retaliation discussion."
+    ],
+    "claude_judge": [
+     "Retaliation, which the criterion requires, is absent.",
+     "The article mentions tariffs and trade barriers but never mentions retaliation."
+    ]
+   },
+   {
+    "task_id": "46fc494e-a24f-45ce-b099-851d5c181fd4",
+    "occupation": "Mechanical Engineers",
+    "sector": "Manufacturing",
+    "model": "openai",
+    "rubric_item_id": "9d2d8e6e-f43c-432d-9fd7-71b0d33467c6",
+    "criterion": "Includes a brief interpretation of the 20\u2011minute contour (e.g., hottest region and whether any back\u2011face hotspot is within 10 \u00b0C of 150 \u00b0C).",
+    "weight": 4,
+    "share": 0.03418803418803419,
+    "run_id": "879e3532-9fc3-4aad-a3aa-a8a193f7701f",
+    "files": [
+     "Heat_Shield_Screening_Report.pdf"
+    ],
+    "gpt_judge": [
+     "No interpretation of 20-minute hot regions or hotspots provided.",
+     "candidate/Heat_Shield_Screening_Report.pdf p.1 withholds isotherm map and all temperatures."
+    ],
+    "claude_judge": [
+     "No interpretation.",
+     "No contour"
+    ]
+   },
+   {
+    "task_id": "57b2cdf2-ad62-4591-aa91-aad489740320",
+    "occupation": "Private Detectives and Investigators",
+    "sector": "Retail Trade",
+    "model": "openai",
+    "rubric_item_id": "98b06d61-4018-4ada-be75-4ad6ef6cf519",
+    "criterion": "Confirms in the report that the provided photographs correspond to the listed surveillance events",
+    "weight": 2,
+    "share": 0.03389830508474576,
+    "run_id": "77d634d4-15f2-4b39-8353-39ad0127b302",
+    "files": [
+     "Final_Surveillance_Report.pdf"
+    ],
+    "gpt_judge": [
+     "Report expressly withholds confirmation of correspondence, although it describes some consistent images.",
+     "candidate/Final_Surveillance_Report.pdf p.2: discrepancies 'prevent unqualified confirmation' of same sequence; timeline retained 'not as photographically verified fact.'"
+    ],
+    "claude_judge": [
+     "The report declines to confirm that the photographs match the events.",
+     "Assessment: 'These discrepancies prevent unqualified confirmation that the photographs document the same continuous sequence'"
+    ]
+   },
+   {
+    "task_id": "fd3ad420-6f7d-43b1-a990-c0c5c047d071",
+    "occupation": "Real Estate Brokers",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "openai",
+    "rubric_item_id": "ac2f6c28-f7b4-4ff6-a716-247b6aa28af9",
+    "criterion": "If a Flat Fee alternative is included, it states a fixed numeric dollar amount per closed transaction.",
+    "weight": 1,
+    "share": 0.03225806451612903,
+    "run_id": "e05fab23-5dcf-42d5-a558-2edd3c42e616",
+    "files": [
+     "Sample_Realty_Broker_Compensation_Structure.pdf"
+    ],
+    "gpt_judge": [
+     "Alternative is monthly rather than a fixed amount per closed transaction.",
+     "candidate/Sample_Realty_Broker_Compensation_Structure.pdf p. 1 'Flat-fee alternative' specifies '$1,500 per state per month'."
+    ],
+    "claude_judge": [
+     "The flat fee is set per month, not per closed transaction.",
+     "\"Flat-fee alternative: ... $1,500 per state per month\""
+    ]
+   },
+   {
+    "task_id": "a97369c7-e5cf-40ca-99e8-d06f81c57d53",
+    "occupation": "Lawyers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "model": "openai",
+    "rubric_item_id": "76edf1e5-824c-449e-875a-cfd24649cf29",
+    "criterion": "The memorandum concludes that Marcus\u2019s consent (veto) right over corporate transactions is facially enforceable under DGCL \u00a7 122(18) unless it is contrary to Avalon\u2019s certificate, and that Avalon\u2019s general \u00a7 141(a) clause alone does not make it contrary.",
+    "weight": 4,
+    "share": 0.031746031746031744,
+    "run_id": "34d27aca-91f2-4886-8544-b8a4f5875c6f",
+    "files": [
+     "Avalon_Legal_Memorandum.docx",
+     "Avalon_Legal_Memorandum.pdf"
+    ],
+    "gpt_judge": [
+     "Does not conclude facial enforceability notwithstanding the general clause; instead presents that clause itself as a substantial obstacle.",
+     "candidate/Avalon_Legal_Memorandum.pdf, p. 2 concludes only 'substantial statutory support' and says the exclusivity wording makes a categorical conclusion unsafe."
+    ],
+    "claude_judge": [
+     "Does not conclude that the general clause alone fails to make the veto contrary to the charter.",
+     "p2 'veto has substantial statutory support, but the exclusivity wording makes a categorical enforceability conclusion unsafe'"
+    ]
+   },
+   {
+    "task_id": "f9f82549-fdde-4462-aff8-e70fba5b8c66",
+    "occupation": "Private Detectives and Investigators",
+    "sector": "Retail Trade",
+    "model": "openai",
+    "rubric_item_id": "4612fd86-303f-4328-871a-86fa8c630ea6",
+    "criterion": "The flowchart includes a possible outcome step for termination of employment (when warranted).",
+    "weight": 1,
+    "share": 0.030303030303030304,
+    "run_id": "15851aeb-ac4f-4962-bec8-58618dcaee69",
+    "files": [
+     "01 Report and Triage - Missing Bank Deposits.pptx",
+     "02 Reconcile and Validate - Missing Bank Deposits.pptx",
+     "03 Preserve and Investigate - Missing Bank Deposits.pptx",
+     "04 Evaluate and Decide - Missing Bank Deposits.pptx",
+     "05 Act and Remediate - Missing Bank Deposits.pptx",
+     "06 Close and Share - Missing Bank Deposits.pptx",
+     "Missing Bank Deposits Investigation.pdf"
+    ],
+    "gpt_judge": [
+     "Generic discipline does not identify termination as a possible outcome.",
+     "candidate/Missing Bank Deposits Investigation.pdf p.1 stage 5 mentions discipline under policy, and stage 6 closure; no termination outcome is included anywhere on the complete one-page chart."
+    ],
+    "claude_judge": [
+     "There is no termination outcome.",
+     "Page 1 does not mention termination anywhere; it only says 'discipline under policy'."
+    ]
+   },
+   {
+    "task_id": "2fa8e956-7b35-4c13-95dc-027f02be318b",
+    "occupation": "Concierges",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "openai",
+    "rubric_item_id": "3516321e-7785-4dc0-aefb-df26a08db7b3",
+    "criterion": "For each winery entry, the distance from the hotel is provided in miles (unit displayed as \"mi\" or \"miles\").",
+    "weight": 1,
+    "share": 0.030303030303030304,
+    "run_id": "5eb1ba27-0ff7-4193-863c-0aa50529e184",
+    "files": [
+     "Napa_Valley_Wineries.docx"
+    ],
+    "gpt_judge": [
+     "No numerical distance in miles is provided.",
+     "candidate/Napa_Valley_Wineries.docx every entry states 'From hotel: miles / drive time not verified. Google Maps route'; introductory note confirms no mileage was returned."
+    ],
+    "claude_judge": [
+     "No distance values in miles are given.",
+     "Every entry reads 'From hotel: miles / drive time not verified.'"
+    ]
+   },
+   {
+    "task_id": "2d06bc0a-89c6-4e89-9417-5ffe725c1bc6",
+    "occupation": "Real Estate Brokers",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "openai",
+    "rubric_item_id": "e4980d77-2703-4021-ad33-6e845c37b44c",
+    "criterion": "States that the additional deposit becomes nonrefundable at the end of the feasibility period unless seller defaults",
+    "weight": 2,
+    "share": 0.030303030303030304,
+    "run_id": "9416d5af-dd30-4dab-be31-b971fa1f31aa",
+    "files": [
+     "Annocium_Investors_LOI.docx"
+    ],
+    "gpt_judge": [
+     "The additional deposit's nonrefundability and seller-default exception are deferred rather than stated.",
+     "candidate/Annocium_Investors_LOI.docx, \u00a74: initial deposit refundable on timely termination; 'further deposit release and remedy provisions will be addressed in the PSA'."
+    ],
+    "claude_judge": [
+     "Never says the additional deposit becomes nonrefundable unless the seller defaults.",
+     "Sec 4: \"further deposit release and remedy provisions will be addressed in the PSA\""
+    ]
+   },
+   {
+    "task_id": "045aba2e-4093-42aa-ab7f-159cc538278c",
+    "occupation": "Pharmacists",
+    "sector": "Retail Trade",
+    "model": "openai",
+    "rubric_item_id": "94567ebf-2e5a-4a1f-b9ee-bd785deba6eb",
+    "criterion": "The Monthly section includes reviewing staff schedule to ensure the pharmacist\u2011to\u2011technician ratio complies with California Board of Pharmacy requirements",
+    "weight": 2,
+    "share": 0.0273972602739726,
+    "run_id": "7511bbc9-f802-4348-8560-fb991282c572",
+    "files": [
+     "01_daily_compliance.pdf",
+     "02_weekly_monthly_compliance.pdf",
+     "03_quarterly_annual_compliance.pdf"
+    ],
+    "gpt_judge": [
+     "The monthly section does not direct a staffing schedule review for pharmacist-to-technician ratio compliance.",
+     "candidate/02_weekly_monthly_compliance.pdf p.1 Monthly Credentials & staffing says 'Review staffing, supervision and technician job descriptions'; legal technician ratio appears instead in candidate/01_daily_compliance.pdf p.1."
+    ],
+    "claude_judge": [
+     "The monthly section does not explicitly review the pharmacist-to-technician ratio; it only cites the code section.",
+     "02 Monthly says 'Review staffing, supervision and technician job descriptions [BPC 4106, 4113-4115]'. The word 'ratio' appears only in the daily checklist."
+    ]
+   },
+   {
+    "task_id": "f1be6436-ffff-4fee-9e66-d550291a1735",
+    "occupation": "Medical Secretaries and Administrative Assistants",
+    "sector": "Health Care and Social Assistance",
+    "model": "openai",
+    "rubric_item_id": "6f67b578-58e2-4cb5-8dd4-f6b4fa25ecaa",
+    "criterion": "Dr. Jane Joe\u2019s itinerary returns her to Chicago by or before April 18, 2026 at 3:00 pm Central Time, with the arrival time evidenced in the document.",
+    "weight": 2,
+    "share": 0.02702702702702703,
+    "run_id": "cf3b9fbe-add3-4f51-8b84-59ed9dd4fbc0",
+    "files": [
+     "2026 ACP-IMM Estimated Costs.docx"
+    ],
+    "gpt_judge": [
+     "A target is not an evidenced arrival time for an itinerary returning her before the deadline.",
+     "candidate/2026 ACP-IMM Estimated Costs.docx, Doe timing paragraph targets before 9 a.m. April 18 but calls the overnight flight conditional; table 2 says 'Exact times unverified.'"
+    ],
+    "claude_judge": [
+     "No arrival time is documented.",
+     "Doe return row: 'arriving April 18 morning. Exact times unverified.'"
+    ]
+   },
+   {
+    "task_id": "b57efde3-26d6-4742-bbff-2b63c43b4baa",
+    "occupation": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+    "sector": "Wholesale Trade",
+    "model": "openai",
+    "rubric_item_id": "fb76141a-7f9f-495a-a651-0cf14bee7ea0",
+    "criterion": "Includes a lead whose company name matches 'Ace Aquatec' (case-insensitive; 'Ltd' suffix optional; punctuation-insensitive).",
+    "weight": 2,
+    "share": 0.02666666666666667,
+    "run_id": "b6d106d0-978f-47cd-b52a-fa016e3d574b",
+    "files": [
+     "Aqua_Nor_2025_OEM_Prospects.xlsx"
+    ],
+    "gpt_judge": [
+     "Required lead absent from the complete lead inventory.",
+     "candidate/Aqua_Nor_2025_OEM_Prospects.xlsx, complete Prospects!B2:B5 and Qualification holds!A2:A3 contain no Ace Aquatec."
+    ],
+    "claude_judge": [
+     "Missing lead.",
+     "No Ace Aquatec on any sheet"
+    ]
+   },
+   {
+    "task_id": "9efbcd35-186d-49b6-ac24-28ee2bc9a263",
+    "occupation": "Securities, Commodities, and Financial Services Sales Agents",
+    "sector": "Finance and Insurance",
+    "model": "openai",
+    "rubric_item_id": "1a0543d8-96ad-44c1-bbd7-b3b821ea0187",
+    "criterion": "States that EM are well positioned for strong performance or potential outperformance over the outlook period (with rationale).",
+    "weight": 2,
+    "share": 0.02631578947368421,
+    "run_id": "6c5dbbbf-6c96-41e3-ad2d-1ce0dddcdcb1",
+    "files": [
+     "EM_Q1_2025_Outlook.docx"
+    ],
+    "gpt_judge": [
+     "Offers a diversification case and scenarios, not a statement that EM is well positioned for strong performance or outperformance.",
+     "candidate/EM_Q1_2025_Outlook.docx allocation section: 'not a promise that EM must catch up'; base case is selective improvement and volatility, 'not return forecasts'."
+    ],
+    "claude_judge": [
+     "The document deliberately avoids saying EM is well positioned to outperform.",
+     "'not evidence that a durable reversal ... is assured'; 'not a promise that EM must catch up'; 'These are scenarios, not return forecasts'"
+    ]
+   },
+   {
+    "task_id": "b78fd844-db76-448e-a783-5e9877cb74c2",
+    "occupation": "Financial Managers",
+    "sector": "Finance and Insurance",
+    "model": "openai",
+    "rubric_item_id": "6f382fb5-e537-4fd7-a91f-25959fa0aca2",
+    "criterion": "For each project, the report states whether the IRR is directionally above or below 9% (or approximately at 9% if supported) without providing invented point estimates.",
+    "weight": 2,
+    "share": 0.02631578947368421,
+    "run_id": "547f322e-1113-468c-a1b3-3d57060a54b6",
+    "files": [
+     "Tiny_Rod_Hit_Board_Report.docx",
+     "Tiny_Rod_Hit_Board_Report.pdf"
+    ],
+    "gpt_judge": [
+     "Uses assumption-derived point estimates rather than solely above/below-hurdle directions or ranges.",
+     "candidate/Tiny_Rod_Hit_Board_Report.pdf pp.1\u20132 supplies IRRs 'About 12%' and 'About 14%' plus scenario point values."
+    ],
+    "claude_judge": [
+     "These are point IRR estimates from invented cash flows.",
+     "Page 1: \"IRR implication: About 12%\" and \"About 14%\". Page 2 gives IRRs of 4%, 21% and 27%."
+    ]
+   },
+   {
+    "task_id": "c44e9b62-7cd8-4f72-8ad9-f8fbddb94083",
+    "occupation": "Administrative Services Managers",
+    "sector": "Government",
+    "model": "openai",
+    "rubric_item_id": "5de73b0b-40d4-48bf-94de-1f871178f7d4",
+    "criterion": "Mentions the updated FTE report is targeting Administrative Support Services Branch in the Central Services Division.",
+    "weight": 3,
+    "share": 0.02459016393442623,
+    "run_id": "bdfdad80-2b28-4ac0-8630-d93abf6434ab",
+    "files": [
+     "Briefing_Note_FTE_Reductions.docx",
+     "Revised_Organizational_Chart.pdf",
+     "Updated_FTE_Report.xlsx"
+    ],
+    "gpt_judge": [
+     "The report does not mention the required division.",
+     "candidate/Updated_FTE_Report.xlsx, FTE by position A1: 'Administrative Support Services | FTE plan'; A2 identifies baseline and next year. Both complete sheet previews contain no Central Services Division identification."
+    ],
+    "claude_judge": [
+     "The division is not named in the report.",
+     "Updated_FTE_Report.xlsx A1: 'Administrative Support Services | FTE plan'; no mention of the Central Services Division found"
+    ]
+   },
+   {
+    "task_id": "aa071045-bcb0-4164-bb85-97245d56287e",
+    "occupation": "Counter and Rental Clerks",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "openai",
+    "rubric_item_id": "937f306e-c421-4c3e-8f31-8004d1cb68b5",
+    "criterion": "The Word form includes a request type field with options to select either Repair or Replace",
+    "weight": 2,
+    "share": 0.023255813953488372,
+    "run_id": "351bf9c9-2c36-4af2-ae01-65a09db049b2",
+    "files": [
+     "Damage Revenue Report.xlsx",
+     "Service Request Form.docx"
+    ],
+    "gpt_judge": [
+     "Request type is stated, not offered as two selectable options.",
+     "candidate/Service Request Form.docx paragraph 3 has fixed REPLACEMENT; tables contain no Repair/Replace options."
+    ],
+    "claude_judge": [
+     "No selectable options",
+     "Only 'REQUEST TYPE: REPLACEMENT'; no Repair/Replace checkbox options in paragraphs or tables"
+    ]
+   },
+   {
+    "task_id": "05389f78-589a-473c-a4ae-67c61050bfca",
+    "occupation": "Buyers and Purchasing Agents",
+    "sector": "Manufacturing",
+    "model": "openai",
+    "rubric_item_id": "c625a1cb-e0d2-46d1-9997-87df6f8f2ea8",
+    "criterion": "Difference vs. Juvoxa Optics' shows Autonexis Lighting\u2019s cumulative part cost difference as +\u20b9769.56 million (accepts numeric equivalent \u20b9769,560,000).",
+    "weight": 2,
+    "share": 0.022727272727272728,
+    "run_id": "6871b4f2-c388-41cb-8792-a193611ef7d9",
+    "files": [
+     "CPO_Model_A_Replacement_Report.docx",
+     "Juvoxa_Termination_Email.docx"
+    ],
+    "gpt_judge": [
+     "Required Autonexis-versus-Juvoxa 769.56 million difference is not reported in the comparison.",
+     "candidate/CPO_Model_A_Replacement_Report.docx table 2 comparison column is only 'Vendrax less Juvoxa'; section 4 compares Vendrax to Autonexis at 497.67 million."
+    ],
+    "claude_judge": [
+     "Autonexis's cumulative part-cost difference vs. Juvoxa is not reported.",
+     "The report shows only the Vendrax-vs-Juvoxa difference column and the Vendrax-vs-Autonexis savings (497.67). No 769.56 figure appears."
+    ]
+   },
+   {
+    "task_id": "6974adea-8326-43fa-8187-2724b15d9546",
+    "occupation": "News Analysts, Reporters, and Journalists",
+    "sector": "Information",
+    "model": "openai",
+    "rubric_item_id": "ddbf3c0c-4187-4418-ac94-d82d1a029b4a",
+    "criterion": "The article explicitly names the US/United States as a country where wholesale milk prices have fallen.",
+    "weight": 2,
+    "share": 0.021739130434782608,
+    "run_id": "cca5eeaf-f756-4fc1-8ebe-320a2e5e85ba",
+    "files": [
+     "livestock-rtls-feature.docx"
+    ],
+    "gpt_judge": [
+     "Required US context is omitted.",
+     "candidate/livestock-rtls-feature.docx, paragraphs 1\u201334 never name the US as experiencing falling wholesale milk prices."
+    ],
+    "claude_judge": [
+     "Absent",
+     "US not mentioned"
+    ]
+   },
+   {
+    "task_id": "7d7fc9a7-21a7-4b83-906f-416dea5ad04f",
+    "occupation": "Accountants and Auditors",
+    "sector": "Professional, Scientific, and Technical Services",
+    "model": "openai",
+    "rubric_item_id": "e66f9bd6-89e8-448b-9227-0dbf3bac7ed7",
+    "criterion": "Workbook contains a detailed worksheet for Prepaid Insurance whose sheet name includes the account number 1251 (e.g., Prepaid Insurance (Account #1251)).",
+    "weight": 2,
+    "share": 0.021052631578947368,
+    "run_id": "124d6301-0b63-40e9-b709-64889ff6404b",
+    "files": [
+     "Aurisic_Prepaid_Amortization_Apr2025.xlsx"
+    ],
+    "gpt_judge": [
+     "Sheet name does not contain 1251.",
+     "Workbook sheet name is Prepaid Insurance; 1251 appears in A1 rather than sheet name."
+    ],
+    "claude_judge": [
+     "The criterion requires 1251 in the sheet name.",
+     "The sheet is named 'Prepaid Insurance'. The number 1251 appears only in the A1 title."
+    ]
+   },
+   {
+    "task_id": "e6429658-4de1-42dd-a9e0-2d2b9b02fb10",
+    "occupation": "Nurse Practitioners",
+    "sector": "Health Care and Social Assistance",
+    "model": "openai",
+    "rubric_item_id": "e1be1fe8-a385-4a8c-8aed-e25e65d0c1cb",
+    "criterion": "Application Insurance Information includes answer to the question \"Has your insurance denied coverage for requested medication?\" as yes",
+    "weight": 2,
+    "share": 0.021052631578947368,
+    "run_id": "621997c2-d258-4c5a-859e-8f2ddfb2410b",
+    "files": [
+     "RP Financial Assistance Application.pdf",
+     "Vraylar Appeal for RP.docx"
+    ],
+    "gpt_judge": [
+     "Requested insurance-section answer not completed.",
+     "candidate/RP Financial Assistance Application.pdf p1 insurance fields contain name/ID/group, BIN/PCN/Rx group, Medicare ID; no denied-coverage question answered yes. P2 only narrates coverage barrier."
+    ],
+    "claude_judge": [
+     "There is no 'yes' answer to the denial question.",
+     "The denial question does not appear. Page 2 only notes \"insurance no longer covers the medication\""
+    ]
+   },
+   {
+    "task_id": "40a99a31-42d6-4f23-b3ec-8f591afe25b6",
+    "occupation": "Industrial Engineers",
+    "sector": "Manufacturing",
+    "model": "openai",
+    "rubric_item_id": "c0e2d81a-745d-4c3b-876a-be3749cb2e91",
+    "criterion": "The report or Excel table explicitly states that selected LIDARs, pressure mats, and the AMR comply with industrial safety standards.",
+    "weight": 2,
+    "share": 0.020618556701030927,
+    "run_id": "31d949ac-8d72-4173-959c-71aa911cd279",
+    "files": [
+     "cell_layout.png",
+     "design_report.pdf",
+     "hardware_selection.xlsx"
+    ],
+    "gpt_judge": [
+     "Standards are requirements to verify, not an explicit statement that all three selected device classes comply.",
+     "candidate/design_report.pdf p5 calls certifications purchase-release conditions, not assumptions of compliance; p2 requires obtaining mat conformity evidence. Workbook Hardware!E13 says validate AMR application compliance."
+    ],
+    "claude_judge": [
+     "The documents specify standards to be verified but explicitly decline to state that the selected devices comply.",
+     "PDF p5 'specifications are provisional ... no complete system compliance claim is made'; E2 'certificate to confirm'"
+    ]
+   },
+   {
+    "task_id": "c357f0e2-963d-4eb7-a6fa-3078fe55b3ba",
+    "occupation": "Computer and Information Systems Managers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "model": "openai",
+    "rubric_item_id": "c334c03c-c144-41ea-8a6c-de894c568073",
+    "criterion": "There is a counted row under Idea Management that creates a new Idea with required fields populated (lists at least two specific fields) and the Expected Result states the Idea is saved/created.",
+    "weight": 2,
+    "share": 0.019801980198019802,
+    "run_id": "9941a8e8-3e32-43b2-9951-dc63cbadac89",
+    "files": [
+     "ProjMGR Tool - UAT Test Plan.xlsx"
+    ],
+    "gpt_judge": [
+     "The creation case names no specific input fields, rather than at least two.",
+     "Candidate UAT Test Plan!D3:G3 says 'valid basic project information' and references an approved mandatory-field list; Idea cases occupy rows 3\u201314."
+    ],
+    "claude_judge": [
+     "The create-idea row names no specific fields, and the criterion requires at least two.",
+     "UAT-001 E3: 'Enter valid basic project information; save and reopen the new idea.'"
+    ]
+   },
+   {
+    "task_id": "6a900a40-8d2b-4064-a5b1-13a60bc173d8",
+    "occupation": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+    "sector": "Wholesale Trade",
+    "model": "openai",
+    "rubric_item_id": "dd7a136e-dd17-404e-8d5d-d204e0c6ada2",
+    "criterion": "The updated quotation preserves the overall structure of the original Q9749821 Danish Wholesale & Co. Quotation.xlsx and updates only the fields required by the prompt.",
+    "weight": 1,
+    "share": 0.0196078431372549,
+    "run_id": "9b3c4ac9-8987-462f-8c88-fe87f1af187d",
+    "files": [
+     "Q9749821-revised_including_transport.xlsx"
+    ],
+    "gpt_judge": [
+     "Reorganized original structure and edited non-required fields rather than limiting updates to requested fields.",
+     "Original references/915b365bc4f90265af6cd2930594a15f/Q9749821 Danish Wholesale & Co. Quotation.xlsx, Blad1!A15:B16 places currency/incoterm beside EXW E15:F15. Candidate candidate/Q9749821-revised_including_transport.xlsx separates EXW row8 and terms rows14\u201317, moves header/client/destination, and expands C15 incoterm beyond original 'CIP'."
+    ],
+    "claude_judge": [
+     "The layout was rebuilt and fields beyond those required were changed.",
+     "Original: sheet 'Blad1', header table on row 10, Total EXW at E15/F15, values in column B, Incoterm 'CIP', offer validity '30 days from date of offer'. Candidate: sheet renamed 'Quotation', layout compressed (header row 6, Total EXW row 8), values moved to column C, Incoterm and offer validity text changed, and extra header and footer notes added."
+    ]
+   },
+   {
+    "task_id": "22c0809b-f8db-489e-93b3-b4da225e3e0e",
+    "occupation": "First-Line Supervisors of Police and Detectives",
+    "sector": "Government",
+    "model": "openai",
+    "rubric_item_id": "370bfecd-5899-47ee-b5e0-85724831d8ab",
+    "criterion": "Each Preparation indicator provides space to capture details (at least two blank lines or a multi-line text field)",
+    "weight": 2,
+    "share": 0.019417475728155338,
+    "run_id": "92a53d7a-0d9e-4bbd-a38e-8a2ae4e4abb7",
+    "files": [
+     "BTAM_Private_Entity_Intake.pdf"
+    ],
+    "gpt_judge": [
+     "Does not provide two lines or a multiline field per indicator.",
+     "candidate/BTAM_Private_Entity_Intake.pdf p.3 view shows only one ruled detail line each for PR1 and PR2."
+    ],
+    "claude_judge": [
+     "The criterion requires at least two lines per indicator.",
+     "In the page 3 render, PR1 and PR2 each have only a single line next to \"Details / date / source:\"."
+    ]
+   },
+   {
+    "task_id": "0ed38524-a4ad-405f-9dee-7b2252659aad",
+    "occupation": "Customer Service Representatives",
+    "sector": "Finance and Insurance",
+    "model": "openai",
+    "rubric_item_id": "d5c045a9-b69e-45e3-9f49-c6a7a7a0e82c",
+    "criterion": "The summary or talking points state that constituent feedback was received through electronic communication (e.g., communications by phone and email).",
+    "weight": 1,
+    "share": 0.019230769230769232,
+    "run_id": "7108f537-b961-4715-83ce-527ffd0c25ae",
+    "files": [
+     "ECID_Board_Meeting_Talking_Points.pdf",
+     "ECID_Constituent_Feedback_Summary.pdf"
+    ],
+    "gpt_judge": [
+     "Electronic communication channel not stated.",
+     "Complete p.1 of candidate/ECID_Constituent_Feedback_Summary.pdf and candidate/ECID_Board_Meeting_Talking_Points.pdf contains no mention of electronic feedback, phone or email channels."
+    ],
+    "claude_judge": [
+     "Electronic communication channels are not stated.",
+     "Neither PDF mentions email or phone channels."
+    ]
+   },
+   {
+    "task_id": "7bbfcfe9-132d-4194-82bb-d6f29d001b01",
+    "occupation": "Compliance Officers",
+    "sector": "Government",
+    "model": "openai",
+    "rubric_item_id": "b2a8e838-d7fb-4497-824e-ce70e80ec6d7",
+    "criterion": "At least one \u00a73937 question allows alternative proof of service (e.g., other appropriate indicators, such as a certified letter from a commanding officer) and recognizes the DMDC safe harbor when applicable.",
+    "weight": 1,
+    "share": 0.018867924528301886,
+    "run_id": "8835305c-5792-42b3-8626-33b4223c038b",
+    "files": [
+     "SCRA_Compliance_Test_Template.xlsx"
+    ],
+    "gpt_judge": [
+     "Neither alternative proof nor the DMDC safe harbor is included.",
+     "candidate/SCRA_Compliance_Test_Template.xlsx, Account Tests!B5:B8 and Guide and Sources!B5:B6 discuss orders and court relief, without alternative proof or DMDC."
+    ],
+    "claude_judge": [
+     "The content is absent.",
+     "Neither the questions nor the guide mention other proof of service, a commanding officer's letter or DMDC."
+    ]
+   },
+   {
+    "task_id": "61f546a8-c374-467f-95cc-d0d9b5656eb6",
+    "occupation": "Counter and Rental Clerks",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "openai",
+    "rubric_item_id": "2b4a099c-09c8-4c87-afda-028e516012b3",
+    "criterion": "Schedules Clever Carpet or carpet work in either the pair of units M2 and M17 or the single unit M24 on July 3, 2025",
+    "weight": 3,
+    "share": 0.01875,
+    "run_id": "fbf686f4-7b1c-4c80-bf89-c7d2c393e20e",
+    "files": [
+     "TR_Apartments_Turn_Plan.pdf"
+    ],
+    "gpt_judge": [
+     "Neither the M2/M17 pair nor M24 scheduled July 3.",
+     "candidate/TR_Apartments_Turn_Plan.pdf p.1 carpet 7/3 only M17; M2 7/10 and M24 7/7."
+    ],
+    "claude_judge": [
+     "Neither the M2/M17 pair nor M24 alone is scheduled on 7/3.",
+     "Only M17 has carpet work on 7/3; M2 is on 7/10 and M24 is on 7/7"
+    ]
+   },
+   {
+    "task_id": "ed2bc14c-99ac-4a2a-8467-482a1a5d67f3",
+    "occupation": "Property, Real Estate, and Community Association Managers",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "openai",
+    "rubric_item_id": "c6e7a257-8c1d-497f-8fa9-fa5a95319014",
+    "criterion": "The 30\u2011day renewal notification draft includes a subject line and covers: offer terms/incentive, timing/deadline, and a clear call\u2011to\u2011action.",
+    "weight": 1,
+    "share": 0.018518518518518517,
+    "run_id": "ffabc590-ae3e-4e09-87b4-2bc75b35518e",
+    "files": [
+     "Tenant Retention Strategy.docx"
+    ],
+    "gpt_judge": [
+     "Subject, timing and action exist, but no actual offer terms or incentive are stated in this draft.",
+     "candidate/Tenant Retention Strategy.docx, table 3 30-day row: 'Let\u2019s confirm your next step'; asks to confirm plans and says 'We can review available renewal terms'."
+    ],
+    "claude_judge": [
+     "The 30-day draft does not state specific offer terms or an incentive.",
+     "Subject 'Let\u2019s confirm your next step'; body: 'We can review available renewal terms or help with move-out steps.' The deadline appears only as a note to 'State the actual lease notice deadline'."
+    ]
+   },
+   {
+    "task_id": "ef8719da-18e5-4bfe-b986-399652d77376",
+    "occupation": "News Analysts, Reporters, and Journalists",
+    "sector": "Information",
+    "model": "openai",
+    "rubric_item_id": "487b8702-0df1-4b54-840f-9edfde2e9756",
+    "criterion": "Acknowledges that international astronomical organizations have raised concerns and advocated for safeguards related to visible space advertising.",
+    "weight": 1,
+    "share": 0.018518518518518517,
+    "run_id": "8ff3c160-c7fa-4acb-b38c-8a16e4945596",
+    "files": [
+     "Space_Advertising_Pitch.docx"
+    ],
+    "gpt_judge": [
+     "Does not acknowledge actual concern or safeguard advocacy by an international astronomical organization; proposing to investigate it is not that acknowledgment.",
+     "candidate/Space_Advertising_Pitch.docx, paragraph 17 proposes contacting an IAU representative 'to establish the campaign\u2019s reach outside the United States'; existing advocacy is attributed to AAS only."
+    ],
+    "claude_judge": [
+     "It does not say that international astronomical bodies have raised concerns.",
+     "The IAU is mentioned only as a planned source 'to establish the campaign's reach outside the United States'; AAS is the only organization described as acting."
+    ]
+   },
+   {
+    "task_id": "15d37511-75c5-4c7f-81f1-16e00c0d95f3",
+    "occupation": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+    "sector": "Wholesale Trade",
+    "model": "openai",
+    "rubric_item_id": "b7a38be7-086a-4d41-8808-10b503047845",
+    "criterion": "For Tier 2 (\u22651,000 units), the BritezoneUV Duct consumables GloNGroRealEstate cost is $143.65.",
+    "weight": 2,
+    "share": 0.01834862385321101,
+    "run_id": "4e7398ff-69ad-4269-a845-ef1ed0d1002e",
+    "files": [
+     "GloNGroRealEstate_Year1_Projection.xlsx"
+    ],
+    "gpt_judge": [
+     "High-volume consumables cost is 169, not 143.65.",
+     "candidate/GloNGroRealEstate_Year1_Projection.xlsx, Year 1 projection!E8=169 on 2000 sets; Pricing & assumptions!A22 says consumables remain at base cost."
+    ],
+    "claude_judge": [
+     "The $143.65 discounted cost does not appear.",
+     "Consumables undiscounted (A22); only cost shown is E8=169"
+    ]
+   }
+  ],
+  "anthropic": [
+   {
+    "task_id": "f5d428fd-b38e-41f0-8783-35423dab80f6",
+    "occupation": "Concierges",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "anthropic",
+    "rubric_item_id": "3fed7820-45d3-4c05-9d0b-1a44736efcd0",
+    "criterion": "Overall formatting and style of the deliverable",
+    "weight": 5,
+    "share": 0.09433962264150944,
+    "run_id": "9a8c8bb2-3edd-403f-8e1d-22dbea96bb5d",
+    "files": [
+     "Bahamas_Family_Yacht_Itinerary.pdf"
+    ],
+    "gpt_judge": [
+     "Missing visual content and ambiguous day allocation make this an unfinished luxury itinerary despite consistent typography and colors.",
+     "PDF rendered pp.1\u20132 have orderly navy headings but blank photo-link panels, densely packed upper-page text and large unused lower-page areas; p.2 repeats Day 5 and Day 6 across sections."
+    ],
+    "claude_judge": [
+     "The typography is clean, but the missing imagery and the empty space undermine the overall polish.",
+     "Rendered pages show empty placeholder boxes instead of photos, about a third of each page is blank at the bottom, and the overlapping Day 5 / Days 5\u20136 / Days 6\u20137 labels are confusing."
+    ]
+   },
+   {
+    "task_id": "b3573f20-5d3e-4954-948f-9461fda693d2",
+    "occupation": "Sales Managers",
+    "sector": "Wholesale Trade",
+    "model": "anthropic",
+    "rubric_item_id": "d452a342-cffb-4220-b311-f5481b7484b2",
+    "criterion": "Contains at least one prompt related to inventory levels.",
+    "weight": 2,
+    "share": 0.05405405405405406,
+    "run_id": "d03438bf-5b6d-446c-8920-e3d6d430d279",
+    "files": [
+     "Brand_Data_Gathering.pdf"
+    ],
+    "gpt_judge": [
+     "Production capacity and contingency questions do not collect inventory levels; no inventory-level prompt in the complete document.",
+     "candidate/Brand_Data_Gathering.pdf pp.1\u20133 complete prompts 1\u201349 request production capacity (15), out-of-stock contingency (18), MOQ (21), fill rate (25), and sales forecast (39), but no on-hand inventory, stock levels or inventory coverage."
+    ],
+    "claude_judge": [
+     "None of these asks about inventory levels themselves. Out-of-stock contingency and fill rate are related topics but are not inventory-level questions.",
+     "No prompt asks for current inventory or stock-on-hand levels. The closest prompts are #15 (production capacity), #18 (contingency for out-of-stocks) and #25 (fill rate)."
+    ]
+   },
+   {
+    "task_id": "45c6237b-f9c9-4526-9a8d-6a5c404624ec",
+    "occupation": "First-Line Supervisors of Retail Sales Workers",
+    "sector": "Retail Trade",
+    "model": "anthropic",
+    "rubric_item_id": "603ee5c2-abe4-4792-9af4-4e04e8e13e43",
+    "criterion": "The start of another section for next season is one slide titled \u201cCrescent Pines Lodge & Spa\u201d with the subtitle reading exactly \u201cNext Season Assortment\u201d",
+    "weight": 2,
+    "share": 0.043478260869565216,
+    "run_id": "2f85d673-53aa-46cb-bdbe-3f1102e2f276",
+    "files": [
+     "Crescent_Pines_Purchase_Assortment_Spring_2022.pdf",
+     "Crescent_Pines_Purchase_Assortment_Spring_2022.pptx"
+    ],
+    "gpt_judge": [
+     "Section starts with correct lodge title, but subtitle is not exactly \u201cNext Season Assortment\u201d.",
+     "Candidate PDF p.6 begins section with \u201cNext Season Assortment \u2014 Men's Polos (vendor selections)\u201d; pp.7\u20138 also append descriptive text."
+    ],
+    "claude_judge": [
+     "There is no section-start slide with the exact required subtitle.",
+     "Pages 6\u20138 keep the subtitle \"Purchase Assortment Spring 2022\"; their section headings are \"Next Season Assortment \u2014 Men's Polos (vendor selections)\" and similar. No slide has the subtitle exactly \"Next Season Assortment\"."
+    ]
+   },
+   {
+    "task_id": "a97369c7-e5cf-40ca-99e8-d06f81c57d53",
+    "occupation": "Lawyers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "model": "anthropic",
+    "rubric_item_id": "61d8873d-b8c7-481c-9dd7-9a784c9fcac1",
+    "criterion": "The memorandum concludes that there is a substantial risk the Avalon board breached the duty of loyalty/bad faith by rejecting a highly beneficial deal primarily to appease Marcus\u2019s personal animus.",
+    "weight": 5,
+    "share": 0.03968253968253968,
+    "run_id": "0909f255-96d7-4b51-ac23-0b239e0ecb6f",
+    "files": [
+     "Avalon_Delaware_Law_Memo.docx"
+    ],
+    "gpt_judge": [
+     "Discusses possible claims but does not conclude substantial risk of a loyalty/bad-faith breach from rejecting the beneficial deal to appease animus.",
+     "candidate/Avalon_Delaware_Law_Memo.docx, III.B says 'Several facts ... create risk' and conditionally describes what plaintiffs could allege; VI says exposure centers on process and deference."
+    ],
+    "claude_judge": [
+     "The memo lists risks but stays hedged. It never concludes that there is a substantial risk the board breached its duty of loyalty or acted in bad faith.",
+     "'a board that carefully weighs the costs of breach and reasonably decides to comply should receive business judgment protection. Several facts, however, create risk'; Conclusion: 'The board's exposure centers on its process and its apparent deference'"
+    ]
+   },
+   {
+    "task_id": "60221cd0-686e-4a08-985e-d9bb2fa18501",
+    "occupation": "News Analysts, Reporters, and Journalists",
+    "sector": "Information",
+    "model": "anthropic",
+    "rubric_item_id": "97a35d97-2240-46e2-9c91-b242c1adc84a",
+    "criterion": "Mentions how absentee ballots may be returned (by mail or via a designated drop\u2011off location/polling place).",
+    "weight": 1,
+    "share": 0.034482758620689655,
+    "run_id": "94206745-e6ce-4d18-8c7a-fa4c634dd45c",
+    "files": [
+     "Virginia_2025_Elections_Article.pdf"
+    ],
+    "gpt_judge": [
+     "Complete page does not mention how completed absentee ballots may be returned.",
+     "candidate/Virginia_2025_Elections_Article.pdf, p. 1: mail bullets address application receipt; 'How to participate' describes requesting a ballot but supplies no ballot-return instructions."
+    ],
+    "claude_judge": [
+     "Ballot return methods are missing.",
+     "The article covers applying for a mail ballot but never says how to return a completed ballot (by mail, drop-off location or polling place)."
+    ]
+   },
+   {
+    "task_id": "c657103b-b348-4496-a848-b2b7165d28b2",
+    "occupation": "Personal Financial Advisors",
+    "sector": "Finance and Insurance",
+    "model": "anthropic",
+    "rubric_item_id": "705a24a9-3e64-4e5f-ae60-95972d6d4430",
+    "criterion": "For each conversion year, the model calculates tax on the conversion using a marginal tax rate of 35%.",
+    "weight": 2,
+    "share": 0.034482758620689655,
+    "run_id": "58ff6f20-4da2-4ab8-b1af-e3cdb5181e68",
+    "files": [
+     "Roth_Conversion_Analysis.xlsx",
+     "Roth_Conversion_Strategy_Presentation.pptx"
+    ],
+    "gpt_judge": [
+     "Conversion tax is not calculated at a uniform 35% marginal rate for each conversion year; filling a 35% bracket is a different method.",
+     "candidate/Roth_Conversion_Analysis.xlsx: Roth_Conversion P7:P14 use progressive SUMPRODUCT tax differences; S7:S14 allocate total federal+Ohio tax proportionally; Notes_Methodology A10 describes incremental bracket taxation."
+    ],
+    "claude_judge": [
+     "Conversion tax is not calculated at a 35% marginal rate.",
+     "Column P computes progressive federal tax via SUMPRODUCT over the 10%-37% brackets, plus Ohio 2.75%. Conversions fill from roughly $164.5k of taxable income up to the top of the 35% bracket, so they pass through the 22%/24%/32%/35% brackets."
+    ]
+   },
+   {
+    "task_id": "61f546a8-c374-467f-95cc-d0d9b5656eb6",
+    "occupation": "Counter and Rental Clerks",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "anthropic",
+    "rubric_item_id": "7847c1ec-f756-4bbb-9402-5d8d512a1e6b",
+    "criterion": "Schedules carpet cleaning in M2 prior to TR Apartment Staff or \"our staff\" work",
+    "weight": 5,
+    "share": 0.03125,
+    "run_id": "023f8696-6c98-4aad-9f66-5ad49d0615ae",
+    "files": [
+     "TR_Apartments_Make_Ready_Turn_Report.pdf"
+    ],
+    "gpt_judge": [
+     "Carpet is after, not before, staff.",
+     "candidate/TR_Apartments_Make_Ready_Turn_Report.pdf p.2 M2 staff 7/1\u20132, carpet 7/8."
+    ],
+    "claude_judge": [
+     "Carpet cleaning comes after staff work, not before.",
+     "M2 staff 7/1-7/2, carpet cleaning 7/8"
+    ]
+   },
+   {
+    "task_id": "46bc7238-3501-4839-b989-e2bd47853676",
+    "occupation": "Real Estate Brokers",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "anthropic",
+    "rubric_item_id": "553f31f2-8910-4cba-a1e5-4b875f5d8e08",
+    "criterion": "Every page contains at least one image (not just icons or logos).",
+    "weight": 2,
+    "share": 0.029850746268656716,
+    "run_id": "819ef63d-2e1c-4b95-9af8-2912793f2b24",
+    "files": [
+     "QSR_Tenant_Outreach_Playbook_123_Dade_County_Rd.pdf"
+    ],
+    "gpt_judge": [
+     "These pages use icon-style graphics rather than images beyond icons as required.",
+     "candidate/QSR_Tenant_Outreach_Playbook_123_Dade_County_Rd.pdf p.4 has only phone/envelope symbols; p.7 has only document/key symbols."
+    ],
+    "claude_judge": [
+     "Several pages contain only icon-style graphics rather than real images or photos.",
+     "Page 4 has only a flat phone/envelope icon graphic. Page 7 has only a document/magnifier icon. Page 5 has a calendar icon and a small handshake clip art. All are labeled 'Placeholder illustration'."
+    ]
+   },
+   {
+    "task_id": "d025a41c-c439-4ee1-bc79-dd5c94b27a2d",
+    "occupation": "Customer Service Representatives",
+    "sector": "Finance and Insurance",
+    "model": "anthropic",
+    "rubric_item_id": "1ce6b080-594b-4e3e-b327-26e81a3dd231",
+    "criterion": "For every list item, the original statement quoted appears in the corresponding reference case file and is an agent/representative message (not a customer or system message).",
+    "weight": 2,
+    "share": 0.028169014084507043,
+    "run_id": "8f0833c9-2bd2-4ee4-8bac-d4f6f8c8c63d",
+    "files": [
+     "Case Feedback.docx"
+    ],
+    "gpt_judge": [
+     "This item quotes a customer message and falsely asserts an absent agent closing instead of identifying an actual agent statement.",
+     "candidate/Case Feedback.docx, Case Three item 7 calls the original 'No closing message after \u201cNo that\u2019s all I needed.\u201d' Reference references/69b8a9055881ed0f9d3a53428bbb96df/Case Three.docx ends with Support: 'Have a beautiful day!! (\u3065 \u25d5\u203f\u25d5 )\u3065'."
+    ],
+    "claude_judge": [
+     "This item does not quote an agent message. It describes a missing message that the case file shows actually exists, and the only quoted text is a customer line.",
+     "Case Three item 7 reads: 'Original: No closing message after \"No that's all I needed.\"' The reference Case Three file, however, ends with the Support line 'Have a beautiful day!! (\u3065 \u25d5\u203f\u25d5 )\u3065'."
+    ]
+   },
+   {
+    "task_id": "93b336f3-61f3-4287-86d2-87445e1e0f90",
+    "occupation": "Buyers and Purchasing Agents",
+    "sector": "Manufacturing",
+    "model": "anthropic",
+    "rubric_item_id": "9fb19383-e43c-4ac0-98e4-503e2fd7317f",
+    "criterion": "Provides PMP\u2011aligned Phase 1: Years 1\u20132 with local assembly of electric vehicles, battery packs, and motor controllers.",
+    "weight": 2,
+    "share": 0.02631578947368421,
+    "run_id": "1393131c-3364-4a3f-95f0-4e5f49f436a0",
+    "files": [
+     "EV_Battery_Pack_Localisation_Partnership_Proposal.docx"
+    ],
+    "gpt_judge": [
+     "Required EV and motor-controller assembly not included in stated phase scope.",
+     "candidate/EV_Battery_Pack_Localisation_Partnership_Proposal.docx roadmap Phase 1 Years 1\u20132 covers pack assembly, certification, PPAP and ramp-up only."
+    ],
+    "claude_judge": [
+     "Local assembly of vehicles and motor controllers is not included.",
+     "Roadmap Phase 1 (Years 1\u20132): 'Local pack assembly from imported child parts; certification; PPAP; ramp-up'"
+    ]
+   },
+   {
+    "task_id": "e996036e-8287-4e7f-8d0a-90a57cb53c45",
+    "occupation": "First-Line Supervisors of Non-Retail Sales Workers",
+    "sector": "Wholesale Trade",
+    "model": "anthropic",
+    "rubric_item_id": "bade184d-8f0c-4f20-9ccb-53cfb344d2ea",
+    "criterion": "Sum of quarterly shipments at retail value equals $225,000 for Year 1.",
+    "weight": 2,
+    "share": 0.025974025974025976,
+    "run_id": "9f25ea21-beda-4153-bebb-c0cbf90bbca9",
+    "files": [
+     "CosmoGenics_Terms_Scenario_Analysis.xlsx"
+    ],
+    "gpt_judge": [
+     "Does not meet the exact annual total criterion, despite transparently identifying the inconsistent brief.",
+     "candidate/CosmoGenics_Terms_Scenario_Analysis.xlsx Assumptions!C7:G7 sums 70000+80000+80000+25000; B9 explicitly uses $255,000 rather than $225,000."
+    ],
+    "claude_judge": [
+     "The workbook's shipment total is $255,000, not the $225,000 the criterion requires.",
+     "Assumptions G7 = SUM(C7:F7) = 255,000. Note B9 and summary I6 say the model uses $255,000, not $225,000."
+    ]
+   },
+   {
+    "task_id": "bbe0a93b-ebf0-40b0-98dc-8d9243099034",
+    "occupation": "Child, Family, and School Social Workers",
+    "sector": "Government",
+    "model": "anthropic",
+    "rubric_item_id": "8dcedec1-4602-4e12-a6a4-39250bb4e5d3",
+    "criterion": "Each Resource Guide entry lists the organization\u2019s name and at least one contact method: a phone number, email address, or postal address.",
+    "weight": 2,
+    "share": 0.024691358024691357,
+    "run_id": "dd880f88-d5d3-43d8-bbdd-6eeba69a6d1a",
+    "files": [
+     "Evaluacion_de_Necesidades_Espanol.pdf",
+     "Kent_County_Resource_Guide.pdf",
+     "Needs_Assessment_English.pdf"
+    ],
+    "gpt_judge": [
+     "Not every entry has one of the specifically required contact methods; a website alone is insufficient for this criterion.",
+     "candidate/Kent_County_Resource_Guide.pdf, p. 5: Michigan Legal Help lists 'Online' and michiganlegalhelp.org; Justice for Our Neighbors and Clinica Santa Maria list 'See website' and URLs, without phone, email or postal address. Similar website-only Family Promise entry on p. 2."
+    ],
+    "claude_judge": [
+     "Several entries have no phone, email or postal address, so not every entry meets the requirement.",
+     "Guide p2: Family Promise of West Michigan shows only 'See website / familypromisewm.org'. p5: Michigan Legal Help shows 'Online / michiganlegalhelp.org' and Justice for Our Neighbors shows 'See website / jfonwm.org'. Clinica Santa Maria and Strong Beginnings also list only a website."
+    ]
+   },
+   {
+    "task_id": "3f821c2d-ab97-46ec-a0fb-b8f73c2682bc",
+    "occupation": "First-Line Supervisors of Non-Retail Sales Workers",
+    "sector": "Wholesale Trade",
+    "model": "anthropic",
+    "rubric_item_id": "e27dde47-4181-464f-88a7-f3438e3d8b42",
+    "criterion": "In Omni (Last Year), for each month Aug\u2013Jan, BOM, Retail Sales, Receipts, and EOM are computed via formulas summing the corresponding Stores and E\u2011commerce values (no typed constants).",
+    "weight": 2,
+    "share": 0.024691358024691357,
+    "run_id": "31e5767f-a7fd-49d3-ab28-6d3ab4edbb5d",
+    "files": [
+     "Fall_2025_Omni_Stock_and_Sales_Flow.xlsx"
+    ],
+    "gpt_judge": [
+     "LY Omni BOM and EOM are not all computed by summing corresponding channel cells.",
+     "C, Stock & Sales Flow!N24 =M27; M27 =M24+M26-M25, with analogous formulas across LY months."
+    ],
+    "claude_judge": [
+     "BOM for Sep\u2013Jan and EOM are not sums of the Stores and E-com cells, as the criterion literally requires. The results are numerically equivalent.",
+     "N24:R24 =M27..Q27; M27:R27 =M24+M26-M25; only Sales, Receipts and Aug BOM are sums"
+    ]
+   },
+   {
+    "task_id": "61b0946a-5c1c-4bf6-8607-84d7c7e0dfe0",
+    "occupation": "Medical and Health Services Managers",
+    "sector": "Health Care and Social Assistance",
+    "model": "anthropic",
+    "rubric_item_id": "afeb328d-0dd2-4a46-8ae6-189af6296114",
+    "criterion": "The Introduction begins by highlighting the cost savings of the Collaborative Cadaver Program",
+    "weight": 2,
+    "share": 0.024691358024691357,
+    "run_id": "929dec48-e3b5-4845-a8ae-37c4a2b1c2ba",
+    "files": [
+     "Collaborative Cadaver Program Proposal.docx"
+    ],
+    "gpt_judge": [
+     "The introduction begins with utilization rather than highlighting savings.",
+     "candidate/Collaborative Cadaver Program Proposal.docx section 1 opens 'Each year ... buys four cadavers' and discusses procedures and unused cycles; cost savings appears later in the goals."
+    ],
+    "claude_judge": [
+     "Introduction does not begin by highlighting cost savings",
+     "Intro opens describing General Surgery's current cadaver use and wasted cycles; cost savings appear only as second listed goal"
+    ]
+   },
+   {
+    "task_id": "788d2bc6-82df-4dc7-8467-a0f31405dc14",
+    "occupation": "Sales Managers",
+    "sector": "Wholesale Trade",
+    "model": "anthropic",
+    "rubric_item_id": "9bb49785-7642-4acd-8e2a-1ac78bf15bfa",
+    "criterion": "The slide covering Consultation Services contains a list of key capabilities.",
+    "weight": 2,
+    "share": 0.023529411764705882,
+    "run_id": "5e1d5b0a-5932-42ea-92e8-1b4cde6c496f",
+    "files": [
+     "Agence_Marquetia_Amazon_TikTok_Services_Deck.pdf"
+    ],
+    "gpt_judge": [
+     "No consultation capabilities list is supplied; package scope bullets are for launch packages rather than consultation.",
+     "candidate/Agence_Marquetia_Amazon_TikTok_Services_Deck.pdf p.17 Consultation Services panel contains one sentence about expert strategy support via 1:1 session; p.18 contains a booking step."
+    ],
+    "claude_judge": [
+     "There is no list of consultation capabilities.",
+     "Page 17's consultation box has a single sentence ('Expert strategy support via 1:1 session...') and no bullet list."
+    ]
+   },
+   {
+    "task_id": "05389f78-589a-473c-a4ae-67c61050bfca",
+    "occupation": "Buyers and Purchasing Agents",
+    "sector": "Manufacturing",
+    "model": "anthropic",
+    "rubric_item_id": "fd912311-5550-46a0-be8a-c39dc9a58f04",
+    "criterion": "Total Investment Difference vs. Juvoxa Optics shows Vendrax Components' difference as +\u20b9294.39 million (accepts numeric equivalent \u20b9294,390,000).",
+    "weight": 2,
+    "share": 0.022727272727272728,
+    "run_id": "1534b2ca-dfc7-49fa-8416-acb222c2d3f8",
+    "files": [
+     "CPO_Report_Model_A_Headlamp_Resourcing.docx",
+     "Email_to_Juvoxa_Optics_CEO_Model_A_Termination.docx"
+    ],
+    "gpt_judge": [
+     "Required +294.39 Mn investment difference not stated.",
+     "candidate/CPO_Report_Model_A_Headlamp_Resourcing.docx, table 4.2 reports Vendrax incremental programme cost +302.79 INR Mn."
+    ],
+    "claude_judge": [
+     "The +294.39 Mn total-investment difference is never stated.",
+     "Report gives +302.79 for Vendrax vs Juvoxa"
+    ]
+   },
+   {
+    "task_id": "1aecc095-4d76-4b89-b752-1a0f870502cd",
+    "occupation": "First-Line Supervisors of Office and Administrative Support Workers",
+    "sector": "Health Care and Social Assistance",
+    "model": "anthropic",
+    "rubric_item_id": "1a8c8b7e-8f5a-48f8-8128-d47d31dcda84",
+    "criterion": "\"Telehealth Workflow\" instructs confirming and documenting a call-back phone number.",
+    "weight": 2,
+    "share": 0.022222222222222223,
+    "run_id": "a7d0ca40-781a-4635-b637-00df45403d96",
+    "files": [
+     "MA Email - Telehealth Workflow.docx",
+     "Telehealth Roadmap.docx",
+     "Telehealth Workflow.docx"
+    ],
+    "gpt_judge": [
+     "Neither instructs confirming/documenting callback number.",
+     "candidate/Telehealth Workflow.docx Phase 2 intake and 3.2 telephone fallback."
+    ],
+    "claude_judge": [
+     "This element is missing.",
+     "No step for confirming a call-back number"
+    ]
+   },
+   {
+    "task_id": "8f9e8bcd-6102-40da-ab76-23f51d8b21fa",
+    "occupation": "General and Operations Managers",
+    "sector": "Retail Trade",
+    "model": "anthropic",
+    "rubric_item_id": "95d10254-7c9a-4c3b-869c-4c1593251ba9",
+    "criterion": "Every example in the Let\u2019s Practice section explicitly identifies its objection type as one of: price, need, urgency, trust, or authority.",
+    "weight": 1,
+    "share": 0.02040816326530612,
+    "run_id": "37cd8bf1-6bc9-48d4-af75-ba7dded4ace3",
+    "files": [
+     "Overcoming_Sales_Objections_Bridal_Training.docx"
+    ],
+    "gpt_judge": [
+     "This example is not explicitly identified as any of the five required types, despite sensible clarification guidance.",
+     "candidate/Overcoming_Sales_Objections_Bridal_Training.docx, Practice table final row: 'I need to think about it.' has type 'Unclear \u2013 clarify first'."
+    ],
+    "claude_judge": [
+     "Not every example is assigned one of the five types.",
+     "Final practice row 'I need to think about it.' has Type 'Unclear \u2013 clarify first'"
+    ]
+   },
+   {
+    "task_id": "bf68f2ad-eac5-490a-adec-d847eb45bd6f",
+    "occupation": "First-Line Supervisors of Production and Operating Workers",
+    "sector": "Manufacturing",
+    "model": "anthropic",
+    "rubric_item_id": "d3253b8c-98d0-41f9-ab4d-558417209caf",
+    "criterion": "Provides a brief textual summary (\u2264 3 sentences or \u2264 60 words) explaining the recommended catch\u2011up plan.",
+    "weight": 1,
+    "share": 0.017857142857142856,
+    "run_id": "d084ed75-b0e1-4a81-9fe0-f06e3f1374f6",
+    "files": [
+     "Email_Summary_to_Manager.txt",
+     "MIG_Weld_Catch-Up_Plan.xlsx"
+    ],
+    "gpt_judge": [
+     "Neither provided summary satisfies \u22643 sentences or \u226460 words.",
+     "candidate/Email_Summary_to_Manager.txt has three substantive paragraphs and thirteen sentences; candidate/MIG_Weld_Catch-Up_Plan.xlsx Summary!A3 has four sentences and over60 words."
+    ],
+    "claude_judge": [
+     "Exceeds 3 sentences / 60 words.",
+     "Email_Summary_to_Manager.txt has ~12 sentences, ~180 words; Summary A3 is also multi-sentence and >60 words."
+    ]
+   },
+   {
+    "task_id": "15ddd28d-8445-4baa-ac7f-f41372e1344e",
+    "occupation": "Buyers and Purchasing Agents",
+    "sector": "Manufacturing",
+    "model": "anthropic",
+    "rubric_item_id": "53407f05-a5d4-4ded-bee3-4af74f341c82",
+    "criterion": "Details tool transfer logistics beyond timing by including an inspection\u2011on\u2011receipt plan in India.",
+    "weight": 1,
+    "share": 0.017543859649122806,
+    "run_id": "2e101151-4e3e-4821-9c49-20aab0b8af53",
+    "files": [
+     "Modlev_TailLamp_LPI_Negotiation_Strategy.pdf"
+    ],
+    "gpt_judge": [
+     "No inspection-on-receipt plan is stated; the explicit condition check is before dispatch.",
+     "PDF p.2 \u00a76 specifies crating/customs/insurance and pre-dispatch condition documentation; on arrival it says 'refurbish, trials T0/T1'."
+    ],
+    "claude_judge": [
+     "Inspection is planned before dispatch from Korea, not as an inspection on receipt in India.",
+     "Page 2: \"Tools arrive (~25 days); refurbish, trials T0/T1\". The condition check and last-shot samples are documented \"before dispatch\"."
+    ]
+   },
+   {
+    "task_id": "5ad0c554-a7a2-48cd-b41a-ebc1bff4a9de",
+    "occupation": "Real Estate Sales Agents",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "anthropic",
+    "rubric_item_id": "e9927ca4-64f5-45a8-b3f1-31ad9f89fc25",
+    "criterion": "Defines a Buyer\u2019s Broker Agreement as a written buyer representation agreement that both establishes the agency/representation relationship and outlines the scope of services the agent will provide.",
+    "weight": 1,
+    "share": 0.015873015873015872,
+    "run_id": "e25c5b1e-c980-4d19-b801-dd7b5f50cb32",
+    "files": [
+     "Sarasota_First-Time_Buyer_Brochure.docx"
+    ],
+    "gpt_judge": [
+     "Does not define the agreement as establishing representation and outlining the agent's scope of services; enumerating fee requirements does not supply that definition.",
+     "candidate/Sarasota_First-Time_Buyer_Brochure.docx, agreement panel describes compensation, duration, area and Florida brokerage relationship."
+    ],
+    "claude_judge": [
+     "The relationship is addressed, but the agreement is not defined as outlining the agent's scope of services.",
+     "The agreement section lists compensation, negotiability, the cap, length, area and the brokerage relationship. It never describes the agreement as setting out the scope of services."
+    ]
+   },
+   {
+    "task_id": "116e791e-890c-42b1-ba90-1db02e8bfd45",
+    "occupation": "Registered Nurses",
+    "sector": "Health Care and Social Assistance",
+    "model": "anthropic",
+    "rubric_item_id": "543562eb-15fe-485d-aaa7-c52d5e55714b",
+    "criterion": "For the infection\u2011risk diagnosis, interventions include obtaining ordered laboratory tests when indicated.",
+    "weight": 1,
+    "share": 0.015625,
+    "run_id": "419b73e5-e0b4-4176-9671-e41b97054362",
+    "files": [
+     "AB_Nursing_Care_Plan.pdf"
+    ],
+    "gpt_judge": [
+     "No obtaining ordered tests intervention.",
+     "candidate/AB_Nursing_Care_Plan.pdf p1 infection interventions list hygiene, asepsis, antibiotics/cast protection and education; only lab action is reviewing results in assessments."
+    ],
+    "claude_judge": [
+     "Missing",
+     "Dx2 interventions: hand hygiene, asepsis, antibiotics, teaching; none to obtain labs"
+    ]
+   },
+   {
+    "task_id": "69a8ef86-4e69-4fe2-9168-080f1e978e67",
+    "occupation": "Sales Managers",
+    "sector": "Wholesale Trade",
+    "model": "anthropic",
+    "rubric_item_id": "d584628b-d42f-423e-b240-cae3ad7bd55a",
+    "criterion": "Both documents specify whether SLA timelines (3/60/14/45/90) are measured in calendar or business days",
+    "weight": 1,
+    "share": 0.015625,
+    "run_id": "5ac05446-9bc9-4bba-982e-b1b2fc91bc29",
+    "files": [
+     "Internal_RA_Process_SOP.docx",
+     "Key_Account_RA_Guidelines.docx"
+    ],
+    "gpt_judge": [
+     "The external document does not specify calendar versus business days, so both-document requirement is unmet.",
+     "candidate/Internal_RA_Process_SOP.docx, section 3 declares calendar days unless otherwise stated; candidate/Key_Account_RA_Guidelines.docx Policy at a Glance and Steps 2, 4\u20136 state only 'days'."
+    ],
+    "claude_judge": [
+     "Only one of the two documents specifies the day type.",
+     "Internal: 'All timelines are in calendar days unless stated otherwise.' The external guidelines never state calendar vs. business days."
+    ]
+   },
+   {
+    "task_id": "76418a2c-a3c0-4894-b89d-2493369135d9",
+    "occupation": "Shipping, Receiving, and Inventory Clerks",
+    "sector": "Manufacturing",
+    "model": "anthropic",
+    "rubric_item_id": "6c1fd229-1413-4815-8883-b93c3beb7855",
+    "criterion": "For A-1001, Tracking # is either blank or an alphanumeric string at least 7 characters long",
+    "weight": 1,
+    "share": 0.013888888888888888,
+    "run_id": "531132c4-2b3c-4326-a9b9-fd68fac2e4e7",
+    "files": [
+     "Daily Shipment Manifest 062525.xlsx"
+    ],
+    "gpt_judge": [
+     "Not blank or alphanumeric-only; contains spaces and a dash.",
+     "candidate/Daily Shipment Manifest 062525.xlsx E3 = 'Pending - TMS'."
+    ],
+    "claude_judge": [
+     "The cell is neither blank nor an alphanumeric tracking string.",
+     "E3 = 'Pending - TMS', which contains spaces and a hyphen."
+    ]
+   },
+   {
+    "task_id": "a46d5cd2-55fe-48fa-a4c6-6aaf6b9991b5",
+    "occupation": "Private Detectives and Investigators",
+    "sector": "Retail Trade",
+    "model": "anthropic",
+    "rubric_item_id": "9fa505c2-844e-47b3-b623-7127e8ccdfd3",
+    "criterion": "States that two field investigators were provided with the claimant's photograph, home address, and vehicle details",
+    "weight": 1,
+    "share": 0.0136986301369863,
+    "run_id": "2c6d8f21-b063-466d-9146-2d05f0f0c1b3",
+    "files": [
+     "Investigative_Report_SERC-1406PI-2025.pdf"
+    ],
+    "gpt_judge": [
+     "Does not state the complete required set of materials provided to both investigators.",
+     "Candidate PDF p.1 Materials provided lists investigator reports and six photographs, rather than assignment materials. P.5 mentions a claimant photograph provided at assignment, but pp.1\u20136 do not state both investigators received the address and vehicle details."
+    ],
+    "claude_judge": [
+     "The full set of materials given to the investigators is not stated.",
+     "Nowhere does the report say the investigators were given the claimant's photo, home address, and vehicle details. The only related mention is on page 5: 'claimant photograph provided at assignment'."
+    ]
+   },
+   {
+    "task_id": "84322284-5c2c-4873-b507-b147449d209d",
+    "occupation": "Private Detectives and Investigators",
+    "sector": "Retail Trade",
+    "model": "anthropic",
+    "rubric_item_id": "e555865f-30e2-4b72-b6e9-aa2fb26854bb",
+    "criterion": "States in the report the assignment duration. ",
+    "weight": 1,
+    "share": 0.0136986301369863,
+    "run_id": "b7b323a0-1e5d-40e2-a004-04ca69856b48",
+    "files": [
+     "MERC-1403PI-2025_Week1_Investigative_Report.pdf"
+    ],
+    "gpt_judge": [
+     "Reporting-week length is not the approximately three-month assignment duration required here.",
+     "candidate/MERC-1403PI-2025_Week1_Investigative_Report.pdf pp.1\u20138 gives the five-shift reporting period and Week 2 plans but no total assignment duration. references/db5c1a3cce5be3bed9d292f75e92ebaa/Field Investigator's notes.docx header states 'Assignment Duration: Approximately 3 Months'."
+    ],
+    "claude_judge": [
+     "Assignment duration not stated.",
+     "No mention of 'approximately 3 months' duration anywhere in pp1-8; header lists only Week 1 period"
+    ]
+   },
+   {
+    "task_id": "045aba2e-4093-42aa-ab7f-159cc538278c",
+    "occupation": "Pharmacists",
+    "sector": "Retail Trade",
+    "model": "anthropic",
+    "rubric_item_id": "37d14314-83dd-43f1-b071-6133170fc814",
+    "criterion": "The Monthly section includes verifying that prescription records are filed and retained for at least 3 years",
+    "weight": 1,
+    "share": 0.0136986301369863,
+    "run_id": "bfa71ffd-ca15-45cc-9695-298414aa22ed",
+    "files": [
+     "CA_Pharmacy_Daily_Compliance_Checklist.pdf",
+     "CA_Pharmacy_Quarterly_Annual_Compliance_Checklist.pdf",
+     "CA_Pharmacy_Weekly_Monthly_Compliance_Checklist.pdf"
+    ],
+    "gpt_judge": [
+     "No explicit monthly verification of filed prescriptions retained for three years.",
+     "candidate/CA_Pharmacy_Weekly_Monthly_Compliance_Checklist.pdf p.1 M4 audits Rx content; M5 specifies purchase invoices and disposition records, not prescription record filing/retention."
+    ],
+    "claude_judge": [
+     "There is no monthly item for 3-year prescription record retention.",
+     "The monthly items include an Rx audit (M4) but no item on retaining prescription records for 3 years. M5 covers purchase invoices and disposition records only."
+    ]
+   },
+   {
+    "task_id": "76d10872-9ffa-4ede-83ee-e0f1ec5e2b8d",
+    "occupation": "Child, Family, and School Social Workers",
+    "sector": "Government",
+    "model": "anthropic",
+    "rubric_item_id": "43e54ae5-6010-4f06-b7e3-4cb813d345aa",
+    "criterion": "States in the Court Documentation subsection that the court case number is PT-2025-1782.",
+    "weight": 2,
+    "share": 0.013513513513513514,
+    "run_id": "3e1d900d-2d3d-417e-b5ba-7227d9c27a44",
+    "files": [
+     "New_Case_Creation_Report_Michael_Reynolds_CS-2025-1782.pdf"
+    ],
+    "gpt_judge": [
+     "Specified PT-2025-1782 is not the court number given in this subsection.",
+     "Report p. 3 Court Documentation Case Number: DV-2025-1782."
+    ],
+    "claude_judge": [
+     "The report gives DV-2025-1782 here, not PT-2025-1782.",
+     "Page 3 Court Documentation Case Number: 'DV-2025-1782'"
+    ]
+   },
+   {
+    "task_id": "b57efde3-26d6-4742-bbff-2b63c43b4baa",
+    "occupation": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+    "sector": "Wholesale Trade",
+    "model": "anthropic",
+    "rubric_item_id": "00e33cc6-4d70-425d-89f3-10c0951418d7",
+    "criterion": "Every used data column (any column with a non-empty cell in rows 2+) has a non-empty header cell in row 1.",
+    "weight": 1,
+    "share": 0.013333333333333334,
+    "run_id": "43ad294f-e74a-4210-86e7-99fdbda88cf3",
+    "files": [
+     "AquaNor2025_OEM_Prospect_List_LakeHealth_DO.xlsx"
+    ],
+    "gpt_judge": [
+     "Used columns lack row-1 headers.",
+     "candidate/AquaNor2025_OEM_Prospect_List_LakeHealth_DO.xlsx, Prospect List C1 is empty while C4 contains Blueye Robotics AS."
+    ],
+    "claude_judge": [
+     "Row 1 has no header for most of the columns that contain data.",
+     "Columns B\u2013P have data in rows 3+ but B1\u2013P1 are empty"
+    ]
+   },
+   {
+    "task_id": "ffed32d8-d192-4e3f-8cd4-eda5a730aec3",
+    "occupation": "Pharmacists",
+    "sector": "Retail Trade",
+    "model": "anthropic",
+    "rubric_item_id": "a4e54d23-ce84-4af3-9c53-06dc208fd28a",
+    "criterion": "The comparative table includes a column or labeled values for the per-medication Revenue Difference defined as (100-day \u2212 90-day).",
+    "weight": 1,
+    "share": 0.013157894736842105,
+    "run_id": "53210015-1619-4534-8c78-d9464a253e14",
+    "files": [
+     "Auto-Refill_90_vs_100_Day_Analysis.pdf"
+    ],
+    "gpt_judge": [
+     "Column exists but is explicitly defined opposite to the required 100-day minus 90-day convention.",
+     "candidate/Auto-Refill_90_vs_100_Day_Analysis.pdf p.1 defines Revenue difference as '90-day net \u2212 100-day net' and displays positive differences."
+    ],
+    "claude_judge": [
+     "The difference is defined as 90-day \u2212 100-day, which is the reverse of the required 100-day \u2212 90-day.",
+     "Methods: 'Revenue difference = 90-day net \u2212 100-day net (positive = 90-day earns more)'"
+    ]
+   },
+   {
+    "task_id": "b78fd844-db76-448e-a783-5e9877cb74c2",
+    "occupation": "Financial Managers",
+    "sector": "Finance and Insurance",
+    "model": "anthropic",
+    "rubric_item_id": "a66918a3-2438-4974-a63a-e1b0876c1619",
+    "criterion": "If Tiny Rod Hit Inc Reference.pdf specifies any minimum or phased funding requirements by project, the proposed allocation respects those requirements; if none are specified, this criterion is satisfied.",
+    "weight": 1,
+    "share": 0.013157894736842105,
+    "run_id": "3438875c-0b67-4a30-921e-5a6a4208aba6",
+    "files": [
+     "Tiny-Rod_Hit_Board_Investment_Report.docx",
+     "Tiny-Rod_Hit_Board_Investment_Report.pdf"
+    ],
+    "gpt_judge": [
+     "Proposed staging changes the stated upfront funding timing without establishing feasibility of that change; A's remaining $5M also depends on external capital.",
+     "Reference references/e0784d15e464a30316ae57313a9fbd97/Tiny Rod Hit Inc Reference.pdf p.1 describes $50M 'in the front' for A and $40M initial investment for B. Candidate PDF p.7 releases only $25M and $15M initially, with later contingent tranches."
+    ],
+    "claude_judge": [
+     "The allocation does not respect A's stated up-front $50M requirement.",
+     "The reference says the company is 'willing to invest $50 million in the front' for A. Table 4 gives A only $45M, phased, with $5M from partners."
+    ]
+   },
+   {
+    "task_id": "3f625cb2-f40e-4ead-8a97-6924356d5989",
+    "occupation": "Lawyers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "model": "anthropic",
+    "rubric_item_id": "9ca701f6-1724-482c-bf86-3149130e4d71",
+    "criterion": "States that under CCPA/CPRA, personal information can include characteristics such as age and gender",
+    "weight": 1,
+    "share": 0.013157894736842105,
+    "run_id": "9a445282-ce83-40d8-8aa0-eba9eb834cb8",
+    "files": [
+     "Legal_Memo_YouTube_Child_Privacy.pdf"
+    ],
+    "gpt_judge": [
+     "Does not state the California personal-information scope for these characteristics.",
+     "PDF p. 1 discusses age/gender in COPPA bullet, not CCPA/CPRA paragraph."
+    ],
+    "claude_judge": [
+     "Missing.",
+     "No CCPA statement on age/gender characteristics"
+    ]
+   },
+   {
+    "task_id": "c2e8f271-7858-412f-b460-472463ad81d9",
+    "occupation": "Computer and Information Systems Managers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "model": "anthropic",
+    "rubric_item_id": "5566482e-98e5-436e-97aa-cfe319e836b9",
+    "criterion": "Specifies naming conventions for component files and hooks",
+    "weight": 1,
+    "share": 0.012345679012345678,
+    "run_id": "7ef54f3e-7246-4af1-a81f-4bcef693a358",
+    "files": [
+     "Engineering_Coding_Standards_v0.1_DRAFT.docx"
+    ],
+    "gpt_judge": [
+     "Component names covered, hook naming not specified.",
+     "candidate/Engineering_Coding_Standards_v0.1_DRAFT.docx, TS-02 names UserCard.tsx; FE-01 specifies Rules of Hooks but no hook naming convention in frontend or naming rules."
+    ],
+    "claude_judge": [
+     "Hook naming is missing.",
+     "TS-02 covers component file naming (UserCard.tsx). No hook naming convention (e.g., useX) appears anywhere in the text."
+    ]
+   },
+   {
+    "task_id": "f3351922-dbdd-45da-85c5-e7110696bbe5",
+    "occupation": "Customer Service Representatives",
+    "sector": "Finance and Insurance",
+    "model": "anthropic",
+    "rubric_item_id": "327044b3-9023-4e18-81c5-e1cbe56f25d4",
+    "criterion": "If automatic enrollment is mentioned, it is described generically without asserting a specific default percentage.",
+    "weight": 1,
+    "share": 0.011764705882352941,
+    "run_id": "71aaaff0-bf58-4927-8c21-f6c4f5c864da",
+    "files": [
+     "TSP_Funds_and_Transition_Benefits_Email.docx"
+    ],
+    "gpt_judge": [
+     "Asserts specific default percentage contrary to criterion.",
+     "candidate/TSP_Funds_and_Transition_Benefits_Email.docx, Part 2.3: 'automatically enrolled at 5% of base pay'."
+    ],
+    "claude_judge": [
+     "Automatic enrollment is described with a specific default percentage, which the criterion does not allow.",
+     "'New FERS employees are automatically enrolled at 5% of base pay (traditional)'"
+    ]
+   },
+   {
+    "task_id": "0419f1c3-d669-45d0-81cd-f4d5923b06a5",
+    "occupation": "Property, Real Estate, and Community Association Managers",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "anthropic",
+    "rubric_item_id": "07b0fcca-b053-4319-8322-355a739e852a",
+    "criterion": "States the date of review as 07/13/2025.",
+    "weight": 1,
+    "share": 0.011764705882352941,
+    "run_id": "f631873f-d3ac-45b5-9886-ec24a078be9b",
+    "files": [
+     "John_Miller_Performance_Improvement_Plan.docx"
+    ],
+    "gpt_judge": [
+     "Uses July 14 rather than required July 13.",
+     "candidate/John_Miller_Performance_Improvement_Plan.docx header gives Date Issued 07/14/2025 and review start 07/14/2025."
+    ],
+    "claude_judge": [
+     "The date is 07/14, not 07/13/2025.",
+     "Header reads 'Date Issued: 07/14/2025'."
+    ]
+   },
+   {
+    "task_id": "e4f664ea-0e5c-4e4e-a0d3-a87a33da947a",
+    "occupation": "Producers and Directors",
+    "sector": "Information",
+    "model": "anthropic",
+    "rubric_item_id": "fac6a83e-4adf-4bab-af94-09c7ca263f60",
+    "criterion": "Each scene heading includes a time-of-day limited to DAY, NIGHT, DAWN, SUNSET, or SUNRISE (in ALL CAPS)",
+    "weight": 2,
+    "share": 0.011695906432748537,
+    "run_id": "7bf77f29-38bd-407d-acf2-46d02de51130",
+    "files": [
+     "SAINTLINESS_Screenplay.pdf"
+    ],
+    "gpt_judge": [
+     "CONTINUOUS and LATER fall outside the criterion's explicit allowed list, even though the guide uses CONTINUOUS.",
+     "candidate/SAINTLINESS_Screenplay.pdf p.2: INT. SEEDY MOTEL OFFICE - CONTINUOUS; p.5: INT. ROOM 8 - LATER."
+    ],
+    "claude_judge": [
+     "CONTINUOUS and LATER are not among DAY, NIGHT, DAWN, SUNSET or SUNRISE.",
+     "Several headings use times outside the allowed list: 'INT. SEEDY MOTEL OFFICE - CONTINUOUS', 'INT. ROOM 8 - LATER', 'EXT. MOTEL WALKWAY - CONTINUOUS'."
+    ]
+   },
+   {
+    "task_id": "fd6129bd-f095-429b-873c-dcc3137be2c3",
+    "occupation": "Project Management Specialists",
+    "sector": "Professional, Scientific, and Technical Services",
+    "model": "anthropic",
+    "rubric_item_id": "13096b69-8691-4d40-aeab-f0d0d6103166",
+    "criterion": "The SOP defines an implementation step and assigns a named owner for executing approved changes",
+    "weight": 1,
+    "share": 0.011627906976744186,
+    "run_id": "286c8fb4-2199-4b75-bbfc-090e77a07796",
+    "files": [
+     "Change_Control_SOP_v1.0_Draft.docx",
+     "Change_Request_Form_F01.docx"
+    ],
+    "gpt_judge": [
+     "Implementation is described but no named execution owner or assignment mechanism is specified.",
+     "candidate/Change_Control_SOP_v1.0_Draft.docx \u00a76 step 10 says changes are implemented by 'the responsible functions'; \u00a74 RACI has no implementation column."
+    ],
+    "claude_judge": [
+     "No specific owner is named for carrying out approved changes; 'responsible functions' is generic.",
+     "SOP Step 10: 'Approved changes are implemented by the responsible functions. The PM confirms implementation...' The RACI has no implementation column."
+    ]
+   },
+   {
+    "task_id": "6974adea-8326-43fa-8187-2724b15d9546",
+    "occupation": "News Analysts, Reporters, and Journalists",
+    "sector": "Information",
+    "model": "anthropic",
+    "rubric_item_id": "e5bb3f09-ba2c-4b88-a11c-7f1855014e7b",
+    "criterion": "No first- or second-person pronouns ('I', 'we', 'our', 'us', 'you', 'your') appear outside quotations.",
+    "weight": 1,
+    "share": 0.010869565217391304,
+    "run_id": "87221135-2b71-4b13-87c0-2efdcf8e9ea0",
+    "files": [
+     "RTLS_livestock_tracking_feature.docx"
+    ],
+    "gpt_judge": [
+     "Unquoted first-person pronoun appears in delivered article text.",
+     "candidate/RTLS_livestock_tracking_feature.docx p1 meta description: 'We look at how CattleWatch works'."
+    ],
+    "claude_judge": [
+     "First-person 'We' outside quotations in the document",
+     "Meta description: 'We look at how CattleWatch works, the costs and the caveats.'"
+    ]
+   },
+   {
+    "task_id": "40a99a31-42d6-4f23-b3ec-8f591afe25b6",
+    "occupation": "Industrial Engineers",
+    "sector": "Manufacturing",
+    "model": "anthropic",
+    "rubric_item_id": "e41b0361-7bbb-43d8-ae7a-49ac12a67a37",
+    "criterion": "The report mentions time synchronization (e.g., NTP or PTP) if events/streams are discussed.",
+    "weight": 1,
+    "share": 0.010309278350515464,
+    "run_id": "f5515f00-3688-47a2-a8be-ce16cc240217",
+    "files": [
+     "Cell_Layout_Diagram.png",
+     "Design_Rationale_Report.pdf",
+     "Hardware_Selection_Table.xlsx"
+    ],
+    "gpt_judge": [
+     "Timestamping is discussed but time synchronization is not mentioned.",
+     "candidate/Design_Rationale_Report.pdf pp1\u20136 complete text; p4 says snapshot + timestamp, pp3\u20135 integration/network discussion contains no clock synchronization method."
+    ],
+    "claude_judge": [
+     "Events and streams are discussed but time synchronization is not.",
+     "The PDF discusses events, snapshots and a 'snapshot + timestamp' (page 4), but none of pages 1\u20136 mention NTP, PTP or clock synchronization."
+    ]
+   },
+   {
+    "task_id": "afe56d05-dac8-47d7-a233-ad1d035ca5bd",
+    "occupation": "Editors",
+    "sector": "Information",
+    "model": "anthropic",
+    "rubric_item_id": "b8e4c429-c508-4877-909f-de92c334e12c",
+    "criterion": "The Minors section states that certain exceptions (e.g., minor charged with murder) must be consulted with a senior editor before identification.",
+    "weight": 1,
+    "share": 0.008547008547008548,
+    "run_id": "83331ee5-5f7c-4d88-8a71-9ffe58f13770",
+    "files": [
+     "WorldCast_Guidance_on_Special_Reporting_Situations.docx"
+    ],
+    "gpt_judge": [
+     "Required consultation for exceptional cases absent.",
+     "Same candidate, \u00a79 charged-child identification ban has no senior-editor exception process."
+    ],
+    "claude_judge": [
+     "There is no exception, such as a murder charge, requiring a senior editor's input.",
+     "Section 9"
+    ]
+   }
+  ],
+  "shared": [
+   {
+    "task_id": "fd3ad420-6f7d-43b1-a990-c0c5c047d071",
+    "occupation": "Real Estate Brokers",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "shared",
+    "rubric_item_id": "25dada45-9f98-44bc-b20b-ebbe9405ada0",
+    "criterion": "The output Purpose section includes all of the following terms: \u201cEstateWell Realty\u201d, \"Qualifying Broker\" (or \"Qualifying Brokers\"), and either \"compensation\" or \"compensation structure\" or equivalent",
+    "weight": 2,
+    "share": 0.06451612903225806,
+    "run_id": "e05fab23-5dcf-42d5-a558-2edd3c42e616",
+    "files": [
+     "Sample_Realty_Broker_Compensation_Structure.pdf"
+    ],
+    "gpt_judge": [
+     "Not all required terms appear in Purpose.",
+     "candidate/Sample_Realty_Broker_Compensation_Structure.pdf p. 1 Purpose says 'compensation model for contracted Qualifying Brokers (QBs)' but contains no EstateWell Realty."
+    ],
+    "claude_judge": [
+     "One of the required terms is missing.",
+     "The Purpose section includes \"compensation model\" and \"Qualifying Brokers (QBs)\" but not \"EstateWell Realty\"."
+    ]
+   },
+   {
+    "task_id": "1e5a1d7f-12c1-48c6-afd9-82257b3f2409",
+    "occupation": "Property, Real Estate, and Community Association Managers",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "shared",
+    "rubric_item_id": "a066e561-edac-4707-b9da-cd58ebc67ece",
+    "criterion": "Includes a row stating that the PM should conduct a morning check in under the \"Activity\" or \"Details/Tracker\" column",
+    "weight": 2,
+    "share": 0.06060606060606061,
+    "run_id": "e53ced70-76a8-46f1-8246-a2a19773a202",
+    "files": [
+     "Property_Manager_Weekly_Schedule.docx"
+    ],
+    "gpt_judge": [
+     "Morning operational tasks are scheduled, but no row directs a morning check-in.",
+     "candidate/Property_Manager_Weekly_Schedule.docx, table 1 morning rows specify Move-ins first, Escalations, Collections / DQ, and Move-outs / SODAs; table 2 specifies afternoon weekday focus tasks. Neither table specifies a morning check-in."
+    ],
+    "claude_judge": [
+     "No row tells the PM to do a morning check-in.",
+     "Table 1 starts at 8:00\u20138:45 AM with 'Move-ins first'. No row mentions a morning check-in. The last row is a 4:30 'Daily closeout'."
+    ]
+   },
+   {
+    "task_id": "7151c60a-d4cb-4fc4-8169-3d4cb446e6b9",
+    "occupation": "Registered Nurses",
+    "sector": "Health Care and Social Assistance",
+    "model": "shared",
+    "rubric_item_id": "74c422a6-eb6d-4a92-96e1-76c39b1ec3a7",
+    "criterion": "Includes a column labeled \"Patient Information\" in the checklist table.",
+    "weight": 2,
+    "share": 0.047619047619047616,
+    "run_id": "830c796c-8855-4295-9023-97adc90bbfc2",
+    "files": [
+     "Fax Cover Sheet.docx",
+     "Patient Admission Pre-Screening Checklist.docx"
+    ],
+    "gpt_judge": [
+     "Neither table includes the specifically required column label 'Patient Information'.",
+     "candidate/Patient Admission Pre-Screening Checklist.docx both tables label column 1 'Requested information'; other headers are Date Sent, Date Received, Initials."
+    ],
+    "claude_judge": [
+     "The required column label is not used.",
+     "The first column header reads 'Requested information', not 'Patient Information'"
+    ]
+   },
+   {
+    "task_id": "d7cfae6f-4a82-4289-955e-c799dfe1e0f4",
+    "occupation": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+    "sector": "Wholesale Trade",
+    "model": "shared",
+    "rubric_item_id": "9b8a0884-545e-4385-ab80-d8b4f57e79e6",
+    "criterion": "The total available inventory as a percentage of total expected sales from now through the end of Q1 2023 for each Brand (by Axis) is calculated as: ((total on-hand (OH) and on-order (OO) inventory) + (expected shipments in October 2023) + (expected shipments in Q1 2024)) \u00f7 (total expected sales from now through Q1 2023) from the corresponding data in the reference file \"DATA_Beutist_Set_Selling_v2.xlsx\"",
+    "weight": 6,
+    "share": 0.047619047619047616,
+    "run_id": "70656593-04e1-40e5-924c-fd60d03c6539",
+    "files": [
+     "Beutist_Set_Shipment_Recap.xlsx"
+    ],
+    "gpt_judge": [
+     "Numerator subtracts demand; required numerator is total supply without subtraction.",
+     "candidate/Beutist_Set_Shipment_Recap.xlsx Recap J8=SUM(G8:I8), K8=J8-F8, L8=IF(F8>0,K8/F8,\"N/M\"); same pattern across brand rows."
+    ],
+    "claude_judge": [
+     "Wrong formula.",
+     "Brand cells use L=K/F, i.e. (available - expected) / expected, rather than available / expected."
+    ]
+   },
+   {
+    "task_id": "ae0c1093-5ea8-4b84-a81e-53ebf7a4321d",
+    "occupation": "Private Detectives and Investigators",
+    "sector": "Retail Trade",
+    "model": "shared",
+    "rubric_item_id": "3dab6235-8172-4eb4-9f3f-62ecb27702e2",
+    "criterion": "On the observation form, 'Final Notes and Recommendations' appears after the other note-taking headers.",
+    "weight": 1,
+    "share": 0.045454545454545456,
+    "run_id": "4d4fea24-0995-4546-8253-41e5e62e1b4e",
+    "files": [
+     "Undercover_Observation_Form.pdf",
+     "Undercover_Operations_Guide_Employee_Evaluation.pdf"
+    ],
+    "gpt_judge": [
+     "The specified final heading is absent and therefore does not appear after the other note-taking headers.",
+     "candidate/Undercover_Observation_Form.pdf, full pages 1\u20132: last two note headers are 'Assessment and follow-up' and 'Completion and review'; no 'Final Notes and Recommendations' heading appears."
+    ],
+    "claude_judge": [
+     "The required header is missing from the form.",
+     "Form headers listed on pp1-2; there is no 'Final Notes and Recommendations' header, and the last header is 'Completion and review'"
+    ]
+   },
+   {
+    "task_id": "a95a5829-34bb-40f3-993b-558aed6dcdef",
+    "occupation": "First-Line Supervisors of Police and Detectives",
+    "sector": "Government",
+    "model": "shared",
+    "rubric_item_id": "e583371f-3b01-4ce6-94f8-8419a1efa4f2",
+    "criterion": "Submission is provided as a single PDF document ",
+    "weight": 2,
+    "share": 0.044444444444444446,
+    "run_id": "31e50de6-f44f-4d37-a351-27ecf763aa73",
+    "files": [
+     "Training_Request_General_Order.docx"
+    ],
+    "gpt_judge": [
+     "The rubric explicitly requires a single PDF, although the task requests DOCX.",
+     "Artifact inventory contains only candidate/Training_Request_General_Order.docx; no PDF is supplied."
+    ],
+    "claude_judge": [
+     "The criterion asks for a single PDF, and the submission is a Word document.",
+     "The only deliverable is candidate/Training_Request_General_Order.docx. No PDF was submitted."
+    ]
+   },
+   {
+    "task_id": "0818571f-5ff7-4d39-9d2c-ced5ae44299e",
+    "occupation": "Real Estate Brokers",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "shared",
+    "rubric_item_id": "405fa3ca-f252-4f71-8e2d-4c678cd88f5f",
+    "criterion": "Includes a map of the area surrounding the property for each property listing",
+    "weight": 5,
+    "share": 0.03968253968253968,
+    "run_id": "161d7098-6c37-48de-8ac7-4cbb87fd4e1d",
+    "files": [
+     "Florida_Retail_Acquisition_Sourcing_Status.pdf"
+    ],
+    "gpt_judge": [
+     "The required maps are absent.",
+     "candidate/Florida_Retail_Acquisition_Sourcing_Status.pdf, p. 1, says surrounding-area maps remain outstanding; rendered pp. 1\u20133 contain no maps."
+    ],
+    "claude_judge": [
+     "There are no maps.",
+     "p1: surrounding-area maps remain outstanding"
+    ]
+   },
+   {
+    "task_id": "11dcc268-cb07-4d3a-a184-c6d7a19349bc",
+    "occupation": "Shipping, Receiving, and Inventory Clerks",
+    "sector": "Manufacturing",
+    "model": "shared",
+    "rubric_item_id": "fe8cbe2e-f3f6-4221-b23b-c60990ea7edf",
+    "criterion": "For item P21-L44S38-30, includes 0 in the Balance column",
+    "weight": 5,
+    "share": 0.03875968992248062,
+    "run_id": "6208181a-da34-4ba4-89ff-1b6f27dc75db",
+    "files": [
+     "Location Report 2025-06-24.xlsx"
+    ],
+    "gpt_judge": [
+     "Required zero balance absent.",
+     "candidate/Location Report 2025-06-24.xlsx, G3 blank; A9 says blank numeric cells mean unknown, not zero."
+    ],
+    "claude_judge": [
+     "The required balance of 0 is missing.",
+     "G3 is empty."
+    ]
+   },
+   {
+    "task_id": "4c4dc603-c21c-4284-8fb1-1b827c1fddf4",
+    "occupation": "Securities, Commodities, and Financial Services Sales Agents",
+    "sector": "Finance and Insurance",
+    "model": "shared",
+    "rubric_item_id": "19d8838a-560c-4356-b24e-904b60a889b7",
+    "criterion": "Includes the firm's phone number +1-800-555-0144 on the call to action.",
+    "weight": 2,
+    "share": 0.038461538461538464,
+    "run_id": "53243e2d-a0bb-49b8-aac0-5a295e2e4846",
+    "files": [
+     "Project_Kenonic_Product_Summary.pdf"
+    ],
+    "gpt_judge": [
+     "Task-requested number is present, but rubric-required +1-800-555-0144 is not.",
+     "candidate/Project_Kenonic_Product_Summary.pdf p.1 footer gives (+1) 000 000 111."
+    ],
+    "claude_judge": [
+     "The number +1-800-555-0144 does not appear; the file uses the number given in the task.",
+     "Footer: '(+1) 000 000 111'"
+    ]
+   },
+   {
+    "task_id": "7bbfcfe9-132d-4194-82bb-d6f29d001b01",
+    "occupation": "Compliance Officers",
+    "sector": "Government",
+    "model": "shared",
+    "rubric_item_id": "31104b3c-4f19-427e-a762-dfc77dface38",
+    "criterion": "Excel workbook includes tab titled \"Exercise of Rights\".",
+    "weight": 2,
+    "share": 0.03773584905660377,
+    "run_id": "8835305c-5792-42b3-8626-33b4223c038b",
+    "files": [
+     "SCRA_Compliance_Test_Template.xlsx"
+    ],
+    "gpt_judge": [
+     "No tab titled Exercise of Rights exists.",
+     "candidate/SCRA_Compliance_Test_Template.xlsx sheet inventory: Account Tests; Guide and Sources."
+    ],
+    "claude_judge": [
+     "There is no 'Exercise of Rights' tab.",
+     "The only sheets are 'Account Tests' and 'Guide and Sources'."
+    ]
+   },
+   {
+    "task_id": "f5d428fd-b38e-41f0-8783-35423dab80f6",
+    "occupation": "Concierges",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "shared",
+    "rubric_item_id": "768250b0-caa3-4a16-9477-3dcebae3130c",
+    "criterion": "Each day section includes at least one photo associated with that destination/day.",
+    "weight": 2,
+    "share": 0.03773584905660377,
+    "run_id": "f1fc5805-13d2-4f72-aeda-7951347592d5",
+    "files": [
+     "Bahamas_Family_Yacht_Itinerary.pdf"
+    ],
+    "gpt_judge": [
+     "All seven days lack a photo.",
+     "candidate/Bahamas_Family_Yacht_Itinerary.pdf pp.1\u20132 viewed: no photos; p.2 production note calls this edition 'text-only'."
+    ],
+    "claude_judge": [
+     "There are no photos.",
+     "Pages 1\u20132 are text-only; p2 note: 'this edition is text-only'"
+    ]
+   },
+   {
+    "task_id": "36d567ba-e205-4313-9756-931c6e4691fe",
+    "occupation": "Compliance Officers",
+    "sector": "Government",
+    "model": "shared",
+    "rubric_item_id": "7f121ca0-b666-4ec5-8eba-8abc3a30f224",
+    "criterion": "The question on high-risk status with federal agencies cites at least one relevant 2 C.F.R. Part 200 section; an acceptable example is \"2 C.F.R. 200.206(b)(2)\"",
+    "weight": 2,
+    "share": 0.037037037037037035,
+    "run_id": "66404507-fd69-4005-b9bc-7be3b9532bc2",
+    "files": [
+     "Federal Applicant - Risk Assessment Tool.docx"
+    ],
+    "gpt_judge": [
+     "General introductory and agency-use citations do not constitute a citation in the high-risk-status question.",
+     "candidate/Federal Applicant - Risk Assessment Tool.docx, question 11 requests agency, awards, dates, reasons and status but has no citation. \u00a7 200.206 appears in Purpose and \u00a7 200.208 in the separate Agency use paragraph."
+    ],
+    "claude_judge": [
+     "The question itself does not cite a section.",
+     "Q11 text has no 2 CFR citation. \u00a7200.206/200.208 appear only in the Purpose and Agency use paragraphs."
+    ]
+   },
+   {
+    "task_id": "3baa0009-5a60-4ae8-ae99-4955cb328ff3",
+    "occupation": "News Analysts, Reporters, and Journalists",
+    "sector": "Information",
+    "model": "shared",
+    "rubric_item_id": "c6286ea3-8fd3-45f9-9887-6a3911af56c2",
+    "criterion": "Article is in PDF format.",
+    "weight": 2,
+    "share": 0.03571428571428571,
+    "run_id": "9dd23788-a849-4587-91e1-d7856f2a9ea6",
+    "files": [
+     "article.md",
+     "global_growth.jpg"
+    ],
+    "gpt_judge": [
+     "Article is Markdown, not PDF.",
+     "Deliverable inventory contains candidate/article.md and candidate/global_growth.jpg only."
+    ],
+    "claude_judge": [
+     "The article is not a PDF.",
+     "The article was delivered as candidate/article.md (Markdown). No PDF is present."
+    ]
+   },
+   {
+    "task_id": "bd72994f-5659-4084-9fab-fc547d1efe3b",
+    "occupation": "First-Line Supervisors of Retail Sales Workers",
+    "sector": "Retail Trade",
+    "model": "shared",
+    "rubric_item_id": "3aea1734-7dd5-40de-81b7-fcaf2ea1e4dd",
+    "criterion": "If an SMS/text version is included, it provides an opt-out instruction (e.g., 'Reply STOP to opt out')",
+    "weight": 1,
+    "share": 0.034482758620689655,
+    "run_id": "71aa577a-2cd9-4f67-8ed0-a8cd396ea57b",
+    "files": [
+     "Client_Outreach_Templates.docx",
+     "Resort_2025_Looks.pdf"
+    ],
+    "gpt_judge": [
+     "Staff guidance does not supply an opt-out instruction within the provided text template.",
+     "candidate/Client_Outreach_Templates.docx paragraph 7 SMS ends with checking pieces and sizes before the visit; no recipient opt-out instruction appears. Paragraph 9 only tells staff to use boutique opt-out language."
+    ],
+    "claude_judge": [
+     "An SMS version is included, but it has no opt-out instruction.",
+     "The SMS template text has no STOP/opt-out line; only the team guidance says to use 'boutique opt-out language'"
+    ]
+   },
+   {
+    "task_id": "57b2cdf2-ad62-4591-aa91-aad489740320",
+    "occupation": "Private Detectives and Investigators",
+    "sector": "Retail Trade",
+    "model": "shared",
+    "rubric_item_id": "79fc7d27-b77f-40b2-aa47-b40f9bc9dfc4",
+    "criterion": "Explicitly states in the Assessment section that the observations support suspicion of an extramarital affair.",
+    "weight": 2,
+    "share": 0.03389830508474576,
+    "run_id": "77d634d4-15f2-4b39-8353-39ad0127b302",
+    "files": [
+     "Final_Surveillance_Report.pdf"
+    ],
+    "gpt_judge": [
+     "Does not explicitly state observations support suspicion of an extramarital affair.",
+     "candidate/Final_Surveillance_Report.pdf p.2 Conclusion says personal familiarity, no proof of affair, and allegation remains unconfirmed."
+    ],
+    "claude_judge": [
+     "The Assessment does not say the observations support suspicion of an affair.",
+     "Conclusion: 'neither these observations nor ... proves sexual activity or an affair. The client's allegation remains unconfirmed.'"
+    ]
+   },
+   {
+    "task_id": "61e7b9c6-0051-429f-a341-fda9b6578a84",
+    "occupation": "Medical and Health Services Managers",
+    "sector": "Health Care and Social Assistance",
+    "model": "shared",
+    "rubric_item_id": "3f4429dc-f55a-4765-8758-d8b8ae685aad",
+    "criterion": "Each row includes a price source (e.g., GoodRx) and a price \u2018as-of\u2019 date (month/day/year).",
+    "weight": 2,
+    "share": 0.031746031746031744,
+    "run_id": "f0833b51-887c-4383-b207-54f0cc619512",
+    "files": [
+     "Menopause_Formulary.xlsx"
+    ],
+    "gpt_judge": [
+     "The required month/day/year as-of date is absent, even for the sole quoted price.",
+     "candidate/Menopause_Formulary.xlsx, Formulary!L2:L46 contains lookup URLs, but no dated quotes; Read first!B9 expressly says no reliable calendar retrieval date is supplied."
+    ],
+    "claude_judge": [
+     "The as-of date is missing from every row.",
+     "Column L gives lookup URLs, but no row has an as-of date. Read first B9 says 'no reliable calendar retrieval date'."
+    ]
+   },
+   {
+    "task_id": "61f546a8-c374-467f-95cc-d0d9b5656eb6",
+    "occupation": "Counter and Rental Clerks",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "shared",
+    "rubric_item_id": "814e2506-7daf-46cc-a1f1-18359634bdc2",
+    "criterion": "Schedules appliance delivery to M24 prior to TR Apartments Staff or \"our staff\" work",
+    "weight": 5,
+    "share": 0.03125,
+    "run_id": "fbf686f4-7b1c-4c80-bf89-c7d2c393e20e",
+    "files": [
+     "TR_Apartments_Turn_Plan.pdf"
+    ],
+    "gpt_judge": [
+     "Delivery does not precede staff work.",
+     "candidate/TR_Apartments_Turn_Plan.pdf p.2 M24 staff repairs 7/1\u20137/2 before delivery 7/10."
+    ],
+    "claude_judge": [
+     "Staff work comes before the delivery, not after it.",
+     "Staff routine work 7/1-7/2; delivery 7/10"
+    ]
+   },
+   {
+    "task_id": "2fa8e956-7b35-4c13-95dc-027f02be318b",
+    "occupation": "Concierges",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "shared",
+    "rubric_item_id": "84f2b05b-ef41-4ba1-87fc-909ca9143124",
+    "criterion": "The document includes a relevant royalty-free photo of Napa Valley vineyards.",
+    "weight": 1,
+    "share": 0.030303030303030304,
+    "run_id": "5eb1ba27-0ff7-4193-863c-0aa50529e184",
+    "files": [
+     "Napa_Valley_Wineries.docx"
+    ],
+    "gpt_judge": [
+     "An external photo-source link does not include the requested photograph in the document.",
+     "candidate/Napa_Valley_Wineries.docx final photo section explicitly says 'Photograph is linked, not embedded: the image download was unavailable.'"
+    ],
+    "claude_judge": [
+     "No photo is included in the document.",
+     "'Photograph is linked, not embedded: the image download was unavailable.' The linked image is CC BY-SA 3.0."
+    ]
+   },
+   {
+    "task_id": "6dcae3f5-bf1c-48e0-8b4b-23e6486a934c",
+    "occupation": "First-Line Supervisors of Office and Administrative Support Workers",
+    "sector": "Health Care and Social Assistance",
+    "model": "shared",
+    "rubric_item_id": "2cade68f-9b30-4735-8e75-d5205188f70d",
+    "criterion": "In the email, references the attached Excel file, 'Chief Key Indicators 5 Year.xlsx' (case-insensitive)",
+    "weight": 2,
+    "share": 0.029850746268656716,
+    "run_id": "caf6b93f-d1cb-4cc7-abe5-be873ea5ef4a",
+    "files": [
+     "Chief Key Indicator 5-Year.xlsx",
+     "Email to Dr. Smith.docx"
+    ],
+    "gpt_judge": [
+     "Does not reference the exact filename specified by this criterion.",
+     "candidate/Email to Dr. Smith.docx paragraph 4 references 'attached Chief Key Indicator 5-Year workbook'."
+    ],
+    "claude_judge": [
+     "It does not use the required filename 'Chief Key Indicators 5 Year.xlsx'.",
+     "The email refers to the 'Chief Key Indicator 5-Year workbook'."
+    ]
+   },
+   {
+    "task_id": "4c18ebae-dfaa-4b76-b10c-61fcdf26734c",
+    "occupation": "Compliance Officers",
+    "sector": "Government",
+    "model": "shared",
+    "rubric_item_id": "eb1cc1c2-99ea-4448-a6ac-7b5240036aae",
+    "criterion": "The SAR narrative provides a suspicious transaction summary per account that includes total number of transactions, minimum and maximum amounts, and total amount per transaction category",
+    "weight": 2,
+    "share": 0.028985507246376812,
+    "run_id": "61867618-fa69-44df-be69-6c6d00261a4b",
+    "files": [
+     "SAR_Management_Review.docx",
+     "Supporting_Transactions.xlsx"
+    ],
+    "gpt_judge": [
+     "Narrative summaries lack required per-account category counts/ranges/totals.",
+     "candidate/SAR_Management_Review.docx \u00a7\u00a74\u20135 provide account inflows/outflows and combined cash counts, but no per-account minima and maxima or complete category breakdown."
+    ],
+    "claude_judge": [
+     "Missing the required min/max and category breakdown.",
+     "Section 4 gives credits/debits and cash deposit count/total per account but no minimum/maximum amounts or per-category totals."
+    ]
+   },
+   {
+    "task_id": "a941b6d8-4289-4500-b45a-f8e4fc94a724",
+    "occupation": "Film and Video Editors",
+    "sector": "Information",
+    "model": "shared",
+    "rubric_item_id": "c31d632b-8b5b-4d06-b1bd-9346e7799005",
+    "criterion": "Submits a final composited video file for the VFX shot",
+    "weight": 2,
+    "share": 0.02857142857142857,
+    "run_id": "82e68ff1-f134-4c70-b515-202259895d1e",
+    "files": [
+     "Teleportation_handoff.txt"
+    ],
+    "gpt_judge": [
+     "The requested final composited video was not submitted.",
+     "candidate/Teleportation_handoff.txt, Status: 'No edited video was produced.' Inventory contains only this TXT artifact."
+    ],
+    "claude_judge": [
+     "No composited video was submitted.",
+     "Only candidate/Teleportation_handoff.txt exists; it states 'No edited video was produced.'"
+    ]
+   },
+   {
+    "task_id": "045aba2e-4093-42aa-ab7f-159cc538278c",
+    "occupation": "Pharmacists",
+    "sector": "Retail Trade",
+    "model": "shared",
+    "rubric_item_id": "fb13b658-fe25-4b85-a851-d835fe4b9c2e",
+    "criterion": "The Annual section includes confirming that the \u2018Notice to Consumers\u2019 poster is visible and up to date",
+    "weight": 2,
+    "share": 0.0273972602739726,
+    "run_id": "7511bbc9-f802-4348-8560-fb991282c572",
+    "files": [
+     "01_daily_compliance.pdf",
+     "02_weekly_monthly_compliance.pdf",
+     "03_quarterly_annual_compliance.pdf"
+    ],
+    "gpt_judge": [
+     "No annual verification of a visible, up-to-date Notice to Consumers poster.",
+     "candidate/03_quarterly_annual_compliance.pdf p.1 Annual section contains no consumer poster check; candidate/02_weekly_monthly_compliance.pdf p.1 only generally mentions consumer notices monthly."
+    ],
+    "claude_judge": [
+     "The item is not in the Annual section.",
+     "03 Annual does not mention Notice to Consumers. Consumer notices appear only in the 02 Monthly section."
+    ]
+   },
+   {
+    "task_id": "f1be6436-ffff-4fee-9e66-d550291a1735",
+    "occupation": "Medical Secretaries and Administrative Assistants",
+    "sector": "Health Care and Social Assistance",
+    "model": "shared",
+    "rubric_item_id": "d0685335-3a0c-4cf7-adcc-5731c7bdd8bb",
+    "criterion": "For Dr. Jane Joe, a legible flight-details screenshot is embedded showing airline, dates, origin and destination cities/airports, departure and arrival times, and total billed price including taxes/fees.",
+    "weight": 2,
+    "share": 0.02702702702702703,
+    "run_id": "cf3b9fbe-add3-4f51-8b84-59ed9dd4fbc0",
+    "files": [
+     "2026 ACP-IMM Estimated Costs.docx"
+    ],
+    "gpt_judge": [
+     "Doe's required flight-details screenshot is expressly absent.",
+     "candidate/2026 ACP-IMM Estimated Costs.docx, flight subsection: 'no fare or screenshot obtained'; itinerary is called a search specification."
+    ],
+    "claude_judge": [
+     "There is no flight screenshot for Dr. Doe.",
+     "Same as above: 'no fare or screenshot obtained'."
+    ]
+   },
+   {
+    "task_id": "b57efde3-26d6-4742-bbff-2b63c43b4baa",
+    "occupation": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+    "sector": "Wholesale Trade",
+    "model": "shared",
+    "rubric_item_id": "d10f9637-6459-4326-9ccc-1bc706b197c3",
+    "criterion": "Includes a lead whose company name matches 'MoROV Subsea Solutions' (case-insensitive; punctuation-insensitive).",
+    "weight": 2,
+    "share": 0.02666666666666667,
+    "run_id": "b6d106d0-978f-47cd-b52a-fa016e3d574b",
+    "files": [
+     "Aqua_Nor_2025_OEM_Prospects.xlsx"
+    ],
+    "gpt_judge": [
+     "Required lead absent.",
+     "candidate/Aqua_Nor_2025_OEM_Prospects.xlsx, complete Prospects!B2:B5 and Qualification holds!A2:A3 omit MoROV Subsea Solutions."
+    ],
+    "claude_judge": [
+     "Missing.",
+     "MoROV does not appear"
+    ]
+   },
+   {
+    "task_id": "9efbcd35-186d-49b6-ac24-28ee2bc9a263",
+    "occupation": "Securities, Commodities, and Financial Services Sales Agents",
+    "sector": "Finance and Insurance",
+    "model": "shared",
+    "rubric_item_id": "3a8b8480-d7ac-4998-86df-548bf931f25d",
+    "criterion": "For India, cites slower-than-expected GDP growth as a performance driver.",
+    "weight": 2,
+    "share": 0.02631578947368421,
+    "run_id": "6c5dbbbf-6c96-41e3-ad2d-1ce0dddcdcb1",
+    "files": [
+     "EM_Q1_2025_Outlook.docx"
+    ],
+    "gpt_judge": [
+     "Earnings softness is not a statement of slower-than-expected GDP growth.",
+     "candidate/EM_Q1_2025_Outlook.docx India drivers are foreign selling, demanding valuations and 'softer earnings momentum'."
+    ],
+    "claude_judge": [
+     "Slower-than-expected GDP growth is not cited.",
+     "Cites foreign selling, valuations and softer earnings momentum. GDP growth is not mentioned as a driver."
+    ]
+   },
+   {
+    "task_id": "b78fd844-db76-448e-a783-5e9877cb74c2",
+    "occupation": "Financial Managers",
+    "sector": "Finance and Insurance",
+    "model": "shared",
+    "rubric_item_id": "569fb80f-008f-4151-83b8-b86abcb58a3e",
+    "criterion": "The report does not introduce fabricated exact NPVs or IRRs (e.g., \u201cNPV = $12.4M\u201d, \u201cIRR = 11.2%\u201d) and instead uses directional descriptors or ranges.",
+    "weight": 2,
+    "share": 0.02631578947368421,
+    "run_id": "547f322e-1113-468c-a1b3-3d57060a54b6",
+    "files": [
+     "Tiny_Rod_Hit_Board_Report.docx",
+     "Tiny_Rod_Hit_Board_Report.pdf"
+    ],
+    "gpt_judge": [
+     "Disclosing invented cash-flow proxies is transparent but does not satisfy the restriction to directional descriptors or ranges instead of fabricated point NPVs/IRRs.",
+     "candidate/Tiny_Rod_Hit_Board_Report.pdf p.2 central scenario: A ~+$8m/12%, B success ~+$35m/21%, B expected ~+$12m/14%."
+    ],
+    "claude_judge": [
+     "Near-exact NPVs and IRRs are introduced from fabricated cash-flow assumptions.",
+     "Page 2 scenario table: \"~+$8m / 12%\", \"~+$35m / 21%\" and similar values."
+    ]
+   },
+   {
+    "task_id": "93b336f3-61f3-4287-86d2-87445e1e0f90",
+    "occupation": "Buyers and Purchasing Agents",
+    "sector": "Manufacturing",
+    "model": "shared",
+    "rubric_item_id": "e158aa7f-adb0-4d10-a79f-f71f67cafc25",
+    "criterion": "Calculates localized per-pack cost as INR 703,590 (683,000 + 20,000 + 590).",
+    "weight": 2,
+    "share": 0.02631578947368421,
+    "run_id": "476c50fd-6640-4eab-930e-544b60a12dcd",
+    "files": [
+     "CPO_Battery_Assembly_Partnership.docx"
+    ],
+    "gpt_judge": [
+     "Does not state rubric-required 703,590. Candidate instead correctly follows task inputs and unchanged-component assumption; rubric target is inconsistent with them.",
+     "candidate/CPO_Battery_Assembly_Partnership.docx calculation: 'Local pack = 705,500 + 20,000 + 590 = 726,090'."
+    ],
+    "claude_judge": [
+     "The document gives 726,090, not the rubric's 703,590.",
+     "'Local pack = 705,500 + 20,000 + 590 = 726,090'"
+    ]
+   },
+   {
+    "task_id": "a97369c7-e5cf-40ca-99e8-d06f81c57d53",
+    "occupation": "Lawyers",
+    "sector": "Professional, Scientific, and Technical Services",
+    "model": "shared",
+    "rubric_item_id": "76568365-1fcb-4477-ab44-6d03440dc1bb",
+    "criterion": "The memorandum states that even if not intentional harm, refusing to consider the merits of a highly beneficial transaction can constitute grossly negligent conduct by a controller.",
+    "weight": 3,
+    "share": 0.023809523809523808,
+    "run_id": "34d27aca-91f2-4886-8544-b8a4f5875c6f",
+    "files": [
+     "Avalon_Legal_Memorandum.docx",
+     "Avalon_Legal_Memorandum.pdf"
+    ],
+    "gpt_judge": [
+     "Does not explain that a controller's refusal to consider this beneficial transaction's merits can be gross negligence even absent intentional harm.",
+     "candidate/Avalon_Legal_Memorandum.pdf, p. 4 describes Sears's general gross-negligence prohibition but applies only vengeance, proper objectives, and intentional misuse to Marcus. P. 3's failure-to-investigate discussion concerns directors."
+    ],
+    "claude_judge": [
+     "Does not state that refusing to consider the merits of the deal could be grossly negligent conduct by a controller.",
+     "p4 mentions the gross-negligence duty in Sears only abstractly"
+    ]
+   },
+   {
+    "task_id": "0419f1c3-d669-45d0-81cd-f4d5923b06a5",
+    "occupation": "Property, Real Estate, and Community Association Managers",
+    "sector": "Real Estate and Rental and Leasing",
+    "model": "shared",
+    "rubric_item_id": "6709f01e-510d-4f4e-9c16-5a0038310f1a",
+    "criterion": "States that the PIP review period is 90 days with explicit start date 07/13/2025.",
+    "weight": 2,
+    "share": 0.023529411764705882,
+    "run_id": "104e2351-b269-4f8b-b7ce-ddb17e7ffb87",
+    "files": [
+     "John_Miller_Performance_Improvement_Plan.docx"
+    ],
+    "gpt_judge": [
+     "Explicit start date is July 14, not July 13.",
+     "candidate/John_Miller_Performance_Improvement_Plan.docx header says 'July 14\u2013October 11, 2025 (90 calendar days)'."
+    ],
+    "claude_judge": [
+     "The plan starts on July 14, not 07/13/2025.",
+     "'Review period: July 14\u2013October 11, 2025 (90 calendar days)'"
+    ]
+   },
+   {
+    "task_id": "a73fbc98-90d4-4134-a54f-2b1d0c838791",
+    "occupation": "Recreation Workers",
+    "sector": "Government",
+    "model": "shared",
+    "rubric_item_id": "445fcf79-f960-4fd4-8b8f-3524c12c3ab5",
+    "criterion": "Provides two updated layout PDFs as separate files: one for the Arena and one for the Meeting Room",
+    "weight": 2,
+    "share": 0.022988505747126436,
+    "run_id": "897b57e0-2b19-44e9-8177-fa380d9ce930",
+    "files": [
+     "Spring Bazaar 2025 - Assigned Vendors.xlsx",
+     "Spring Bazaar 2025 - Table Assignment Plan.pdf"
+    ],
+    "gpt_judge": [
+     "The maps are combined, not supplied as two separate PDF files.",
+     "Inventory contains W and only one PDF, P; P pages 1 and 2 contain the two maps."
+    ],
+    "claude_judge": [
+     "Both layouts are in one PDF, not two separate files.",
+     "The only PDF is 'Spring Bazaar 2025 - Table Assignment Plan.pdf' (6 pages: arena on p1, meeting room on p2)."
+    ]
+   },
+   {
+    "task_id": "05389f78-589a-473c-a4ae-67c61050bfca",
+    "occupation": "Buyers and Purchasing Agents",
+    "sector": "Manufacturing",
+    "model": "shared",
+    "rubric_item_id": "9d0cb101-a50d-45d2-bb2b-0e346f3a92e5",
+    "criterion": "Total Investment Difference vs. Juvoxa Optics shows Autonexis Lighting\u2019s difference as +\u20b9804.56 million (accepts numeric equivalent \u20b9804,560,000).",
+    "weight": 2,
+    "share": 0.022727272727272728,
+    "run_id": "6871b4f2-c388-41cb-8792-a193611ef7d9",
+    "files": [
+     "CPO_Model_A_Replacement_Report.docx",
+     "Juvoxa_Termination_Email.docx"
+    ],
+    "gpt_judge": [
+     "Does not report required Autonexis-versus-Juvoxa total difference of 804.56 million.",
+     "candidate/CPO_Model_A_Replacement_Report.docx table 2 only provides Vendrax less Juvoxa difference, 294.390 million; section 4 reports Vendrax versus Autonexis savings 510.17 million."
+    ],
+    "claude_judge": [
+     "Autonexis's total-investment difference vs. Juvoxa is not shown.",
+     "No 804.56 figure appears. Only the Vendrax-vs-Autonexis difference of 510.17 is given."
+    ]
+   },
+   {
+    "task_id": "1aecc095-4d76-4b89-b752-1a0f870502cd",
+    "occupation": "First-Line Supervisors of Office and Administrative Support Workers",
+    "sector": "Health Care and Social Assistance",
+    "model": "shared",
+    "rubric_item_id": "6635a9f7-7a2a-4bb5-befe-5e39cbb36176",
+    "criterion": "\"Telehealth Workflow\" instructs confirming and documenting the patient\u2019s current physical location for the telehealth encounter.",
+    "weight": 2,
+    "share": 0.022222222222222223,
+    "run_id": "422f67d9-3bdc-4ff7-8bc5-8ce5d6b4b36d",
+    "files": [
+     "MA Telehealth Email.txt",
+     "Telehealth Roadmap.docx",
+     "Telehealth Workflow.docx"
+    ],
+    "gpt_judge": [
+     "Confirmation alone does not meet confirmation and documentation requirement.",
+     "candidate/Telehealth Workflow.docx step 5 confirms current location; record lists in steps 3 and 12 do not direct documenting location."
+    ],
+    "claude_judge": [
+     "No instruction to document location.",
+     "Step 5 confirms location, but location appears in neither the step 3 nor the step 12 documentation list"
+    ]
+   },
+   {
+    "task_id": "62f04c2f-e0f7-4710-876c-54ee9c2e8256",
+    "occupation": "First-Line Supervisors of Non-Retail Sales Workers",
+    "sector": "Wholesale Trade",
+    "model": "shared",
+    "rubric_item_id": "708483e7-6f14-4aa6-aee4-d0056575d132",
+    "criterion": "The Word document includes the warehouse phone number 560-555-3867 (accepts common US formats such as 560-555-3867, (560) 555-3867, or 560-555.3867).",
+    "weight": 2,
+    "share": 0.02197802197802198,
+    "run_id": "c7bed3e1-6ab5-4c3c-af54-9a8fdb55061b",
+    "files": [
+     "Gravon_Exchange_Authorization.xlsx",
+     "Gravon_Exchange_Program_Overview.docx"
+    ],
+    "gpt_judge": [
+     "Matches task prompt but not unchanged rubric's required 560-555-3867.",
+     "candidate/Gravon_Exchange_Program_Overview.docx warehouse table gives 'Phone: 455-864-3867'."
+    ],
+    "claude_judge": [
+     "The rubric asks for 560-555-3867, but the document shows 455-864-3867, which is the number given in the task prompt. This literal mismatch with the rubric is likely a rubric error.",
+     "docx table: 'Phone: 455-864-3867'"
+    ]
+   },
+   {
+    "task_id": "6974adea-8326-43fa-8187-2724b15d9546",
+    "occupation": "News Analysts, Reporters, and Journalists",
+    "sector": "Information",
+    "model": "shared",
+    "rubric_item_id": "0d33838a-dd73-4c27-9228-9788a488a20f",
+    "criterion": "The article mentions at least two of the following wireless signals as being used by RTLS to determine the location of tagged items: Wi-Fi, infrared, Bluetooth, and radio frequency identification (RFID).",
+    "weight": 2,
+    "share": 0.021739130434782608,
+    "run_id": "cca5eeaf-f756-4fc1-8ebe-320a2e5e85ba",
+    "files": [
+     "livestock-rtls-feature.docx"
+    ],
+    "gpt_judge": [
+     "Does not mention two of the specified technologies.",
+     "candidate/livestock-rtls-feature.docx, paragraphs 9\u201314 describe RFID and ultra-wideband; no Wi-Fi, infrared or Bluetooth appears in the article."
+    ],
+    "claude_judge": [
+     "Fewer than two of the listed signals are mentioned",
+     "Only ultra-wideband is named as RTLS signalling; RFID is contrasted with RTLS; Wi-Fi, Bluetooth and infrared are absent"
+    ]
+   },
+   {
+    "task_id": "45c6237b-f9c9-4526-9a8d-6a5c404624ec",
+    "occupation": "First-Line Supervisors of Retail Sales Workers",
+    "sector": "Retail Trade",
+    "model": "shared",
+    "rubric_item_id": "61224c45-127e-4186-b042-1a00a698f1f9",
+    "criterion": "The Next Season Assortment section includes at least one image of a hat/headwear style from ORDER LIST PDF.",
+    "weight": 1,
+    "share": 0.021739130434782608,
+    "run_id": "90896e86-28d6-41f3-a597-b4683942a1b4",
+    "files": [
+     "Crescent_Pines_Spring_2022.pdf"
+    ],
+    "gpt_judge": [
+     "Next Season Assortment contains no headwear image.",
+     "candidate/Crescent_Pines_Spring_2022.pdf pp.6\u20138 show folded shirts, hanging apparel and fabric swatches, but no hat/headwear image; hats are confined to purchase pp.2\u20134."
+    ],
+    "claude_judge": [
+     "The Next Season section contains no hat image.",
+     "Pages 6-8 show only shirts, jackets and vests; no hat appears"
+    ]
+   },
+   {
+    "task_id": "e6429658-4de1-42dd-a9e0-2d2b9b02fb10",
+    "occupation": "Nurse Practitioners",
+    "sector": "Health Care and Social Assistance",
+    "model": "shared",
+    "rubric_item_id": "394b53c7-e71c-4d9d-8cee-e58c5e6e4020",
+    "criterion": "All pages of the completed application are present in the PDF, in order, and typed entries render legibly when opened.",
+    "weight": 2,
+    "share": 0.021052631578947368,
+    "run_id": "621997c2-d258-4c5a-859e-8f2ddfb2410b",
+    "files": [
+     "RP Financial Assistance Application.pdf",
+     "Vraylar Appeal for RP.docx"
+    ],
+    "gpt_judge": [
+     "Not all pages of a completed application are present; only substitute worksheet supplied.",
+     "candidate/RP Financial Assistance Application.pdf pp1\u20132 are legible numbered worksheet pages; p1 explicitly says it does not reproduce AbbVie consents or certifications and p2 says obtain official form."
+    ],
+    "claude_judge": [
+     "The official application's pages are not present.",
+     "The PDF is a 2-page custom worksheet; page 1 says it does not reproduce the AbbVie consents or certifications"
+    ]
+   },
+   {
+    "task_id": "9e39df84-ac57-4c9b-a2e3-12b8abf2c797",
+    "occupation": "First-Line Supervisors of Production and Operating Workers",
+    "sector": "Manufacturing",
+    "model": "shared",
+    "rubric_item_id": "f3080a31-d823-4dfa-ac32-c62f3eac29d7",
+    "criterion": "Shows night shift contribution as 49% of total output (\u00b10.5 percentage point due to rounding) for Week 1 KPI in \"Dashboard\"",
+    "weight": 2,
+    "share": 0.020833333333333332,
+    "run_id": "aaf9e27f-57c3-4808-83e5-30e5d8fe6522",
+    "files": [
+     "Dashboard Output.xlsx"
+    ],
+    "gpt_judge": [
+     "41.58% is outside specified 49% \u00b10.5 percentage point.",
+     "candidate/Dashboard Output.xlsx, Dashboard!G15 cached 0.4157664609053498, labeled Night shift contribution."
+    ],
+    "claude_judge": [
+     "The rubric expects 49% \u00b10.5; the workbook shows 41.6%.",
+     "G15 Night shift contribution = 0.4158 (41.6%)."
+    ]
+   },
+   {
+    "task_id": "bb863dd9-31c2-4f64-911a-ce11f457143b",
+    "occupation": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+    "sector": "Wholesale Trade",
+    "model": "shared",
+    "rubric_item_id": "bf858ed4-f77c-4794-9f51-75a1e8b872da",
+    "criterion": "Article Number 458853 is quoted with quantity equal to 3.",
+    "weight": 2,
+    "share": 0.020618556701030927,
+    "run_id": "418596fc-f219-4d4f-9df4-b928e427a6e2",
+    "files": [
+     "Quotation Q6533211 - BO-757820 (Inter-Aid).xlsx"
+    ],
+    "gpt_judge": [
+     "Quantity is not 3.",
+     "Q!A19=458853, C19=1."
+    ],
+    "claude_judge": [
+     "The rubric requires quantity 3.",
+     "Cell C19 shows quantity 1 for 458853."
+    ]
+   },
+   {
+    "task_id": "47ef842d-8eac-4b90-bda8-dd934c228c96",
+    "occupation": "Order Clerks",
+    "sector": "Wholesale Trade",
+    "model": "shared",
+    "rubric_item_id": "4ddd05a2-e7c1-4237-bcc4-fde4cbc56f05",
+    "criterion": "For UPC 217313054556, Number of Stores equals 1223",
+    "weight": 2,
+    "share": 0.020202020202020204,
+    "run_id": "ea82f1b8-781f-4a4f-ad72-64f155b5c644",
+    "files": [
+     "Inventory_Health_Week_28.xlsx"
+    ],
+    "gpt_judge": [
+     "1222 is not the required 1223.",
+     "candidate/Inventory_Health_Week_28.xlsx Summary!F11:G11 cached values 1222."
+    ],
+    "claude_judge": [
+     "The expected value is 1223.",
+     "G11 = 1222"
+    ]
+   },
+   {
+    "task_id": "8c8fc328-69fc-4559-a13f-82087baef0a1",
+    "occupation": "Film and Video Editors",
+    "sector": "Information",
+    "model": "shared",
+    "rubric_item_id": "c4873059-c5ae-4555-86d7-19fb851cc9bc",
+    "criterion": "All time indications use mm:ss only (no formats like \u201c3 min\u201d, \u201c1m30s\u201d, or clock-style times)",
+    "weight": 1,
+    "share": 0.0196078431372549,
+    "run_id": "a132f8ea-c9c7-4f30-805b-3d21d36148fb",
+    "files": [
+     "Unseen Realms - Basic Script.docx"
+    ],
+    "gpt_judge": [
+     "Not all time indications use mm:ss only.",
+     "candidate/Unseen Realms - Basic Script.docx, subtitle says 'Approximate runtime: 4 minutes'; sequence 3 SOUND / SPACE says 'a few seconds'."
+    ],
+    "claude_judge": [
+     "\"4 minutes\" is a non-mm:ss time format, which this criterion explicitly excludes.",
+     "Paragraph 2: \"Approximate runtime: 4 minutes\""
+    ]
+   }
+  ]
+ },
+ "candidate_pool": {
+  "shared": 86,
+  "openai": 67,
+  "anthropic": 40
+ }
+}
