@@ -91,6 +91,7 @@ page = f"""<!doctype html>
       <a class="gpt" href="gpt.html">For OpenAI (GPT)</a>
       <a class="claude" href="claude.html">For Anthropic (Claude)</a>
       <a href="failures.html">Failures</a>
+      <a href="audit.html">Audit progress</a>
       <a href="example.html" aria-current="page">Worked example</a>
       <a href="methods.html">Methods &amp; limits</a>
       <a href="data.html">Data &amp; code</a>

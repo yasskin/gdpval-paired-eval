@@ -1,8 +1,8 @@
 # GPT vs. Claude: Provisional Failure Findings
 
-**Updated:** November 17, 2026; full grading export saved November 11.  
+**Updated:** November 18, 2026; full grading export saved November 11.  
 **Scope:** 220 GDPval tasks, one primary attempt per model; 440 attempts total.  
-**Status:** Primary generation and the provisional automated grading queue have finished. Of 880 judge assignments, 857 have valid assessments, nine have invalid grades, four failed and 10 are unavailable. The 30-task inspection slice has been selected by a pre-set rule; the human hand audit of the failure ledger and expert adjudication remain outstanding.
+**Status:** Primary generation and the provisional automated grading queue have finished. Of 880 judge assignments, 857 have valid assessments, nine have invalid grades, four failed and 10 are unavailable. The 30-item failure ledger has been hand-checked against the original files: 21 items were confirmed as drafted, seven reclassified and two judge fail calls rejected. The resulting ledger classifies 20 items as model failures, eight as grading/rubric issues, and two as rejected judge fail calls. This is one reviewer's audit, not independent expert adjudication or validation of all AI-judge grades. See the [item-by-item published audit](https://yasskin.github.io/evals-site/audit.html).
 
 **Bottom line:** GPT completed with at least one artifact on 211/220 tasks versus Claude on 144/220, a 30.5-percentage-point delivery-proxy gap. Quality comparisons remain uncertain and judge-sensitive, not evidence of an overall quality winner. The independent higher-budget Claude experiment finished with 54/62 completed conversations, 53 with listed artifacts; it does not alter primary outcomes.
 

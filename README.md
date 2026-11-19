@@ -4,7 +4,11 @@ This is the code behind a paired evaluation on all 220 public [GDPval](https://h
 
 **Results site:** https://yasskin.github.io/evals-site/
 
+**Hand-audit page:** https://yasskin.github.io/evals-site/audit.html
+
 **One-page summary:** [RESULTS_ONE_PAGE.md](RESULTS_ONE_PAGE.md). It gives the headline findings, organized by the four parts of the take-home brief.
+
+**Hand-audit record:** [failure_audit.csv](failure_audit.csv) contains the 30 selected failure-ledger items, their recorded verdicts and reviewer notes. All 30 have been checked by one reviewer; this is not independent expert adjudication.
 
 The results site explains the findings for non-specialists. This repository holds the code that produced them, so the work can be checked or re-run.
 
@@ -35,7 +39,7 @@ Run Python with [uv](https://docs.astral.sh/uv/). The paid stages need explicit 
 | | `test_full_grade.py` | Offline tests: `uv run python -m unittest test_full_grade` |
 | 4. Analyze | `analyze_sectors.py`, `analyze_plan_items.py` | Sector comparison, judge agreement, cost, failure-ledger candidates |
 | 5. Site | `build_site_tasks.py`, `build_site_example.py`, `build_site_sectors.py`, `build_site_plan.py` | Generate the results-site pages and CSVs |
-| | `build_audit_packet.py` | Worksheet for the hand audit of the failure ledger |
+| | `build_audit_packet.py` | Worksheet for recording and reviewing the failure-ledger audit |
 
 Analysis and site scripts use only the standard library plus pandas, pyarrow and scipy, for example:
 
@@ -49,6 +53,7 @@ uv run --no-project --with pandas --with pyarrow --with scipy python turing/fiel
 - `CALIBRATION_REPORT.md`: judge calibration sample that was reviewed before full grading
 - `RESULTS_ONE_PAGE.md`: one-page summary of the findings
 - `PROVISIONAL_FAILURE_FINDINGS.md`: detailed failure findings
+- `failure_audit.csv`: final hand-audit verdicts and reviewer notes
 - `plan_items.json`: analysis output used by the site generators
 
 All findings are provisional. Judge scores are never averaged across the two judges.

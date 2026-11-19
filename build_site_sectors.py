@@ -181,6 +181,7 @@ def nav():
         ("gpt.html", "For OpenAI (GPT)", "gpt"),
         ("claude.html", "For Anthropic (Claude)", "claude"),
         ("failures.html", "Failures", ""),
+        ("audit.html", "Audit progress", ""),
         ("example.html", "Worked example", ""),
         ("methods.html", "Methods &amp; limits", ""),
         ("data.html", "Data &amp; code", ""),

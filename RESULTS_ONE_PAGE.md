@@ -1,6 +1,6 @@
 # Can AI do real professional work? GPT-6 Astra vs. Claude Opus 5.5 on GDPval
 
-**Updated November 17, 2026** · [Results site](https://yasskin.github.io/evals-site/) · [Code](https://github.com/yasskin/gdpval-paired-eval) · Provisional results; AI-graded, not yet checked by human experts.
+**Updated November 18, 2026** · [Results site](https://yasskin.github.io/evals-site/) · [Code](https://github.com/yasskin/gdpval-paired-eval) · Provisional results; AI grades, with a completed human check of the selected failure ledger, not expert adjudication.
 
 **Bottom line:** GPT handed in a file far more often: **211 of 220 tasks (95.9%)**, against **144 of 220 (65.5%)** for Claude. Whose files were *better* is still mostly unclear. The AI judges often could not tell, and each favored its own company's model. Where both judges agreed, Claude's work was better on **29** tasks and GPT's on **17**.
 
@@ -28,10 +28,9 @@
 ## 2. Failure modes: which matter, and which are noise
 
 - **85 tasks with no usable file (9 GPT, 76 Claude), all classified against the run records.** Most of Claude's are real model-plus-limits gaps: 33 ran out of the token budget, 14 had the final reply cut off, 15 used all 14 turns, and 13 wrote the work as chat text instead of saving the file. GPT's include **noise**: 2 server timeouts, plus 3 web-search requests cut off mid-way (partly the harness).
-- **30 errors inside delivered files, in a draft taxonomy** (12 GPT, 12 Claude, 6 shared). We took only checklist items that **both** judges failed, prioritized by weight. 8 are high severity (could mislead a decision) and 4 are grading problems or tool limits, not model weaknesses.
-  - **GPT** mostly misses *domain judgment and completeness*: 5 domain-judgment errors, 3 completeness. One example is a heat-map analysis that left out whether a hotspot was within 10 °C of a safety limit.
-  - **Claude** mostly makes *quantitative and grounding* errors: 4 quantitative, 3 reference grounding. One example is a wrong legal identifier in a case file.
-- The ledger is a draft until each item is hand-checked against the original file ([failures page](https://yasskin.github.io/evals-site/failures.html)).
+- **The 30-item failure ledger has now been hand-checked against the original files.** The reviewer confirmed 21 as drafted, reclassified 7, and rejected 2 judge fail calls. After applying those verdicts, 20 items remain classified as model failures, 8 as grading/rubric issues, and 2 judge fail calls were rejected. Eight are rated high severity. See the [item-by-item audit and notes](https://yasskin.github.io/evals-site/audit.html) and the [failure analysis](https://yasskin.github.io/evals-site/failures.html).
+  - **GPT**'s audited model failures mostly involve *domain judgment and completeness*: 5 domain-judgment and 2 completeness items. One example is a heat-map analysis that left out whether a hotspot was within 10 °C of a safety limit.
+  - **Claude**'s audited model failures include 2 quantitative and 2 reference-grounding items. These findings are a small, deliberately selected slice, not an estimate of overall error rates.
 
 ## 3. Gaps, and the dataset that would close them
 
@@ -48,7 +47,7 @@ Proposed pilot: about 300 tasks for each dataset, scaled only if the held-out te
 ## 4. Honest limits
 
 - **Sample:** one try per task. Sectors have 20–25 tasks each. The 30-task slice was chosen for large gaps, so it exaggerates differences by design.
-- **Grader reliability:** AI judges with measurable self-preference. A quarter of checklist items could not be verified. Calibration was an approval after reviewing a 6-task report, not a human check of the grades. **The human hand audit of the 30 failures is still pending.**
+- **Grader reliability:** AI judges with measurable self-preference. A quarter of checklist items could not be verified. Calibration was an approval after reviewing a 6-task report, not a human check of the grades. A human checked all 30 selected ledger items; this spot-check does not independently validate AI-judge passes, unverified items, or the overall grades, and is not expert adjudication.
 - **Comparability:** reasoning effort was not matched, and Claude ran through Databricks serving. The retry changed several limits at once and its files are ungraded; it never replaces the main results.
 - **Cost:** list-price estimates. They exclude web-search fees and Databricks platform charges.
 

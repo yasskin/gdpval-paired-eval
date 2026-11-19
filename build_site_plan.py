@@ -1,4 +1,4 @@
-"""Build failures.html and data.html from plan_items.json and the frozen run records. No inference."""
+"""Build failure, audit-progress and data pages from the frozen results. No inference."""
 
 import csv
 import html
@@ -18,6 +18,7 @@ NAV = [
     ("gpt.html", "For OpenAI (GPT)", "gpt"),
     ("claude.html", "For Anthropic (Claude)", "claude"),
     ("failures.html", "Failures", ""),
+    ("audit.html", "Audit progress", ""),
     ("example.html", "Worked example", ""),
     ("methods.html", "Methods &amp; limits", ""),
     ("data.html", "Data &amp; code", ""),
@@ -110,10 +111,10 @@ SEV_CLS = {"High": "sev-high", "Medium": "sev-med", "Low": "sev-low", "Not a mod
 ledger = []
 for model, items in REVIEW.items():
     pool = D["candidates"][model]
-    for idx, prefix, cls, sev, req, wrong, note in items:
+    for n, (idx, prefix, cls, sev, req, wrong, note) in enumerate(items, 1):
         c = pool[idx]
         assert c["criterion"].startswith(prefix), (model, idx, c["criterion"][:60])
-        ledger.append({"model": WHO[model], "occupation": c["occupation"], "sector": c["sector"],
+        ledger.append({"id": f"{WHO[model][0].replace('B', 'S')}{n}", "model": WHO[model], "occupation": c["occupation"], "sector": c["sector"],
                        "task_id": c["task_id"], "run_id": c["run_id"], "rubric_item_id": c["rubric_item_id"],
                        "weight": c["weight"], "criterion": c["criterion"], "required": req, "wrong": wrong,
                        "class": cls, "severity": sev, "note": note,
@@ -122,8 +123,40 @@ for model, items in REVIEW.items():
                        "review_status": "draft: classified from both judges' evidence; artifact re-check pending"})
 assert len(ledger) == 30
 
+# Hand-audit verdicts (audit/failure_audit.csv, from build_audit_packet.py) override the draft labels.
+AUDIT = HERE / "audit" / "failure_audit.csv"
+audit = {r["id"]: r for r in csv.DictReader(AUDIT.open(encoding="utf-8"))} if AUDIT.exists() else {}
+CLASSES = {GR, CI, QR, DJ, CO, CA, TM, GH}
+for x in ledger:
+    a = audit.get(x["id"], {})
+    verdict = a.get("verdict", "").strip().lower()
+    x["draft_class"], x["draft_severity"] = x["class"], x["severity"]
+    if not verdict:
+        continue
+    assert verdict in ("confirmed", "reclassified", "rejected"), (x["id"], verdict)
+    if verdict == "rejected":
+        x["class"], x["severity"] = GH, "Not a model failure"
+        x["wrong"] = "On hand check, the file meets this item: the judges were wrong"
+    elif verdict == "reclassified":
+        x["class"] = a.get("class", "").strip() or x["class"]
+        x["severity"] = a.get("severity", "").strip() or x["severity"]
+        assert x["class"] in CLASSES and x["severity"] in SEV_CLS, (x["id"], x["class"], x["severity"])
+    x["note"] = a.get("notes", "").strip() or x["note"]
+    x["review_status"] = f"hand-checked against the original file: {verdict}"
+verdicts = Counter(x["review_status"].rsplit(": ", 1)[-1] for x in ledger if x["review_status"].startswith("hand"))
+checked = sum(verdicts.values())
+all_checked = checked == len(ledger)
+audited = [x for x in ledger if x["review_status"].startswith("hand-checked")]
+audited_model_failures = sum(x["severity"] != "Not a model failure" for x in audited)
+audited_non_model_failures = len(audited) - audited_model_failures
+audited_rubric_issues = sum(
+    x["class"] == GH and x["severity"] == "Not a model failure"
+    and x["review_status"].endswith(("confirmed", "reclassified"))
+    for x in audited)
+
 (SITE / "data").mkdir(exist_ok=True)
-with (SITE / "data" / "failure_ledger_draft.csv").open("w", newline="", encoding="utf-8") as fh:
+(SITE / "data" / "failure_ledger_draft.csv").unlink(missing_ok=True)
+with (SITE / "data" / "failure_ledger.csv").open("w", newline="", encoding="utf-8") as fh:
     w = csv.DictWriter(fh, fieldnames=list(ledger[0]))
     w.writeheader()
     w.writerows(ledger)
@@ -133,19 +166,57 @@ matrix = list(csv.DictReader((SITE / "data" / "status_matrix.csv").open(encoding
 both_delivered = sum(r["gpt_status"] == "completed" and int(r["gpt_files"]) > 0
                      and r["claude_status"] == "completed" and int(r["claude_files"]) > 0 for r in matrix)
 sev_counts = Counter(x["severity"] for x in ledger)
+if all_checked:
+    audit_callout = (f"<strong>Hand-checked.</strong> Each item was first classified from both AI judges' cited evidence, then checked by hand against the original file: "
+                     f"{verdicts['confirmed']} confirmed as drafted, {verdicts['reclassified']} reclassified and {verdicts['rejected']} rejected because the judges were wrong. "
+                     f"One reviewer, so severities remain a judgment call.")
+elif checked:
+    audit_callout = (f"<strong>Status: partly checked.</strong> Each item was classified from both AI judges' cited evidence. {checked} of 30 have been hand-checked against the original file "
+                     f"({verdicts['confirmed']} confirmed, {verdicts['reclassified']} reclassified, {verdicts['rejected']} rejected); the rest are still drafts.")
+else:
+    audit_callout = ("<strong>Status: draft.</strong> Each item was classified from both AI judges' cited evidence. A human re-check of each item against the original file is still pending, so treat severities as provisional.")
+spot_check = (f" <strong>Human spot-check:</strong> of {checked} checklist items both judges failed, the reviewer classified {audited_model_failures} as model failures, "
+              f"{audited_rubric_issues} as grading/rubric issues, and rejected {verdicts['rejected']} judge fail calls. "
+              "This checks agreed fail calls only, not judge passes or items they could not verify.") if checked else ""
+
+audit_rows = "\n".join(
+    f"""<tr><td><strong>{E(x['id'])}</strong></td><td>{E(x['model'])}</td><td>{E(x['occupation'])}</td>
+<td><span class="badge {'gpt' if x['review_status'].endswith('confirmed') else 'weak' if x['review_status'].endswith('reclassified') else 'even'}">{E(x['review_status'].rsplit(': ', 1)[-1].capitalize())}</span></td>
+<td>{E(x['class'])}</td><td>{E(x['severity'])}</td><td>{E(x['note']) if x['note'] else '<span class="muted">No note recorded</span>'}</td></tr>"""
+    for x in audited)
+audit_page = f"""  <h1>Hand-audit progress</h1>
+  <p class="lede">A running record of the 30-item failure-ledger audit. Each row is one checklist item selected for review, not necessarily a separate task. Counts and notes below come from the audit CSV.</p>
+  <div class="grid">
+    <div class="stat"><div class="num">{checked} / 30</div><div class="label">items with a recorded human verdict</div></div>
+    <div class="stat gpt"><div class="num">{verdicts['confirmed']}</div><div class="label">confirmed as drafted</div></div>
+    <div class="stat"><div class="num">{verdicts['reclassified']}</div><div class="label">reclassified after review</div></div>
+    <div class="stat claude"><div class="num">{verdicts['rejected']}</div><div class="label">AI judge fail calls rejected</div></div>
+    <div class="stat"><div class="num">{audited_model_failures}</div><div class="label">audited items still classified as model failures</div></div>
+    <div class="stat"><div class="num">{audited_non_model_failures}</div><div class="label">not counted as model failures</div></div>
+  </div>
+  <p class="callout"><strong>How to read this:</strong> Confirmed means the flagged issue and draft labels were accepted. Reclassified means the issue or rubric was reconsidered; see the recorded type and severity. Rejected means the reviewer did not accept the judges' fail call. Of the {checked} checked items, {audited_model_failures} are classified as model failures, {audited_rubric_issues} as grading/rubric issues, and {verdicts['rejected']} fail calls were rejected. {30 - checked} of 30 items still have no recorded verdict.</p>
+  <h2>Recorded items ({checked})</h2>
+  <p class="howto">The audited type and severity reflect the recorded verdict. Reviewer notes are shown as entered; blank notes are marked as such.</p>
+  <div class="table-wrap"><table class="numbers">
+  <thead><tr><th>ID</th><th>Model</th><th>Occupation</th><th>Verdict</th><th>Audited type</th><th>Audited severity</th><th>Reviewer note</th></tr></thead>
+  <tbody>{audit_rows if audit_rows else '<tr><td colspan="7">No verdicts recorded yet.</td></tr>'}</tbody>
+  </table></div>
+  <p class="note">Source: the local <code>audit/failure_audit.csv</code> at the time this page was built. This page does not update until the site is regenerated after the CSV changes.</p>
+"""
 
 
 def ledger_table(model):
     rows = []
     for x in [x for x in ledger if x["model"] == model]:
         note = f'<div class="pnote" style="white-space:normal">{E(x["note"])}</div>' if x["note"] else ""
-        rows.append(f"""        <tr><td>{E(x['occupation'])}<div class="pnote"><code>{x['task_id'][:8]}</code></div></td>
+        mark = " · ✓ hand-checked" if x["review_status"].startswith("hand") else ""
+        rows.append(f"""        <tr><td>{E(x['occupation'])}<div class="pnote"><b>{x['id']}</b> · <code>{x['task_id'][:8]}</code>{mark}</div></td>
           <td>{E(x['required'])}</td><td>{E(x['wrong'])}{note}</td>
           <td>{E(x['class'])}</td><td><span class="sev {SEV_CLS[x['severity']]}">{E(x['severity'])}</span></td></tr>""")
     return "\n".join(rows)
 
 
-cls_order = [GR, QR, DJ, CO, CA, TM, GH]
+cls_order = [GR, CI, QR, DJ, CO, CA, TM, GH]
 cls_counts = {k: Counter(x["model"] for x in ledger if x["class"] == k) for k in cls_order}
 cls_rows = "\n".join(
     f'        <tr><td>{E(k)}</td><td class="n">{v["GPT"] or "–"}</td><td class="n">{v["Claude"] or "–"}</td><td class="n">{v["Both"] or "–"}</td></tr>'
@@ -177,7 +248,7 @@ failures = f"""  <h1>What went wrong, and which failures matter</h1>
 
   <div class="grid">
     <div class="stat claude"><div class="num">85</div><div class="label">tasks with no usable file (9 GPT, 76 Claude), all classified</div></div>
-    <div class="stat"><div class="num">30</div><div class="label">errors inside delivered files, classified in a draft ledger</div></div>
+    <div class="stat"><div class="num">30</div><div class="label">errors inside delivered files, {"each hand-checked against the original file" if all_checked else f"classified in a draft ledger ({checked} hand-checked so far)" if checked else "classified in a draft ledger"}</div></div>
     <div class="stat"><div class="num">{sev_counts['High']}</div><div class="label">of the 30 rated high severity (could mislead a decision)</div></div>
     <div class="stat"><div class="num">{sev_counts['Not a model failure'] + sum(1 for x in ledger if 'Noise' in x['note'] or 'rubric problem' in x['note'])}</div><div class="label">of the 30 are grading problems or noise, not model weaknesses</div></div>
   </div>
@@ -195,8 +266,8 @@ failures = f"""  <h1>What went wrong, and which failures matter</h1>
   </div>
   <p class="note">Nine of these attempts left partial files (1 GPT, 8 Claude). Limits were identical for both models: 14 turns, 24 tool calls and 50,000 written tokens per task. In a separate follow-up with larger limits, 53 of 62 cut-off Claude tasks produced a file (<a href="claude.html">details</a>).</p>
 
-  <h2>Part B: errors inside delivered files (draft ledger of 30)</h2>
-  <div class="callout"><strong>Status: draft.</strong> Each item was classified from both AI judges' cited evidence. A human re-check of each item against the original file is still pending, so treat severities as provisional. <a href="data/failure_ledger_draft.csv">Download the full ledger (CSV)</a> with task, run and checklist-item IDs and both judges' reasoning.</div>
+  <h2>Part B: errors inside delivered files ({"hand-checked ledger" if all_checked else "draft ledger"} of 30)</h2>
+  <div class="callout">{audit_callout} <a href="data/failure_ledger.csv">Download the full ledger (CSV)</a> with task, run and checklist-item IDs, both judges' reasoning and the hand-check result.</div>
   <h3>How the 30 were chosen</h3>
   <ol class="steps">
     <li><strong>Start from agreement</strong>Only checklist items that <em>both</em> judges failed. One judge alone is not enough.</li>
@@ -370,6 +441,7 @@ data_page = f"""  <h1>Data and code: how to check our work</h1>
 
 for name, title, sub, body in (
         ("failures.html", "Failures", "Which failures matter, and which are noise", failures),
+        ("audit.html", "Audit progress", "Human checks recorded so far", audit_page),
         ("data.html", "Data &amp; code", "Reproducibility, frozen settings and the full status matrix", data_page)):
     (SITE / name).write_text(page(name, title, sub, body), encoding="utf-8")
 
@@ -454,7 +526,7 @@ methods_block = f"""<!-- plan:start (generated by build_site_plan.py) -->
     <div class="table-wrap"><table class="numbers"><tbody>
 {other_rows}
     </tbody></table></div></details>
-  <p class="note">A slice chosen for big gaps exaggerates differences by design; it shows where to look, not how the models compare overall. The full-220 results remain the headline. Hand-checking these 30 tasks against the original files is the next step and is not yet done.</p>
+  <p class="note">A slice chosen for big gaps exaggerates differences by design; it shows where to look, not how the models compare overall. The full-220 results remain the headline. {"The 30 failure-ledger items were hand-checked against the original files (see <a href='failures.html'>Failures</a>)." if all_checked else "Hand-checking the failure ledger against the original files is the next step and is not yet done."}</p>
 
   <h2 id="cost">What it cost</h2>
   <p>We did not set a dollar cap, but every request's token usage was recorded. Multiplying by each provider's published list price gives an <strong>estimated total of about {money(tot['openai'] + tot['anthropic'])}</strong> for everything shown on this site, including the pilot.</p>
@@ -494,7 +566,7 @@ methods_block = f"""<!-- plan:start (generated by build_site_plan.py) -->
     <tbody>
 {fmt_rows}
     </tbody></table></div>
-  <p class="note">PowerPoint, video and ZIP files were almost entirely unverifiable, so results on tasks that need them say little about quality. A human audit of the judges' pass/fail calls against the original files has not been done; until then, all quality results are provisional.</p>
+  <p class="note">PowerPoint, video and ZIP files were almost entirely unverifiable, so results on tasks that need them say little about quality.{spot_check or " A human audit of the judges' pass/fail calls against the original files has not been done; until then, all quality results are provisional."}</p>
 
   <h2 id="pilot">Development pilot (kept separate)</h2>
   <p>Before the full run, a 6-task pilot tested the harness and grading end to end. Its fixes, such as better file inspection and recovery from errors, went into the frozen settings above. Pilot results are not counted anywhere on this site except in the cost table.</p>
@@ -510,4 +582,27 @@ if start == -1:
 else:
     mt = mt[:start] + methods_block.rstrip("\n").lstrip() + mt[end + len("<!-- plan:end -->"):]
 mp.write_text(mt, encoding="utf-8")
+
+if all_checked:
+    ip = SITE / "index.html"
+    it = ip.read_text(encoding="utf-8")
+    choose_start = it.find("<li><b>Choose a slice to inspect</b>")
+    choose_end = it.find("</li>", choose_start) + len("</li>")
+    choose_status = "done" if all_checked else "part"
+    choose_label = "Done" if all_checked else "Draft"
+    choose_detail = ("30 tasks picked by a rule fixed in advance; all 30 failure-ledger items were hand-checked."
+                     if all_checked else
+                     f"30 tasks picked by a rule fixed in advance; {checked} of 30 failure-ledger items hand-checked.")
+    if choose_start >= 0 and choose_end >= len("</li>"):
+        it = it[:choose_start] + f'<li><b>Choose a slice to inspect</b><span class="st {choose_status}">{choose_label}</span> {choose_detail} <a href="methods.html#slice">How we chose</a></li>' + it[choose_end:]
+    sort_start = it.find("<li><b>Sort the failures</b>")
+    sort_end = it.find("</li>", sort_start) + len("</li>")
+    sort_status = "done" if all_checked else "part"
+    sort_label = "Done" if all_checked else "Draft"
+    sort_detail = (f"All 85 missing-file failures explained, plus 30 quality items hand-checked: {audited_model_failures} model failures, {audited_rubric_issues} grading/rubric issues and {verdicts['rejected']} rejected judge calls."
+                   if all_checked else
+                   f"All 85 missing-file failures explained; {checked} of 30 quality items hand-checked so far.")
+    if sort_start >= 0 and sort_end >= len("</li>"):
+        it = it[:sort_start] + f'<li><b>Sort the failures</b><span class="st {sort_status}">{sort_label}</span> {sort_detail} <a href="failures.html">Failures</a></li>' + it[sort_end:]
+    ip.write_text(it, encoding="utf-8")
 print("wrote failures.html, data.html; ledger", len(ledger), "both delivered", both_delivered, dict(sev_counts))
